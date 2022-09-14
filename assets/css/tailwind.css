@@ -605,23 +605,12 @@ video {
   position: relative;
 }
 
-.inset-0 {
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-}
-
-.top-1\/2 {
-  top: 50%;
+.bottom-5 {
+  bottom: 1.25rem;
 }
 
 .left-1\/2 {
   left: 50%;
-}
-
-.bottom-5 {
-  bottom: 1.25rem;
 }
 
 .top-0 {
@@ -636,6 +625,10 @@ video {
   right: 0px;
 }
 
+.top-1\/2 {
+  top: 50%;
+}
+
 .top-1 {
   top: 0.25rem;
 }
@@ -644,24 +637,8 @@ video {
   left: 0.25rem;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .z-30 {
   z-index: 30;
-}
-
-.z-10 {
-  z-index: 10;
-}
-
-.z-20 {
-  z-index: 20;
-}
-
-.float-left {
-  float: left;
 }
 
 .mx-auto {
@@ -673,20 +650,8 @@ video {
   margin-top: 1.25rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .block {
   display: block;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .flex {
@@ -733,22 +698,6 @@ video {
   height: 1.25rem;
 }
 
-.h-auto {
-  height: auto;
-}
-
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-6 {
-  height: 1.5rem;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
 .w-full {
   width: 100%;
 }
@@ -765,28 +714,8 @@ video {
   width: 1.25rem;
 }
 
-.w-12 {
-  width: 3rem;
-}
-
-.w-4 {
-  width: 1rem;
-}
-
-.w-10 {
-  width: 2.5rem;
-}
-
-.w-6 {
-  width: 1.5rem;
-}
-
 .max-w-2xl {
   max-width: 42rem;
-}
-
-.max-w-md {
-  max-width: 28rem;
 }
 
 .flex-none {
@@ -817,21 +746,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.-translate-x-full {
-  --tw-translate-x: -100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-0 {
-  --tw-translate-x: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-full {
-  --tw-translate-x: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -848,12 +762,12 @@ video {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -874,10 +788,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -904,16 +814,8 @@ video {
   border-radius: 9999px;
 }
 
-.rounded {
-  border-radius: 0.25rem;
-}
-
 .border {
   border-width: 1px;
-}
-
-.border-0 {
-  border-width: 0px;
 }
 
 .bg-white\/30 {
@@ -925,119 +827,14 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-pink-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 114 182 / var(--tw-bg-opacity));
-}
-
-.bg-teal-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(20 184 166 / var(--tw-bg-opacity));
-}
-
-.bg-blue-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
-}
-
-.bg-zinc-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
-}
-
-.bg-purple-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 33 168 / var(--tw-bg-opacity));
-}
-
-.bg-purple-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(192 132 252 / var(--tw-bg-opacity));
-}
-
-.bg-neutral-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
-}
-
-.bg-inherit {
-  background-color: inherit;
-}
-
 .bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
-.bg-cover {
-  background-size: cover;
-}
-
-.bg-left-bottom {
-  background-position: left bottom;
-}
-
-.bg-center {
-  background-position: center;
-}
-
-.bg-top {
-  background-position: top;
-}
-
-.bg-left {
-  background-position: left;
-}
-
-.bg-no-repeat {
-  background-repeat: no-repeat;
-}
-
-.object-fill {
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-
-.p-2 {
-  padding: 0.5rem;
-}
-
-.p-0 {
-  padding: 0px;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.py-24 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.pb-2 {
-  padding-bottom: 0.5rem;
 }
 
 .text-center {
@@ -1056,14 +853,14 @@ video {
   font-family: 'Paragraph';
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-base {
@@ -1074,16 +871,6 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 
 .text-5xl {
@@ -1100,10 +887,6 @@ video {
   font-weight: 600;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
 .uppercase {
   text-transform: uppercase;
 }
@@ -1112,18 +895,9 @@ video {
   text-transform: capitalize;
 }
 
-.leading-none {
-  line-height: 1;
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-blue-600 {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 .text-\[\#262b59\] {
@@ -1139,6 +913,11 @@ video {
 .text-\[\#4b4b4c\] {
   --tw-text-opacity: 1;
   color: rgb(75 75 76 / var(--tw-text-opacity));
+}
+
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 .text-gray-800 {
@@ -1184,12 +963,6 @@ video {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-all {
-  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1767,6 +1540,310 @@ video {
 
 /*bauti*/
 
+.services-box1{
+  display: flex;
+  width: auto;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://rec-end.elnuevodia.com/images/tn/0/16/1413/1901/473/618/2015/04/03/enfermera.jpg.jpg);
+  border: 1px solid gray;
+}
+
+.div-services-box1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 37%;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.div2-services-box1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 63%;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.h2-div-services-box1{
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  height: 50%;
+  font-size: 1.4cm;
+  opacity: 0.5;
+  color: #4b4b4c;
+}
+
+.div-img-services-box1{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: rgb(114, 111, 111);
+  border: 1px solid blue;
+}
+
+.img-services-box1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.p-title-div-services-box1{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.75cm;
+}
+
+.p-div-services-box1{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 65%;
+  color: #4b4b4c;
+}
+
+.services-box2{
+  display: flex;
+  width: auto;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://th.bing.com/th/id/OIP.pSWQXuzwGvI9gS6qBy2d8AHaHa?pid=ImgDet&rs=1);
+  border: 1px solid gray;
+}
+
+.div-services-box2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 37%;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.div2-services-box2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 63%;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.h2-div-services-box2{
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  height: 50%;
+  font-size: 1.4cm;
+  opacity: 0.5;
+  color: #4b4b4c;
+}
+
+.div-img-services-box2{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: rgb(114, 111, 111);
+  border: 1px solid blue;
+}
+
+.img-services-box2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.p-title-div-services-box2{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.75cm;
+}
+
+.p-div-services-box2{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 65%;
+  color: #4b4b4c;
+}
+
+.services-box3{
+  display: flex;
+  width: auto;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://image.freepik.com/foto-gratis/veterinario-companero-trabajo-examinar-perro_13339-232292.jpg);
+  border: 1px solid gray;
+}
+
+.div-services-box3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 37%;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.div2-services-box3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 63%;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.h2-div-services-box3{
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  height: 50%;
+  font-size: 1.4cm;
+  opacity: 0.5;
+  color: #4b4b4c;
+}
+
+.div-img-services-box3{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: rgb(114, 111, 111);
+  border: 1px solid blue;
+}
+
+.img-services-box3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.p-title-div-services-box3{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.75cm;
+}
+
+.p-div-services-box3{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 65%;
+  color: #4b4b4c;
+}
+
+.services-box4{
+  display: flex;
+  width: auto;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://th.bing.com/th/id/OIP.zXqXSt5TkA3Umx-SUaH1bgHaLG?pid=ImgDet&rs=1);
+  border: 1px solid gray;
+}
+
+.div-services-box4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 37%;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.div2-services-box4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 63%;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.h2-div-services-box4{
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  height: 50%;
+  font-size: 1.4cm;
+  opacity: 0.5;
+  color: #4b4b4c;
+}
+
+.div-img-services-box4{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: rgb(114, 111, 111);
+  border: 1px solid blue;
+}
+
+.img-services-box4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.p-title-div-services-box4{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.75cm;
+}
+
+.p-div-services-box4{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 65%;
+  color: #4b4b4c;
+}
+
+.bauti-celu{
+  display: none;
+}
+
 @media (max-width: 640px) {
   .bauti-celu{
     display: block;
@@ -1775,11 +1852,6 @@ video {
   .dasdasd{
     display: none;
   }
-}
-
-.hover\:underline:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
 }
 
 .focus\:outline-none:focus {
@@ -1839,6 +1911,10 @@ video {
 @media (min-width: 1024px) {
   .laptop\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .laptop\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .laptop\:text-4xl {

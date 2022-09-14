@@ -504,6 +504,292 @@
 
 
 /*bauti*/
+
+.services-box1{
+  display: flex;
+  width: auto;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://rec-end.elnuevodia.com/images/tn/0/16/1413/1901/473/618/2015/04/03/enfermera.jpg.jpg);
+  border: 1px solid gray;
+}
+.div-services-box1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 37%;
+  width: 100%;
+  padding: 0px 10px;
+}
+.div2-services-box1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 63%;
+  width: 100%;
+  padding: 0px 10px;
+}
+.h2-div-services-box1{
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  height: 50%;
+  font-size: 1.4cm;
+  opacity: 0.5;
+  color: #4b4b4c;
+}
+.div-img-services-box1{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: rgb(114, 111, 111);
+  border: 1px solid blue;
+
+}
+.img-services-box1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+}
+.p-title-div-services-box1{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.75cm;
+}
+.p-div-services-box1{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 65%;
+  color: #4b4b4c;
+}
+
+.services-box2{
+  display: flex;
+  width: auto;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://th.bing.com/th/id/OIP.pSWQXuzwGvI9gS6qBy2d8AHaHa?pid=ImgDet&rs=1);
+  border: 1px solid gray;
+}
+.div-services-box2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 37%;
+  width: 100%;
+  padding: 0px 10px;
+}
+.div2-services-box2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 63%;
+  width: 100%;
+  padding: 0px 10px;
+}
+.h2-div-services-box2{
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  height: 50%;
+  font-size: 1.4cm;
+  opacity: 0.5;
+  color: #4b4b4c;
+}
+.div-img-services-box2{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: rgb(114, 111, 111);
+  border: 1px solid blue;
+
+}
+.img-services-box2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+}
+.p-title-div-services-box2{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.75cm;
+}
+.p-div-services-box2{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 65%;
+  color: #4b4b4c;
+}
+
+.services-box3{
+  display: flex;
+  width: auto;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://image.freepik.com/foto-gratis/veterinario-companero-trabajo-examinar-perro_13339-232292.jpg);
+  border: 1px solid gray;
+}
+.div-services-box3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 37%;
+  width: 100%;
+  padding: 0px 10px;
+}
+.div2-services-box3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 63%;
+  width: 100%;
+  padding: 0px 10px;
+}
+.h2-div-services-box3{
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  height: 50%;
+  font-size: 1.4cm;
+  opacity: 0.5;
+  color: #4b4b4c;
+}
+.div-img-services-box3{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: rgb(114, 111, 111);
+  border: 1px solid blue;
+
+}
+.img-services-box3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+}
+.p-title-div-services-box3{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.75cm;
+}
+.p-div-services-box3{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 65%;
+  color: #4b4b4c;
+}
+
+.services-box4{
+  display: flex;
+  width: auto;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://th.bing.com/th/id/OIP.zXqXSt5TkA3Umx-SUaH1bgHaLG?pid=ImgDet&rs=1);
+  border: 1px solid gray;
+}
+.div-services-box4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 37%;
+  width: 100%;
+  padding: 0px 10px;
+}
+.div2-services-box4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 63%;
+  width: 100%;
+  padding: 0px 10px;
+}
+.h2-div-services-box4{
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  height: 50%;
+  font-size: 1.4cm;
+  opacity: 0.5;
+  color: #4b4b4c;
+}
+.div-img-services-box4{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: rgb(114, 111, 111);
+  border: 1px solid blue;
+
+}
+.img-services-box4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+}
+.p-title-div-services-box4{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.75cm;
+}
+.p-div-services-box4{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 65%;
+  color: #4b4b4c;
+}
+
+.bauti-celu{
+  display: none;
+}
+
+
 @media (max-width: 640px) { 
   .bauti-celu{
     display: block;
