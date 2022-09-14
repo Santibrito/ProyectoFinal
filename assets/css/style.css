@@ -603,3 +603,51 @@
     display: none;
   }
 }
+
+/* Footer */
+
+.h6-footer {
+  color: var(--main);
+  font-weight: 600;
+}
+
+.list-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+ul a {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+ul input {
+  margin-top: 1rem;
+  border: 1px black solid;
+  border-radius: 0.5rem;
+  height: 3rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.button-footer-suscription {
+  display: flex;
+  justify-content: start;
+}
+
+.button-footer-suscription button {
+  margin-top: 0.5rem;
+  background-color: var(--secondary);
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.div-footer {
+  margin-left: 3rem;
+}
