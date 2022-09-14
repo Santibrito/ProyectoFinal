@@ -1000,7 +1000,7 @@ video {
 }
 
 :root {
-  --main: #262b59;
+  --main: hsl(234, 40%, 25%);
   --secondary: #009eb8;
   --paragraph: #4b4b4c;
   --font-title: Title;
@@ -1502,37 +1502,121 @@ video {
 }
 
 .slider-banner {
-  height: 65vh;
+  height: 60vh;
 }
 
 .slider-banner1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.507), #0000018c), url("../img/banner.jpg");
+  background-image:  url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
+  background-position: 200% 30%;
   background-size: cover;
 }
 
 .slider-banner2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.507), #0000018c), url("../img/banner2.jpg");
-  background-position: center;
+  background-image:  url("../img/pruebaaaa.jpg");
+  background-position: 100% 30%  ;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .sub-banner {
   color: white;
+  width: 100%;
+  padding-bottom: 2vh;
+  font-size: 3rem;
+}
+
+.sub-banner1 {
+  color: rgb(0, 0, 0);
+  width: 60%;
+  padding-bottom: 2vh;
+  font-size: 4.5rem;
+}
+
+.p-banner{
+  font-size: 1.5rem;
+  width: 40%;
+  padding-bottom: 2vh;
+  font-family: var(--font-paragraph);
+}
+
+#todo{
+  color: var(--secondary);
+}
+
+#btn-banner{
+  margin-top: 10vh;
+  padding: 1.5vh;
+  border-radius: 5px;
+  background-color: var(--secondary);
+  color: white;
+  font-family: var(--font-subtitle);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .paragraph-banner {
   color: white;
 }
 
+.slider-banner1{
+  padding: 10vh;
+}
+
+.slider-banner2{
+  padding: 10vh;
+}
+
 /*About Us*/
 
 .about-us-box1{
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.h6-about-us {
+  color: var(--main);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.p-about-us {
+  margin-top: 1rem;
+  text-align: justify;
 }
 
 .about-us-box2{
-  background-color: green;
+  padding: 4rem;
 }
+
+.img-about-us {
+  width: 20rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.img-about-us-1 {
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 48vw;
+  left: 25vw;
+  width: 20rem;
+  height: 14rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+/* END About Us*/
 
 .bauti-celu{
   display: none;
@@ -1854,6 +1938,54 @@ video {
   }
 }
 
+/* Footer */
+
+.h6-footer {
+  color: var(--main);
+  font-weight: 600;
+}
+
+.list-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+ul a {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+ul input {
+  margin-top: 1rem;
+  border: 1px black solid;
+  border-radius: 0.5rem;
+  height: 3rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.button-footer-suscription {
+  display: flex;
+  justify-content: start;
+}
+
+.button-footer-suscription button {
+  margin-top: 0.5rem;
+  background-color: var(--secondary);
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.div-footer {
+  margin-left: 3rem;
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1957,5 +2089,3 @@ video {
     line-height: 1.75rem;
   }
 }
-
-
