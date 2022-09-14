@@ -487,3 +487,31 @@
 .paragraph-banner {
   color: white;
 }
+
+
+/*About Us*/
+.about-us-box1{
+  background-color: red;
+}
+
+.about-us-box2{
+  background-color: green;
+}
+
+.bauti-celu{
+  display: none;
+}
+
+
+/*bauti*/
+@media (max-width: 640px) { 
+  .bauti-celu{
+    display: block;
+  }
+
+  .dasdasd{
+    display: none;
+  }
+}
+
+
