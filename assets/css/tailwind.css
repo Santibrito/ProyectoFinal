@@ -1227,7 +1227,7 @@ video {
 }
 
 :root {
-  --main: #262b59;
+  --main: hsl(234, 40%, 25%);
   --secondary: #009eb8;
   --paragraph: #4b4b4c;
   --font-title: Title;
@@ -1733,22 +1733,69 @@ video {
 }
 
 .slider-banner1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.507), #0000018c), url("../img/banner.jpg");
+  background-image: linear-gradient(131deg, rgba(38, 43, 89, 0.925) 0%, rgba(38, 43, 89) 0%, rgba(38, 43, 89, 0.938) 26%, rgba(38, 43, 89, 0.884) 46%, rgba(9,9,121,0) 120%), url("../img/bannerprueba.jpg");
+  background-position: 200% 50% ;
   background-size: cover;
 }
 
 .slider-banner2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.507), #0000018c), url("../img/banner2.jpg");
-  background-position: center;
+  background-image: linear-gradient(131deg, rgba(38, 43, 89, 0.925) 0%, rgba(38, 43, 89) 0%, rgba(38, 43, 89, 0.938) 26%, rgba(38, 43, 89, 0.884) 46%, rgba(9,9,121,0) 120%), url("../img/banner2.jpg");
+  background-position: 200% 50% ;
   background-size: cover;
+}
+
+.span-msj{
+  font-family: Sub-Title;
+  font-size: 1.5rem;
 }
 
 .sub-banner {
   color: white;
+  width: 100%;
+  padding-bottom: 2vh;
+  font-size: 5.5rem;
+}
+
+.sub-banner1 {
+  color: rgb(255, 255, 255);
+  width: 60%;
+  padding-bottom: 2vh;
+  font-size: 5.5rem;
+}
+
+.p-banner{
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  width: 50%;
+}
+
+#todo{
+  color: var(--secondary);
+}
+
+#btn-banner{
+  margin-top: 10vh;
+  padding: 1.5vh;
+  border-radius: 5px;
+  background-color: var(--secondary);
+  color: white;
+  font-family: var(--font-subtitle);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .paragraph-banner {
   color: white;
+}
+
+.slider-banner1{
+  padding: 10vh;
+}
+
+.slider-banner2{
+  padding: 10vh;
 }
 
 /*About Us*/
