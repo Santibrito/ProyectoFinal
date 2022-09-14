@@ -466,46 +466,46 @@
 }
 
 .slider-banner {
-  height: 65vh;
+  height: 60vh;
 }
 
 .slider-banner1 {
-  background-image: linear-gradient(131deg, rgba(38, 43, 89, 0.925) 0%, rgba(38, 43, 89) 0%, rgba(38, 43, 89, 0.938) 26%, rgba(38, 43, 89, 0.884) 46%, rgba(9,9,121,0) 120%), url("../img/bannerprueba.jpg");
-  background-position: 200% 50% ;
+  background-image:  url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
+ 
+  background-position: 200% 30%;
   background-size: cover;
 
 }
 
 .slider-banner2 {
-  background-image: linear-gradient(131deg, rgba(38, 43, 89, 0.925) 0%, rgba(38, 43, 89) 0%, rgba(38, 43, 89, 0.938) 26%, rgba(38, 43, 89, 0.884) 46%, rgba(9,9,121,0) 120%), url("../img/banner2.jpg");
-  background-position: 200% 50% ;
+  background-image:  url("../img/pruebaaaa.jpg");
+  background-position: 100% 30%  ;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.span-msj{
-  font-family: Sub-Title;
-  font-size: 1.5rem;
-}
+
 
 .sub-banner {
   color: white;
   width: 100%;
   padding-bottom: 2vh;
-  font-size: 5.5rem;
+  font-size: 3rem;
 }
 
 .sub-banner1 {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   width: 60%;
   padding-bottom: 2vh;
-  font-size: 5.5rem;
+  font-size: 4.5rem;
 }
 
 .p-banner{
-  font-size: 2rem;
-  color: rgb(255, 255, 255);
-  width: 50%;
-  
+  font-size: 1.5rem;
+
+  width: 40%;
+  padding-bottom: 2vh;
+  font-family: var(--font-paragraph);
 }
 #todo{
   color: var(--secondary);
@@ -603,5 +603,3 @@
     display: none;
   }
 }
-
-
