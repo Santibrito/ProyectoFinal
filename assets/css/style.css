@@ -491,12 +491,53 @@
 
 /*About Us*/
 .about-us-box1{
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.h6-about-us {
+  color: var(--main);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.p-about-us {
+  margin-top: 1rem;
+  text-align: justify;
 }
 
 .about-us-box2{
-  background-color: green;
+  padding: 4rem;
 }
+
+.img-about-us {
+  width: 20rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.img-about-us-1 {
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 48vw;
+  left: 25vw;
+  width: 20rem;
+  height: 14rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+/* END About Us*/
+
 
 .bauti-celu{
   display: none;
