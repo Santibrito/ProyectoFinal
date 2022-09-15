@@ -744,6 +744,131 @@
 
 /* END About Us*/
 
+/*Servicios carrusel*/
+
+.container-services{
+  background-color: rgba(143, 143, 143, 0.1);
+  padding: 8vh;
+}
+.div-h2-services{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 10px;
+}
+.container-services-into{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);/*3*/
+  grid-gap: 2vh;
+  width: 60%;
+}
+
+.box-services{
+  /*background-color: #f8f7f7;*/
+  background-color:#aaaaaa;
+  padding: 3vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+.icon-services{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 60%;
+  background-color: #f8f7f7;
+  border-radius: 50%;
+  padding: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.icon-services img{
+  width: 80px;
+  height: 80px;
+}
+.text-services{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  height: 40%;
+}
+
+.btn-services{
+  text-align: center;
+  padding: 0.7vh;
+  font-size: 1rem;
+  color:var(--main);
+  font-family: var(--font-subtitle);
+}
+
+
+@media (max-width: 1770px){
+  .container-services-into{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);/*3*/
+    grid-gap: 2vh;
+    width: 80%;
+  }
+}
+@media (max-width: 1368px){
+  .container-services-into{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);/*3*/
+    grid-gap: 2vh;
+    width: 100%;
+  }
+  .title-services{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+}
+
+.mobile-responsive-services{
+  display: block;/*display: none;*/
+}
+
+@media (max-width: 1015px){
+  .container-services-into{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);/*3*/
+    grid-gap: 1vh;
+    width: 100%;
+    
+  }
+  .pc-responsive-services{
+    display: none;
+  }
+
+  .mobile-responsive-services{
+    display: block;
+  }
+
+  .container-services{
+    background-color: rgba(143, 143, 143, 0.1);
+    padding: 1vh;
+  }
+}
+
+@media (max-width: 768px){
+
+  .box-services{
+    width: 75%;
+  }
+}
+
+/*Final servicios carrusel*/
+
 /*Obra social*/
 .container-social-work{
   background-image: linear-gradient(rgba(40, 45, 48, 0.24), #1d1f2050),url("../img/iStock-1208801475.jpg");
