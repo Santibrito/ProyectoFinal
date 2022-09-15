@@ -2566,11 +2566,11 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .shop-title p{
   margin-top: 1vh;
-  font-size: 1.5rem;
 }
 
 .container-cards-shop{
