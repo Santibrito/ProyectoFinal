@@ -690,6 +690,11 @@ video {
   margin-right: auto;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .-ml-2 {
   margin-left: -0.5rem;
 }
@@ -1402,12 +1407,12 @@ video {
   padding-top: 2.5rem;
 }
 
-.pb-4 {
-  padding-bottom: 1rem;
-}
-
 .pt-1 {
   padding-top: 0.25rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-left {
@@ -1416,6 +1421,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .align-middle {
@@ -1476,6 +1485,11 @@ video {
 
 .text-5xl {
   font-size: 3rem;
+  line-height: 1;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
   line-height: 1;
 }
 
@@ -1772,7 +1786,7 @@ video {
 
 @media (min-width: 1280px) {
   .title {
-    font-size: 3rem;
+    font-size: 3.75rem;
     line-height: 1;
   }
 }
@@ -1794,8 +1808,8 @@ video {
 
 @media (min-width: 1280px) {
   .sub-title {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    font-size: 3rem;
+    line-height: 1;
   }
 }
 
@@ -2484,8 +2498,6 @@ video {
     padding: 2rem;
   }
 }
-
-/* END About Us*/
 
 /*Servicios carrusel*/
 
@@ -3308,6 +3320,13 @@ video {
   justify-content: center;
 }
 
+.container-footer-img{
+  background-image: url("../img/footer-img.png");
+  padding: 23vh;
+  background-position: 50% -265%;
+  background-repeat: no-repeat;
+}
+
 /* Footer */
 
 footer{
@@ -3324,15 +3343,15 @@ footer{
   padding: 1vh;
 }
 
+.list-footer {
+  display: flex;
+  flex-direction: column;
+}
+
 .h6-footer {
   color: var(--main);
   font-weight: 600;
   font-size: 1rem;
-}
-
-.list-footer {
-  display: flex;
-  flex-direction: column;
 }
 
 .div-footer input{
@@ -3429,14 +3448,14 @@ footer{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .desktop\:text-5xl {
-    font-size: 3rem;
+  .desktop\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
   }
 
-  .desktop\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .desktop\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .desktop\:text-lg {
@@ -3444,4 +3463,3 @@ footer{
     line-height: 1.75rem;
   }
 }
-
