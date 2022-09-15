@@ -62,6 +62,7 @@
 }
 
 
+
 /*Social*/
 
 .info-clinic {
@@ -150,7 +151,24 @@
 
 }
 
+.p-banner{
+  font-size: 1.7rem;
+  width: 50%;
+}
+
+.p-banner{
+  font-size: 1.7rem;
+  width: 50%;
+}
+
+
+
 @media screen and (max-width: 992px) {
+
+  .p-banner{
+    font-size: 1.2rem;
+    width: 55%;
+  }
 
   #img-nav-mobile {
     display: block;
@@ -209,6 +227,14 @@
   }
 
 }
+
+@media screen and (max-width: 550px){
+  .p-banner{
+    font-size: 1.2rem;
+    width: 100%;
+  }
+}
+
 
 #card-shop-mobile {
   display: none;
@@ -471,19 +497,18 @@
 
 .slider-banner1 {
   background-image:  url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
- 
-  background-position: 200% 30%;
+  background-position: 30%;
   background-size: cover;
+  background-repeat: no-repeat;
 
 }
 
-.slider-banner2 {
-  background-image:  url("../img/pruebaaaa.jpg");
-  background-position: 100% 30%  ;
+.img-banner-2 {
+  background-image: url("../img/pruebaaaa.jpg");
+  background-position:  30%  ;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 
 
 .sub-banner {
@@ -493,20 +518,104 @@
   font-size: 3rem;
 }
 
-.sub-banner1 {
+.sub-banner1{
   color: rgb(0, 0, 0);
   width: 60%;
   padding-bottom: 2vh;
   font-size: 4.5rem;
 }
 
-.p-banner{
-  font-size: 1.5rem;
 
-  width: 40%;
-  padding-bottom: 2vh;
-  font-family: var(--font-paragraph);
+.paragraph-banner {
+  color: white;
 }
+
+.slider-banner1{
+  padding: 10vh;
+}
+
+.slider-banner2{
+  padding: 10vh;
+}
+
+
+@media (max-width: 1280px){
+  .slider-banner1{
+    padding: 5vh;
+  }
+  .sub-banner {
+    color: white;
+    width: 100%;
+    padding-bottom: 2vh;
+    font-size: 2.5rem;
+   line-height: 20vh;
+  }
+
+  .sub-banner1{
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding-bottom: 2vh;
+    font-size: 2.8rem;
+    line-height: 6vh;
+  }
+}
+
+
+
+.h1-m{
+  display: none;
+}
+
+
+@media (max-width: 642px){
+  .h1-p{
+    display: none;
+  }
+  .h1-m{
+    display: block;
+  }
+  .sub-banner {
+    color: white;
+    width: 100%;
+    padding-bottom: 1vh;
+    font-size: 2rem;
+  
+  }
+
+  .sub-banner1{
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding-bottom: 2vh;
+    font-size: 2.5rem;
+  
+  }
+  .slider-banner1{
+    padding: 5vh;
+  }
+
+  .p-banner{
+    color: rgb(19, 19, 19);
+    font-size: 1.2rem;
+    width: 80%;
+  }
+  .slider-banner1 {
+    background-image: url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
+    background-position: 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+  }
+  
+  .img-banner-2 {
+    background-image: url("../img/pruebaaaa.jpg");
+    background-position: 50% 100% ;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+}
+
+
 #todo{
   color: var(--secondary);
 }
@@ -523,18 +632,6 @@
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-}
-
-.paragraph-banner {
-  color: white;
-}
-
-.slider-banner1{
-  padding: 10vh;
-}
-
-.slider-banner2{
-  padding: 10vh;
 }
 
 
@@ -585,6 +682,7 @@
   -o-border-radius: 0.5rem;
 }
 
+
 /* END About Us*/
 
 
@@ -592,13 +690,176 @@
   display: none;
 }
 
-
 /*bauti*/
+
+
+
+.carousel {
+  position: relative;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 26px;
+  width: 40vh;
+  
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: auto;
+}
+
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 2%;
+}
+
+.carousel-control.next {
+  right: 2%;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.carousel-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+.carousel-bullet:hover {
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #428bca;
+}
+
+#title {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 27px;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
+
+.container-service{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 2vh;
+}
+
+.container-service>*{
+  padding: 2vh;
+  width: 100%;
+}
+
+@media (max-width: 1280px) { 
+  .container-service{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 70%;
+  }
+
+}
+
+@media (max-width: 872px) { 
+  .container-service{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    width: 60%;
+    margin: auto;
+  }
+
+}
+
+@media (max-width: 590px) { 
+  .container-service{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    width: 95%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
 
 .services-box1{
   display: flex;
   width: auto;
-  height: 400px;
+  height: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -668,7 +929,7 @@
 .services-box2{
   display: flex;
   width: auto;
-  height: 400px;
+  height: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -738,7 +999,7 @@
 .services-box3{
   display: flex;
   width: auto;
-  height: 400px;
+  height: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -808,7 +1069,7 @@
 .services-box4{
   display: flex;
   width: auto;
-  height: 400px;
+  height: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -937,3 +1198,4 @@ ul input {
 .div-footer {
   margin-left: 3rem;
 }
+
