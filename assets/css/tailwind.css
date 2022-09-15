@@ -790,6 +790,10 @@ video {
   margin-top: 0.75rem;
 }
 
+.mr-8 {
+  margin-right: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -882,6 +886,10 @@ video {
   height: 8rem;
 }
 
+.max-h-0 {
+  max-height: 0px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -948,6 +956,10 @@ video {
 
 .max-w-3xl {
   max-width: 48rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
 }
 
 .flex-none {
@@ -1139,6 +1151,10 @@ video {
 
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.rounded-none {
+  border-radius: 0px;
 }
 
 .border {
@@ -1377,12 +1393,25 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .pt-1 {
   padding-top: 0.25rem;
 }
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -2762,13 +2791,12 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgba(11, 98, 179, 0.863), #ffffff8c),url(https://rec-end.elnuevodia.com/images/tn/0/16/1413/1901/473/618/2015/04/03/enfermera.jpg.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 10px;
   background-size: 90%;
   transition: 0.5s all ease;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .services-box1:hover{
@@ -2846,7 +2874,7 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image:  linear-gradient(rgba(2, 32, 46, 0.466), #065888fd),url(https://th.bing.com/th/id/OIP.pSWQXuzwGvI9gS6qBy2d8AHaHa?pid=ImgDet&rs=1);
+  background-image:  linear-gradient(rgba(122, 215, 255, 0.466), #0485cffd),url(https://th.bing.com/th/id/OIP.pSWQXuzwGvI9gS6qBy2d8AHaHa?pid=ImgDet&rs=1);
 }
 
 .div-services-box2{
@@ -3262,6 +3290,10 @@ footer{
 @media (min-width: 1280px) {
   .desktop\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .desktop\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .desktop\:text-5xl {

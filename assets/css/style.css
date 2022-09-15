@@ -1075,14 +1075,13 @@ background-size: cover;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgba(11, 98, 179, 0.863), #ffffff8c),url(https://rec-end.elnuevodia.com/images/tn/0/16/1413/1901/473/618/2015/04/03/enfermera.jpg.jpg);
+
   background-position: center;
   background-size: cover;
   border-radius: 10px;
   background-size: 90%;
   transition: 0.5s all ease;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;}
 
 .services-box1:hover{
   transition: 0.5s all ease;
@@ -1155,7 +1154,7 @@ background-size: cover;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image:  linear-gradient(rgba(2, 32, 46, 0.466), #065888fd),url(https://th.bing.com/th/id/OIP.pSWQXuzwGvI9gS6qBy2d8AHaHa?pid=ImgDet&rs=1);
+  background-image:  linear-gradient(rgba(122, 215, 255, 0.466), #0485cffd),url(https://th.bing.com/th/id/OIP.pSWQXuzwGvI9gS6qBy2d8AHaHa?pid=ImgDet&rs=1);
   
 }
 .div-services-box2{
