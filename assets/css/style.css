@@ -1811,3 +1811,18 @@ footer{
   color: var(--main);
   font-weight: 600;
 }
+
+
+/* MAP */
+iframe {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Modal Social Works */
+
+.title-modal {
+  font-size: 2rem;
+  color: var(--main);
+  font-weight: 600;
+}
