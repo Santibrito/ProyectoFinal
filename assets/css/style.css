@@ -61,8 +61,6 @@
   @apply text-base laptop:text-base desktop:text-lg text-[#4b4b4c] font-['Paragraph'] dark:text-[#e4e3e3]
 }
 
-
-
 /*Social*/
 
 .info-clinic {
@@ -742,7 +740,7 @@
   }
 }
 
-/* END About Us*/
+
 
 /*Obra social*/
 .container-social-work{
@@ -759,9 +757,6 @@ background-size: cover;
   grid-gap: 2vh;
   width: 60%;
 }
-
-
-
 
 .title-social{
   text-transform: uppercase;
@@ -844,7 +839,6 @@ background-size: cover;
     padding: 1vh;
   }
 }
-
 
 
 /*Tienda*/
@@ -1457,21 +1451,19 @@ footer{
 
 }
 
-
-
 .div-footer{
   padding: 1vh;
+}
+
+.list-footer {
+  display: flex;
+  flex-direction: column;
 }
 
 .h6-footer {
   color: var(--main);
   font-weight: 600;
   font-size: 1rem;
-}
-
-.list-footer {
-  display: flex;
-  flex-direction: column;
 }
 
 .div-footer input{
@@ -1529,4 +1521,3 @@ footer{
     margin-left: 3rem;
 }
 }
-
