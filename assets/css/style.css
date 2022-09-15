@@ -504,7 +504,12 @@
 }
 
 .slider-banner3{
-  background-image:  linear-gradient(rgba(33, 34, 34, 0.507), #191b1b7a),url("../img/servicios/cardiologia.jpg");
+  background-image:  linear-gradient(rgba(33, 34, 34, 0.507), #056b6b7a),url("../img/servicios/cardiologia.jpg");
+ background-position: center;
+ background-size: cover;
+}
+.slider-banner4{
+  background-image:  linear-gradient(rgba(48, 53, 53, 0.808), #191b1bce),url("../img/social-works.png");
  background-position: center;
  background-size: cover;
 }
@@ -550,12 +555,20 @@
   padding: 10vh;
 }
 
+.slider-banner4{
+  padding: 10vh;
+}
+
 
 @media (max-width: 1280px){
   .slider-banner1{
     padding: 5vh;
   }
   .slider-banner3{
+    padding: 5vh;
+  }
+
+  .slider-banner4{
     padding: 5vh;
   }
   .sub-banner {
@@ -628,6 +641,9 @@
   .slider-banner1{
     padding: 5vh;
   }
+  .slider-banner4{
+    padding: 5vh;
+  }
   .slider-banner3{
     padding: 5vh;
   }
@@ -644,6 +660,14 @@
     background-repeat: no-repeat;
   
   }
+  .slider-banner4 {
+    background-image: linear-gradient(rgba(16, 156, 221, 0.507), #0730577e),url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
+    background-position: 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+  }
+  
 
   .slider-banner3 {
     background-image: linear-gradient(rgba(16, 156, 221, 0.507), #0730577e),url("../img/servicios/cardiologia.jpg");
@@ -1086,10 +1110,6 @@ background-size: cover;
   font-size: 1.2rem;
   border-radius: 10px;
 }
-
-
-
-
 
 
 
@@ -1758,7 +1778,7 @@ footer{
 .container-info-list{
   display: grid;
   grid-template-rows: 100px 1fr;
-  height: 35vh;
+  height: 70vh;
 
 }
 
@@ -1810,4 +1830,30 @@ footer{
 .container-inf-services h6 {
   color: var(--main);
   font-weight: 600;
+}
+
+/*Obra social*/
+.social-works-cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 5vh;
+}
+
+.title-social{
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.title-social i{
+  font-size: 1rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.p-banner-social-works{
+  color: black;
+  font-size: 1.4rem;
+  width: 50%;
+  line-height: 150%;
 }
