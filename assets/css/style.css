@@ -1792,6 +1792,8 @@ footer{
   justify-content: center;
   align-items: center;
   height: fit-content;
+  flex-direction: column;
+  text-align: center;
 
 }
 
@@ -1807,7 +1809,7 @@ footer{
   background-image: url("https://th.bing.com/th/id/R.0dbc52ce3084738b84f5acbb867dd7cb?rik=1eVrxlPasjzuYQ&riu=http%3a%2f%2fpageweb.virtevo.com%2fimg%2fdocteur-faucher.jpg&ehk=LGlDG%2fQAhvTnmAOhpP5sX2JCG90Aqq1qVNbz9xC3dbc%3d&risl=&pid=ImgRaw&r=0");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: inherit;
 }
 
 @media (max-width: 1278px){
@@ -1917,7 +1919,7 @@ footer{
   .container-info-list{
     display: grid;
     grid-template-rows: 100px 1fr;
-    height: 70vh;
+    height: 85vh;
   }
 }
 @media (max-width: 1010px){
