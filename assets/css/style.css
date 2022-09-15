@@ -1800,13 +1800,13 @@ footer{
 
 
 .div-img-specialist1{
-  background-image: url("https://medicointernistatijuana.com/wp-content/uploads/2021/01/smiling-doctor-with-stethoscope-at-hospital-PVS8FJU.jpg");
+  background-image: url("https://eunamed.com/wp-content/uploads/2021/02/medico-especialista-en-chile-650x650-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: inherit;
 }
 .div-img-specialist2{
-  background-image: url("https://th.bing.com/th/id/R.0dbc52ce3084738b84f5acbb867dd7cb?rik=1eVrxlPasjzuYQ&riu=http%3a%2f%2fpageweb.virtevo.com%2fimg%2fdocteur-faucher.jpg&ehk=LGlDG%2fQAhvTnmAOhpP5sX2JCG90Aqq1qVNbz9xC3dbc%3d&risl=&pid=ImgRaw&r=0");
+  background-image: url("https://medicointernistatijuana.com/wp-content/uploads/2021/01/smiling-doctor-with-stethoscope-at-hospital-PVS8FJU.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: inherit;
@@ -1820,6 +1820,12 @@ footer{
   }
 
   .div-img-specialist2{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .div-img-specialist1{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1839,6 +1845,11 @@ footer{
     background-position: center;
   }
 
+  .div-img-specialist1{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   .box-specialist{
     display: grid;
     grid-template-columns: 1fr;
