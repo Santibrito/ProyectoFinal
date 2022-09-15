@@ -613,12 +613,12 @@
   }
 
   .p-banner{
-    color: rgb(19, 19, 19);
+    color: rgb(255, 255, 255);
     font-size: 1.1rem;
     width: 100%;
   }
   .slider-banner1 {
-    background-image: linear-gradient(rgba(224, 222, 222, 0.507), #429df1a8),url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
+    background-image: linear-gradient(rgba(16, 156, 221, 0.507), #0730577e),url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
     background-position: 35%;
     background-size: cover;
     background-repeat: no-repeat;
