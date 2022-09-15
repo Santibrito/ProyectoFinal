@@ -744,10 +744,149 @@
 
 /* END About Us*/
 
+/*Obra social*/
+.container-social-work{
+  background-image: linear-gradient(rgba(40, 45, 48, 0.24), #1d1f2050),url("../img/iStock-1208801475.jpg");
+  background-position: center;
+background-size: cover;
+  padding: 8vh;
+}
+
+
+.container-social-work-into{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 2vh;
+  width: 60%;
+}
+
+
+
+
+.title-social{
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.box-social-work{
+  background-color: #f8f7f7;
+  padding: 3vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-chek{
+  margin-bottom: 1vh;
+}
+
+.list-chek i{
+  color: green;
+}
+
+.btn-social-work{
+  background-color: var(--main);
+  text-align: center;
+  padding: 0.7vh;
+  font-size: 1rem;
+  color: white;
+  font-family: var(--font-subtitle);
+}
+
+
+@media (max-width: 1770px){
+  .container-social-work-into{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2vh;
+    width: 80%;
+  }
+}
+@media (max-width: 1368px){
+  .container-social-work-into{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2vh;
+    width: 100%;
+  }
+  .title-social{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+}
+
+.mobile-responsive-social{
+  display: none;
+}
+
+@media (max-width: 1015px){
+  .container-social-work-into{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1vh;
+    width: 100%;
+    
+  }
+  .pc-responsive-social{
+    display: none;
+  }
+
+  .mobile-responsive-social{
+    display: block;
+  }
+
+  .container-social-work{
+    background-image: linear-gradient(rgba(40, 45, 48, 0.24), #1d1f2050),url("../img/iStock-1208801475.jpg");
+    background-position: center;
+  background-size: cover;
+    padding: 1vh;
+  }
+}
+
+
+
+/*Tienda*/
+.shop-title{
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-title p{
+  margin-top: 1vh;
+  font-size: 1.5rem;
+}
+
+
+.container-cards-shop{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .bauti-celu{
   display: none;
 }
+
+
 
 /*bauti*/
 
