@@ -1521,3 +1521,14 @@ footer{
     margin-left: 3rem;
 }
 }
+
+/* Sevices */
+
+.container-inf-services {
+  padding: 5rem;
+}
+
+.container-inf-services h6 {
+  color: var(--main);
+  font-weight: 600;
+}
