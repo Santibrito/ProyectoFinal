@@ -50,11 +50,11 @@
 /*Tailwind*/
 
 .title{
-  @apply text-3xl laptop:text-4xl desktop:text-5xl text-[#262b59] font-['Title'] dark:text-[#ffffff]
+  @apply text-3xl laptop:text-4xl desktop:text-6xl text-[#262b59] font-['Title'] dark:text-[#ffffff]
 }
 
 .sub-title{
-  @apply text-2xl laptop:text-3xl desktop:text-4xl text-[#009eb8] font-['Sub-Title']
+  @apply text-2xl laptop:text-3xl desktop:text-5xl text-[#009eb8] font-['Sub-Title']
 }
 
 .paragraph{
@@ -882,7 +882,6 @@ background-size: cover;
 
 
 
-
 .bauti-celu{
   display: none;
 }
@@ -1436,6 +1435,13 @@ background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.container-footer-img{
+  background-image: url("../img/footer-img.png");
+  padding: 23vh;
+  background-position: 50% -265%;
+  background-repeat: no-repeat;
 }
 
 /* Footer */
