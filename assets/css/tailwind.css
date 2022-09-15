@@ -813,6 +813,10 @@ video {
   width: 33.333333%;
 }
 
+.w-5 {
+  width: 1.25rem;
+}
+
 .w-1 {
   width: 0.25rem;
 }
@@ -823,10 +827,6 @@ video {
 
 .w-80 {
   width: 20rem;
-}
-
-.w-5 {
-  width: 1.25rem;
 }
 
 .max-w-xl {
@@ -983,6 +983,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-none {
+  border-radius: 0px;
+}
+
 .rounded-t {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
@@ -1085,6 +1089,10 @@ video {
   padding: 1rem;
 }
 
+.p-1\.5 {
+  padding: 0.375rem;
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -1107,10 +1115,6 @@ video {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.p-1\.5 {
-  padding: 0.375rem;
 }
 
 .py-8 {
@@ -1163,6 +1167,11 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1202,14 +1211,14 @@ video {
   line-height: 1.25rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-lg {
@@ -1292,6 +1301,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
 .text-\[\#262b59\] {
   --tw-text-opacity: 1;
   color: rgb(38 43 89 / var(--tw-text-opacity));
@@ -1305,11 +1324,6 @@ video {
 .text-\[\#4b4b4c\] {
   --tw-text-opacity: 1;
   color: rgb(75 75 76 / var(--tw-text-opacity));
-}
-
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .text-blue-600 {
@@ -1423,13 +1437,6 @@ video {
   color: rgb(38 43 89 / var(--tw-text-opacity));
 }
 
-@media (prefers-color-scheme: dark) {
-  .title {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-}
-
 @media (min-width: 1024px) {
   .title {
     font-size: 2.25rem;
@@ -1472,13 +1479,6 @@ video {
   line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(75 75 76 / var(--tw-text-opacity));
-}
-
-@media (prefers-color-scheme: dark) {
-  .paragraph {
-    --tw-text-opacity: 1;
-    color: rgb(228 227 227 / var(--tw-text-opacity));
-  }
 }
 
 @media (min-width: 1024px) {
@@ -3182,36 +3182,38 @@ footer{
 
 /*Nuestros Especialista*/
 
-.container-specialist {
-  background-color: bisque;
-  padding: 8vh;
+.container-main-specialists{
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.div-info-specialist{
+  padding: 2vh;
+}
+
+.container-specialists{
+  padding-top: 5vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 2vh;
+}
+
+.box-specialist{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 3vh;
 }
 
 .div-h2-specialist{
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 3rem;
 }
 
-/*.box-specialist{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  width: 100%;
-  padding: 1rem;
-}*/
-
 .div-img-specialist1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30vh 20vh;
   background-image: url("https://medicointernistatijuana.com/wp-content/uploads/2021/01/smiling-doctor-with-stethoscope-at-hospital-PVS8FJU.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -3219,34 +3221,55 @@ footer{
 }
 
 .div-img-specialist2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30vh 20vh;
   background-image: url("https://th.bing.com/th/id/R.0dbc52ce3084738b84f5acbb867dd7cb?rik=1eVrxlPasjzuYQ&riu=http%3a%2f%2fpageweb.virtevo.com%2fimg%2fdocteur-faucher.jpg&ehk=LGlDG%2fQAhvTnmAOhpP5sX2JCG90Aqq1qVNbz9xC3dbc%3d&risl=&pid=ImgRaw&r=0");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.div-info-specialist{
-  display: flex;
-  justify-content: start;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 0px 8px;
+@media (max-width: 1278px){
+  .container-specialists{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  .div-img-specialist2{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media (max-width: 616px){
+  .container-specialists{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  .div-img-specialist2{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .box-specialist{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+    padding: 2vh;
+  }
 }
 
 .name-specialist{
-  display: flex;
   justify-content: start;
   align-items: flex-start;
-  flex-direction: column;
   text-align: start;
   width: 100%;
-  padding-bottom: 10px;
-  padding-left: 5px;
-  background-color: #aaaaaa;
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
 }
 
 .name-specialist h3{
@@ -3255,7 +3278,7 @@ footer{
 }
 
 .name-specialist p{
-  font-size: 1.225rem;
+  font-size: 1.3rem;
   padding-left: 5px;
 }
 
@@ -3265,88 +3288,21 @@ footer{
   align-items: flex-start;
   flex-direction: column;
   text-align: start;
-  width: 100%;
-  padding: 5px;
-  background-color: #f8f7f7;
+  padding: 2px;
 }
 
-@media (max-width: 1023px){
-  .box-specialist{
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .div-info-specialist {
-    width: 30%;
-    padding: 0;
-  }
-
-  .div-img-specialist1 {
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-  }
-
-  .div-img-specialist2 {
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-  }
-}
-
-@media (max-width: 768px){
-  .div-info-specialist {
-    width: 45%;
-    padding: 0;
-  }
-
-  .div-img-specialist1 {
-    justify-content: center;
-    align-items: center;
-    width: 35%;
-  }
-
-  .div-img-specialist2 {
-    justify-content: center;
-    align-items: center;
-    width: 35%;
-  }
-}
-
-@media (max-width: 640px){
-  .box-specialist{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .div-info-specialist{
-    width: 221px;
-  }
-
-  .name-specialist h3{
-    font-size: 1.5rem;
-    padding: 5px 0px;
-  }
-
-  .name-specialist p{
-    font-size: 1rem;
-    padding-left: 5px;
-  }
-
-  .text-specialist{
-    font-size: 0.7rem;
-  }
+.text-specialist p{
+  font-size: 1rem;
+  font-weight: bolder;
 }
 
 /* Sevices */
 
 .container-info-main{
   padding: 5vh;
-  display: grid;
   grid-gap: 2vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }
 
 .container-inf-services {
@@ -3357,7 +3313,7 @@ footer{
 .container-info-list{
   display: grid;
   grid-template-rows: 100px 1fr;
-  height: 70vh;
+  height: 60vh;
 }
 
 .img-inf-services{
@@ -3366,6 +3322,50 @@ footer{
   grid-template-rows: repeat(2,1fr);
   grid-gap: 1vh;
   margin-top: 2vh;
+}
+
+@media (max-width: 700px){
+  .container-info-list{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    height: 70vh;
+  }
+}
+
+@media (max-width: 1010px){
+  .container-info-main{
+    padding: 5vh;
+    grid-gap: 2vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  .container-inf-services {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  .img-inf-services{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1vh;
+    margin-top: 2vh;
+  }
+
+  .title-ul-service{
+    margin-top: 2vh;
+  }
+
+  #img1,#img3{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #img2,#img4{
+    display: none;
+  }
 }
 
 .title-inf-services{
@@ -3594,16 +3594,6 @@ iframe {
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-\[\#ffffff\] {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-\[\#e4e3e3\] {
-    --tw-text-opacity: 1;
-    color: rgb(228 227 227 / var(--tw-text-opacity));
   }
 
   .dark\:text-gray-300 {
