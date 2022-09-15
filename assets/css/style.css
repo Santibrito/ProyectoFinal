@@ -567,6 +567,27 @@
 }
 
 
+
+
+#todo{
+  color: var(--secondary);
+}
+
+
+#btn-banner{
+  margin-top: 10vh;
+  padding: 1.5vh;
+  border-radius: 5px;
+  background-color: var(--secondary);
+  color: white;
+  font-family: var(--font-subtitle);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+
 @media (max-width: 642px){
   .h1-p{
     display: none;
@@ -590,7 +611,7 @@
   
   }
   .slider-banner1{
-    padding: 5vh;
+    padding: 4vh;
   }
 
   .p-banner{
@@ -599,39 +620,34 @@
     width: 100%;
   }
   .slider-banner1 {
-    background-image: url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
-    background-position: 30%;
+    background-image: linear-gradient(rgba(177, 175, 175, 0.507), #0997cf7a),url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
+    background-position: 35%;
     background-size: cover;
     background-repeat: no-repeat;
   
   }
   
   .img-banner-2 {
-    background-image: url("../img/pruebaaaa.jpg");
-    background-position: 43% 90% ;
+    background-image: linear-gradient(rgba(224, 222, 222, 0.507), #0997cf7a),url("../img/pruebaaaa.jpg");
+    background-position: 60% 90% ;
     background-size: cover;
     background-repeat: no-repeat;
   }
   
-}
-
-
-#todo{
-  color: var(--secondary);
-}
-
-
-#btn-banner{
-  margin-top: 10vh;
-  padding: 1.5vh;
-  border-radius: 5px;
-  background-color: var(--secondary);
-  color: white;
-  font-family: var(--font-subtitle);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  #btn-banner{
+    margin-top: 10vh;
+    padding: 1.5vh;
+    border-radius: 5px;
+    background-color: var(--main);
+    color: white;
+    font-family: var(--font-subtitle);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  
+  
 }
 
 
