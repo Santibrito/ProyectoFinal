@@ -61,8 +61,6 @@
   @apply text-base laptop:text-base desktop:text-lg text-[#4b4b4c] font-['Paragraph'] dark:text-[#e4e3e3]
 }
 
-
-
 /*Social*/
 
 .info-clinic {
@@ -864,21 +862,6 @@ background-size: cover;
   justify-content: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .bauti-celu{
   display: none;
 }
@@ -1517,4 +1500,3 @@ footer{
     margin-left: 3rem;
 }
 }
-
