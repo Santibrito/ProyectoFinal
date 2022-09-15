@@ -54,7 +54,7 @@
 }
 
 .sub-title{
-  @apply text-2xl laptop:text-3xl desktop:text-5xl text-[#009eb8] font-['Sub-Title']
+  @apply text-3xl laptop:text-3xl desktop:text-5xl text-[#009eb8] font-['Sub-Title']
 }
 
 .paragraph{
@@ -90,6 +90,12 @@
 
 .phone {
   display: flex;
+}
+
+.active{
+  color: var(--secondary) !important;
+  border-bottom:2px solid var(--main);
+    padding-bottom:2px;
 }
 
 .info-clinic i {
@@ -492,11 +498,15 @@
 
 .slider-banner1 {
   background-image:  url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
-
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
+}
 
+.slider-banner3{
+  background-image:  linear-gradient(rgba(33, 34, 34, 0.507), #191b1b7a),url("../img/servicios/cardiologia.jpg");
+ background-position: center;
+ background-size: cover;
 }
 
 .img-banner-2 {
@@ -505,6 +515,8 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
 
 
 .sub-banner {
@@ -534,9 +546,16 @@
   padding: 10vh;
 }
 
+.slider-banner3{
+  padding: 10vh;
+}
+
 
 @media (max-width: 1280px){
   .slider-banner1{
+    padding: 5vh;
+  }
+  .slider-banner3{
     padding: 5vh;
   }
   .sub-banner {
@@ -609,6 +628,9 @@
   .slider-banner1{
     padding: 5vh;
   }
+  .slider-banner3{
+    padding: 5vh;
+  }
 
   .p-banner{
     color: rgb(255, 255, 255);
@@ -617,6 +639,14 @@
   }
   .slider-banner1 {
     background-image: linear-gradient(rgba(16, 156, 221, 0.507), #0730577e),url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
+    background-position: 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+  }
+
+  .slider-banner3 {
+    background-image: linear-gradient(rgba(16, 156, 221, 0.507), #0730577e),url("../img/servicios/cardiologia.jpg");
     background-position: 35%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -748,13 +778,15 @@
   background-color: rgba(143, 143, 143, 0.1);
   padding: 8vh;
 }
-.div-h2-services{
+.title-services{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: fit-content;
   padding: 10px;
+  flex-direction: column;
+  margin-bottom: 2vh;
 }
 .container-services-into{
   display: grid;
@@ -764,15 +796,29 @@
 }
 
 .box-services{
-  /*background-color: #f8f7f7;*/
-  background-color:#aaaaaa;
-  padding: 3vh;
+  padding: 2vh;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   margin: auto;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.text-services h5{
+  font-size: 2rem;
+  color: var(--main);
+}
+
+.text-services a{
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.text-services p{
+  color: var(--secondary);
 }
 .icon-services{
   display: flex;
@@ -816,7 +862,7 @@
     display: grid;
     grid-template-columns: repeat(1,1fr);/*3*/
     grid-gap: 2vh;
-    width: 80%;
+    
   }
 }
 @media (max-width: 1368px){
@@ -827,7 +873,10 @@
     width: 100%;
   }
   .title-services{
-    text-transform: uppercase;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    
     font-size: 1.5rem;
   }
 }
@@ -968,7 +1017,8 @@ background-size: cover;
 
 /*Tienda*/
 .shop-title{
-  margin-top: 5vh;
+  margin-top: 9vh;
+  padding-bottom: 4vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -976,6 +1026,9 @@ background-size: cover;
   text-align: center;
 }
 
+.container-shop-index{
+  padding-bottom: 5vh;
+}
 
 .shop-title p{
   margin-top: 1vh;
@@ -990,10 +1043,49 @@ background-size: cover;
 
 
 
+.card-shop{
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  padding: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.card-shop-title h4{
+  font-size: 1.6rem;
+  text-align: center;
+}
 
+.card-shop-price h5{
+  font-size: 1.5rem;
+  color: var(--main);
+  text-align: center;
+  padding: 1rem;
+  
+}
 
+.card-shop-price p{
+  text-align: center;
+  display: flex;
+  margin: auto;
+  font-size: 0.9rem;
+  font-weight: bolder;
+}
 
+.btn-shop{
+  display: grid;
+  justify-content: center;
+}
+
+#btn-shop{
+  padding: 1vh;
+  background-color: var(--main);
+  font-family: var(--font-subtitle);
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
 
 
 
@@ -1559,7 +1651,7 @@ background-size: cover;
 .container-footer-img{
   background-image: url("../img/footer-img.png");
   padding: 23vh;
-  background-position: 50% -265%;
+  background-position: center 4.2vh;
   background-repeat: no-repeat;
 }
 
@@ -1567,6 +1659,7 @@ background-size: cover;
 
 footer{
   background-color: rgb(232, 247, 248);
+  padding: 2vh;
 }
 
 .container-footer{
@@ -1649,8 +1742,69 @@ footer{
 
 /* Sevices */
 
+.container-info-main{
+  padding: 5vh;
+  display: grid;
+  grid-gap: 2vh;
+ 
+}
+
 .container-inf-services {
-  padding: 5rem;
+  display: grid;
+  grid-template-rows: 200px 1fr;
+
+}
+
+.container-info-list{
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  height: 35vh;
+
+}
+
+.img-inf-services{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-gap: 1vh;
+  margin-top: 2vh;
+ 
+}
+
+.title-inf-services{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.container-inf-services-details{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.img-info-services-box1{
+  background-image: url("../img/servicios/servicescardiology.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.img-info-services-box2{
+  background-image: url("../img/servicios/cardiologia.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.img-info-services-box3{
+  background-image: url("../img/servicios/cardiologia3.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.img-info-services-box4{
+  background-image: url("../img/servicios/cardiologia4.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .container-inf-services h6 {
