@@ -595,7 +595,7 @@
 
   .p-banner{
     color: rgb(19, 19, 19);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     width: 80%;
   }
   .slider-banner1 {
@@ -653,7 +653,7 @@
 
 .p-about-us {
   margin-top: 1rem;
-  text-align: justify;
+
 }
 
 .about-us-box2{
@@ -683,6 +683,11 @@
   -o-border-radius: 0.5rem;
 }
 
+@media (max-width: 642px){
+  .about-us-box2{
+    padding: 2rem;
+  }
+}
 
 /* END About Us*/
 
