@@ -578,7 +578,7 @@
     color: white;
     width: 100%;
     padding-bottom: 1vh;
-    font-size: 2rem;
+    font-size: 2.2rem;
   
   }
 
@@ -586,7 +586,7 @@
     color: rgb(0, 0, 0);
     width: 100%;
     padding-bottom: 2vh;
-    font-size: 2.5rem;
+    font-size: 2rem;
   
   }
   .slider-banner1{
@@ -596,7 +596,7 @@
   .p-banner{
     color: rgb(19, 19, 19);
     font-size: 1.1rem;
-    width: 80%;
+    width: 100%;
   }
   .slider-banner1 {
     background-image: url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
