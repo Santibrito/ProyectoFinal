@@ -2789,9 +2789,9 @@ video {
 #logos-home-page .slider:before, #logos-home-page .slider:after {
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
-  height: 100px;
+  height: 200px;
   position: absolute;
-  width: 200px;
+  width: 100px;
   z-index: 2;
 }
 
@@ -2810,7 +2810,9 @@ video {
   -webkit-animation: scroll 40s linear infinite;
   animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 14);
+  width: calc(400px * 14);
+  margin-left: 2vh;
+  margin-right: 2vh;
 }
 
 #logos-home-page div.slide {
