@@ -121,9 +121,156 @@
         </section>
         </section>
 
+        <!--Contador-->
+        <section class="mx-auto container-counter">
+
+            <div class="counter-box">
+
+              <div class="number-box">
+                <div class="counter sub-title" style="font-size: 3rem;">
+                  <h2>0 +</h2>
+                </div>
+              </div>
+              <br>
+              <div class="counter-text">
+                <h3 class="paragraph ">Pacientes Contentos</h3>
+              </div>
+
+            </div>
+
+            <div class="counter-box">
+              <div class="number-box sub-title" style="font-size: 3rem;">
+                <div class="counter">0</div>
+              </div>
+              <br>
+              <div class="counter-text">
+                <h3 class="paragraph ">Cirugia exitosas</h3>
+              </div>
+            </div>
+
+            <div class="counter-box">
+              <div class="number-box sub-title" style="font-size: 3rem;">
+                <div class="counter">0</div>
+              </div>
+              <br>
+              <div class="counter-text">
+                <h3 class="paragraph">Años de trayectoria</h3>
+              </div>
+            </div>
+        </section>
+
+        <section>
+    
+    <section class="mx-auto container-counter-m">
+        <div x-data="{swiper: null}" x-init="swiper = new Swiper($refs.container, {
+              loop: true,
+              slidesPerView: 1,
+              spaceBetween: 0,
+          
+              breakpoints: {
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 0,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 0,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 0,
+                },
+              },
+            })" class="relative w-10/12 mx-auto flex flex-row">
+          <div class="absolute inset-y-0 left-0 z-10 flex items-center">
+            <button @click="swiper.slidePrev()" class="bg-white -ml-2 lg:-ml-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6">
+                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+        
+          <div class="swiper-container" x-ref="container">
+            <div class="swiper-wrapper">
+          
+              <div class="swiper-slide p-4">
+                <div class="flex flex-col rounded  overflow-hidden">
+                  <div class="flex-shrink-0">
+                    <div class="counter-box">
+
+                      <div class="number-box">
+                        <div class="counter sub-title" style="font-size: 3rem;">
+                          <h2>0</h2>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="counter-text">
+                        <h3 class="paragraph ">Pacientes Contentos</h3>
+                      </div>
+        
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+        
+              <div class="swiper-slide p-4">
+                <div class="flex flex-col rounded  overflow-hidden">
+                  <div class="flex-shrink-0">
+ <div class="counter-box">
+
+              <div class="number-box">
+                <div class="counter sub-title" style="font-size: 3rem;">
+                  <h2>0 +</h2>
+                </div>
+              </div>
+              <br>
+              <div class="counter-text">
+                <h3 class="paragraph ">Años de trayectoria</h3>
+              </div>
+
+            </div>                  </div>
+                </div>
+              </div>
+        
+              <div class="swiper-slide p-4">
+                <div class="flex flex-col rounded  overflow-hidden">
+                  <div class="flex-shrink-0">
+                    <div class="counter-box">
+
+                      <div class="number-box">
+                        <div class="counter sub-title" style="font-size: 3rem;">
+                          <h2>0 +</h2>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="counter-text">
+                        <h3 class="paragraph ">Pacientes Contentos</h3>
+                      </div>
+        
+                    </div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="absolute inset-y-0 right-0 z-10 flex items-center">
+            <button @click="swiper.slideNext()" class="bg-white -mr-2 lg:-mr-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+    </section>     
+      
+       </section>
     </header>
 
     <main>
+
+
     <!--Naylu-->
         <section class="grid grid-cols-1 laptop:grid-cols-2 desktop:grid-cols-2 container mx-auto container-about">
 
@@ -140,64 +287,76 @@
         </section>
 
        
-    <!--Bauti-->
+   
+
+<!--Bauti
     <section class="container-service container mx-auto ">
             
             <div class="services-box1">
-                <div class="div-services-box1">
-                    <h2 class="h2-div-services-box1">01</h2>
-                </div>
+                
                 <div class="div2-services-box1">
-                    <div class="div-img-services-box1">
-                        <img class="img-services-box1" src="https://cdn-icons-png.flaticon.com/512/862/862032.png" alt="x">
-                    </div>
-                    <p class="p-title-div-services-box1">Terapia Intensiva</p>
-                    <p class="paragraph p-div-services-box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatum quidem voluptates exercitationem? Debitis</p>
+                    <div class="title-service">
+                        <h2 class="h2-service-title">Radiología</h2>
+                      </div>
+    
+                      <div class="paragraph-service">
+                        <p class="paragraph p-service">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, rerum optio sed amet sapiente voluptatum!</p>
+                      </div>
                 </div>
             </div>
 
             <div class="services-box2">
-                <div class="div-services-box2">
-                    <h2 class="h2-div-services-box2">02</h2>
-                </div>
+                
                 <div class="div2-services-box2">
-                    <div class="div-img-services-box2">
-                        <img class="img-services-box2" src="https://cdn-icons-png.flaticon.com/512/4039/4039442.png" alt="x">
-                    </div>
-                    <p class="p-title-div-services-box2">Laboratorio</p>
-                    <p class="paragraph p-div-services-box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatum quidem voluptates exercitationem? Debitis</p>
+                  
+                    <div class="title-service">
+                        <h2 class="sub-title sub-service">Ecografia</h2>
+                      </div>
+    
+                      <div class="paragraph-service">
+                        <p class="paragraph p-service">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, rerum optio sed amet sapiente voluptatum!</p>
+                      </div>
+                  
+            
                 </div>
+
             </div>
 
             <div class="services-box3">
-                <div class="div-services-box3">
-                    <h2 class="h2-div-services-box3">03</h2>
-                </div>
+                
                 <div class="div2-services-box3">
-                    <div class="div-img-services-box3">
-                        <img class="img-services-box3" src="https://cdn-icons-png.flaticon.com/512/971/971646.png" alt="x">
+                    <div class="title-service">
+                        <h2 class="sub-title sub-service">Dermatologia</h2>
+                      </div>
+    
+                      <div class="paragraph-service">
+                        <p class="paragraph p-service">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, rerum optio sed amet sapiente voluptatum!</p>
+                      </div>
+                      
+                
                     </div>
-                    <p class="p-title-div-services-box3">Radiologia</p>
-                    <p class="paragraph p-div-services-box3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatum quidem voluptates exercitationem? Debitis</p>
                 </div>
             </div>
 
             <div class="services-box4">
-                <div class="div-services-box4">
-                    <h2 class="h2-div-services-box4">04</h2>
-                </div>
+                
                 <div class="div2-services-box4">
-                    <div class="div-img-services-box4">
-                        <img class="img-services-box4" src="https://cdn-icons-png.flaticon.com/512/2719/2719650.png" alt="x">
+                    <div class="title-service">
+                        <h2 class="sub-title sub-service">Oftalmología</h2>
+                      </div>
+    
+                      <div class="paragraph-service">
+                        <p class="paragraph p-service">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, rerum optio sed amet sapiente voluptatum!</p>
+                      </div>
+                      
+                
                     </div>
-                    <p class="p-title-div-services-box4">Especialidades</p>
-                    <p class="paragraph p-div-services-box4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatum quidem voluptates exercitationem? Debitis</p>
                 </div>
             </div>
 
     </section>
-
-
+-->
+<!--
  <section>
     
     
@@ -231,7 +390,7 @@
   
     <div class="swiper-container" x-ref="container">
       <div class="swiper-wrapper">
-        <!-- Slides -->
+    
         <div class="swiper-slide p-4">
           <div class="flex flex-col rounded shadow overflow-hidden">
             <div class="flex-shrink-0">
@@ -280,17 +439,55 @@
     
 
  </section>
-      
-    </main>
+-->
+    
+</main>
 
-    <footer class="grid grid-cols-2 laptop:grid-cols-4 desktop:grid-cols-4 container mx-auto">
+<section class="container-marks container mx-auto">
+  <div id="logos-home-page">
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide"><img class="alignnone size-medium wp-image-13023" src="assets/img/marcas/Petco-Logo-2021.webp" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13022" src="assets/img/marcas/purina.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13021" src="assets/img/marcas/royal.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-full wp-image-13020" src="assets/img/marcas/sabrositos.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13019" src="assets/img/marcas/Whiskas.png"alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13023" src="assets/img/marcas/Petco-Logo-2021.webp" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13022" src="assets/img/marcas/purina.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13021" src="assets/img/marcas/royal.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-full wp-image-13020" src="assets/img/marcas/sabrositos.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13019" src="assets/img/marcas/Whiskas.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13023" src="assets/img/marcas/Petco-Logo-2021.webp" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13022" src="assets/img/marcas/purina.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13021" src="assets/img/marcas/royal.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-full wp-image-13020" src="assets/img/marcas/sabrositos.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13019" src="assets/img/marcas/Whiskas.png" alt="" width="110" height="60" /></div>        <div class="slide"><img class="alignnone size-medium wp-image-13023" src="assets/img/marcas/Petco-Logo-2021.webp" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13022" src="assets/img/marcas/purina.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13021" src="assets/img/marcas/royal.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-full wp-image-13020" src="assets/img/marcas/sabrositos.png" alt="" width="110" height="60" /></div>        <div class="slide"><img class="alignnone size-medium wp-image-13019" src="assets/img/marcas/Whiskas.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13023" src="assets/img/marcas/Petco-Logo-2021.webp" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13022" src="assets/img/marcas/purina.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13021" src="assets/img/marcas/royal.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-full wp-image-13020" src="assets/img/marcas/sabrositos.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-full wp-image-13020" src="assets/img/marcas/sabrositos.png" alt="" width="110" height="60" /></div>        <div class="slide"><img class="alignnone size-medium wp-image-13019" src="assets/img/marcas/Whiskas.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13023" src="assets/img/marcas/Petco-Logo-2021.webp" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13022" src="assets/img/marcas/purina.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13021" src="assets/img/marcas/royal.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-full wp-image-13020" src="assets/img/marcas/sabrositos.png" alt="" width="110" height="60" /></div>
+        <div class="slide"><img class="alignnone size-medium wp-image-13019" src="assets/img/marcas/Whiskas.png" alt="" width="110" height="60" /></div>
+      </div>
+    </div>
+  </div>
+</section>
 
+    <footer>
+<div class="container mx-auto container-footer">
         <div class="div-footer">
             <ul class="list-footer">
-                <h6 class="h6-footer">NUESTRA EMPRESA</h6>
-                <a href="">Quienes somos?</a>
-                <a href="">Visión</a>
-                <a href="">Misión</a>
+                <h6 class="h6-footer sub-title">NUESTRA EMPRESA</h6>
+                <a href="" class="paragraph">Quienes somos?</a>
+                <a href="" class="paragraph">Visión</a>
+                <a href="" class="paragraph">Misión</a>
                 <a href=""></a>
                 <a href=""></a>
             </ul>
@@ -298,41 +495,41 @@
 
         <div class="div-footer">
             <ul class="list-footer">
-                <h6 class="h6-footer">PRODUCTOS</h6>
-                <a href="">Farmacia</a>
-                <a href="">Alimento</a>
-                <a href="">Juguetes</a>
-                <a href=""></a>
-                <a href=""></a>
+                <h6 class="h6-footer sub-title">PRODUCTOS</h6>
+                <a href="" class="paragraph">Farmacia</a>
+                <a href="" class="paragraph">Alimento</a>
+                <a href="" class="paragraph">Juguetes</a>
+                <a href="" class="paragraph"></a>
+                <a href="" class="paragraph"></a>
             </ul>
         </div>
 
         <div class="div-footer">
             <ul class="list-footer">
-                <h6 class="h6-footer">SERVICIOS</h6>
-                <a href="">Vacunas</a>
-                <a href="">Cirugía</a>
-                <a href="">Cardiología</a>
-                <a href="">Traumatología</a>
-                <a href="">Oftalmología</a>
+                <h6 class="h6-footer sub-title">SERVICIOS</h6>
+                <a href="" class="paragraph">Vacunas</a>
+                <a href="" class="paragraph">Cirugía</a>
+                <a href="" class="paragraph">Cardiología</a>
+                <a href="" class="paragraph">Traumatología</a>
             </ul>
         </div>
 
         <div class="div-footer">
             <ul>
-                <h6 class="h6-footer">SUSCRIBETE</h6>
-                <!--
+                <h6 class="h6-footer sub-title">SUSCRIBETE</h6>
+                
                 <input type="text" placeholder="Ingresa tu email">
-                -->
                 <div class="button-footer-suscription">
-                <button>Suscribirse</button>
+                  <br>
+                <a href="" id="sub-footer">Suscribirse</a>
                 </div>
             </ul>
         </div>
-
+      </div>
     </footer>
 
     <!--JavaScript-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
     <script src='https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js'></script>
     <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

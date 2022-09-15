@@ -648,13 +648,52 @@
   
 }
 
+/*Contador*/
+.container-counter{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 5vh;
+}
+
+.container-counter-m{
+  display: none;
+}
+
+@media (max-width: 890px){
+  .container-counter{
+    display: none;
+  }
+  .container-counter-m{
+    display: block;
+  }
+  
+}
+
+
+
+.counter-box {
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-box h2{
+  font-size: 2.5rem;
+}
+
+.counter-box h3{
+  font-size: 1.4rem;
+}
+
 
 /*About Us*/
 .container-about{
   margin-bottom: 5vh;
 }
 .about-us-box1{
-  background-image: url("../img/banner004.png");
+  background-image: url("../img/prueba.png");
   background-position: center;
   background-size: cover;
 }
@@ -711,8 +750,6 @@
 }
 
 /*bauti*/
-
-
 
 .carousel {
   position: relative;
@@ -876,6 +913,25 @@
 
 }
 
+.title-service{
+  color: rgb(250, 253, 253);
+  font-size: 2.2rem;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+ 
+}
+
+.sub-service{
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+
+.p-service{
+  color: rgb(0, 0, 0);
+}
+
 .services-box1{
   display: flex;
   width: auto;
@@ -883,8 +939,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(https://rec-end.elnuevodia.com/images/tn/0/16/1413/1901/473/618/2015/04/03/enfermera.jpg.jpg);
-  border: 1px solid gray;
+  background-image: linear-gradient(rgba(11, 98, 179, 0.863), #ffffff8c),url(https://rec-end.elnuevodia.com/images/tn/0/16/1413/1901/473/618/2015/04/03/enfermera.jpg.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  background-size: 90%;
+  transition: 0.5s all ease;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.services-box1:hover{
+  transition: 0.5s all ease;
+  background-size: 98%;
 }
 .div-services-box1{
   display: flex;
@@ -909,7 +975,7 @@
   height: 50%;
   font-size: 1.4cm;
   opacity: 0.5;
-  color: #4b4b4c;
+ 
 }
 .div-img-services-box1{
   display: flex;
@@ -943,7 +1009,7 @@
   justify-content: end;
   align-items: center;
   height: 65%;
-  color: #4b4b4c;
+  color: white;
 }
 
 .services-box2{
@@ -953,8 +1019,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(https://th.bing.com/th/id/OIP.pSWQXuzwGvI9gS6qBy2d8AHaHa?pid=ImgDet&rs=1);
-  border: 1px solid gray;
+  background-image:  linear-gradient(rgba(2, 32, 46, 0.466), #065888fd),url(https://th.bing.com/th/id/OIP.pSWQXuzwGvI9gS6qBy2d8AHaHa?pid=ImgDet&rs=1);
+  
 }
 .div-services-box2{
   display: flex;
@@ -1024,7 +1090,7 @@
   justify-content: center;
   align-items: center;
   background-image: url(https://image.freepik.com/foto-gratis/veterinario-companero-trabajo-examinar-perro_13339-232292.jpg);
-  border: 1px solid gray;
+  
 }
 .div-services-box3{
   display: flex;
@@ -1094,7 +1160,7 @@
   justify-content: center;
   align-items: center;
   background-image: url(https://th.bing.com/th/id/OIP.zXqXSt5TkA3Umx-SUaH1bgHaLG?pid=ImgDet&rs=1);
-  border: 1px solid gray;
+
 }
 .div-services-box4{
   display: flex;
@@ -1171,11 +1237,89 @@
   }
 }
 
+/*Slider*/
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+/*  Styling  */
+#logos-home-page .slider {
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+#logos-home-page .slider:before, #logos-home-page .slider:after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+#logos-home-page .slider:after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+#logos-home-page .slider:before {
+  left: 0;
+  top: 0;
+}
+
+#logos-home-page .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+#logos-home-page div.slide {
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* Footer */
+
+footer{
+  background-color: rgb(232, 247, 248);
+}
+
+.container-footer{
+  padding: 2vh;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+}
+
+
+
+.div-footer{
+  padding: 1vh;
+}
 
 .h6-footer {
   color: var(--main);
   font-weight: 600;
+  font-size: 1rem;
 }
 
 .list-footer {
@@ -1183,39 +1327,59 @@
   flex-direction: column;
 }
 
-ul a {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.div-footer input{
+  padding: 1vh;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 2px solid var(--main);
+  outline: none;
+  font-family: var(--font-subtitle);
 }
 
-ul input {
-  margin-top: 1rem;
-  border: 1px black solid;
-  border-radius: 0.5rem;
-  height: 3rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
-}
 
-.button-footer-suscription {
-  display: flex;
-  justify-content: start;
-}
-
-.button-footer-suscription button {
-  margin-top: 0.5rem;
+#sub-footer{
   background-color: var(--secondary);
-  padding: 0.8rem;
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
+  padding: 1vh;
+  color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: 0.5;
+  font-family: var(--font-subtitle);
 }
 
 .div-footer {
   margin-left: 3rem;
+}
+
+@media (max-width: 1044px) {
+  .container-footer{
+    padding: 1vh;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  
+  }
+  .container-footer{
+    grid-template-columns: repeat(2,1fr);
+  
+  }
+  .div-footer {
+    margin-left: 1rem;
+}
+}
+
+@media (max-width: 540px) {
+  .container-footer{
+    grid-template-columns: repeat(1,1fr);
+    justify-content: center;
+    margin: auto;
+  
+  }
+
+  .div-footer {
+    margin-left: 3rem;
+}
 }
 
