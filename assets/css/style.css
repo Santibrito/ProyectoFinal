@@ -92,6 +92,12 @@
   display: flex;
 }
 
+.active{
+  color: var(--secondary) !important;
+  border-bottom:2px solid var(--main);
+    padding-bottom:2px;
+}
+
 .info-clinic i {
   margin-right: 10px;
   align-items: center;
@@ -492,11 +498,15 @@
 
 .slider-banner1 {
   background-image:  url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
-
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
+}
 
+.slider-banner3{
+  background-image:  linear-gradient(rgba(33, 34, 34, 0.507), #191b1b7a),url("../img/servicios/cardiologia.jpg");
+ background-position: center;
+ background-size: cover;
 }
 
 .img-banner-2 {
@@ -505,6 +515,8 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
 
 
 .sub-banner {
@@ -534,9 +546,16 @@
   padding: 10vh;
 }
 
+.slider-banner3{
+  padding: 10vh;
+}
+
 
 @media (max-width: 1280px){
   .slider-banner1{
+    padding: 5vh;
+  }
+  .slider-banner3{
     padding: 5vh;
   }
   .sub-banner {
@@ -609,6 +628,9 @@
   .slider-banner1{
     padding: 5vh;
   }
+  .slider-banner3{
+    padding: 5vh;
+  }
 
   .p-banner{
     color: rgb(255, 255, 255);
@@ -617,6 +639,14 @@
   }
   .slider-banner1 {
     background-image: linear-gradient(rgba(16, 156, 221, 0.507), #0730577e),url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
+    background-position: 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+  }
+
+  .slider-banner3 {
+    background-image: linear-gradient(rgba(16, 156, 221, 0.507), #0730577e),url("../img/servicios/cardiologia.jpg");
     background-position: 35%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1712,8 +1742,69 @@ footer{
 
 /* Sevices */
 
+.container-info-main{
+  padding: 5vh;
+  display: grid;
+  grid-gap: 2vh;
+ 
+}
+
 .container-inf-services {
-  padding: 5rem;
+  display: grid;
+  grid-template-rows: 200px 1fr;
+
+}
+
+.container-info-list{
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  height: 35vh;
+
+}
+
+.img-inf-services{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-gap: 1vh;
+  margin-top: 2vh;
+ 
+}
+
+.title-inf-services{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.container-inf-services-details{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.img-info-services-box1{
+  background-image: url("../img/servicios/servicescardiology.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.img-info-services-box2{
+  background-image: url("../img/servicios/cardiologia.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.img-info-services-box3{
+  background-image: url("../img/servicios/cardiologia3.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.img-info-services-box4{
+  background-image: url("../img/servicios/cardiologia4.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .container-inf-services h6 {
