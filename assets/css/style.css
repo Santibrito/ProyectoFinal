@@ -2018,7 +2018,6 @@ footer{
 }
 
 
-<<<<<<< Updated upstream
 /* MAP */
 iframe {
   width: 100%;
@@ -2033,6 +2032,20 @@ iframe {
   font-weight: 600;
 }
 /*Obra social*/
+.title-social-work{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+.title-social-work h2{
+  width: 50%;
+  margin-bottom: 5vh;
+}
+
+
+
 .social-works{
   margin-bottom: 5vh;
   margin-top: 5vh;
@@ -2085,7 +2098,6 @@ iframe {
   font-size: 1.4rem;
   width: 50%;
   line-height: 150%;
-=======
 
 /*Login*/
 
@@ -2112,8 +2124,4 @@ iframe {
   display: flex;
   align-items: flex-end;
 }
-
-
-
->>>>>>> Stashed changes
-}
+}}
