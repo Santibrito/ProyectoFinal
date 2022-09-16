@@ -1927,10 +1927,21 @@ footer{
 }
 
 @media (max-width: 700px){
+  .div-img-specialist2{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: inherit;
+  }
+
+  .div-img-specialist1{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: inherit;
+  }
   .container-info-list{
     display: grid;
     grid-template-rows: 100px 1fr;
-    height: 85vh;
+    height: 90vh;
   }
 }
 @media (max-width: 1010px){
