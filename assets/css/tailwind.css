@@ -1219,19 +1219,14 @@ video {
   padding: 1.25rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .py-2\.5 {
@@ -1247,6 +1242,11 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .py-1 {
@@ -3832,6 +3832,14 @@ iframe {
   text-align: center;
 }
 
+.container-contact-boxes{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 5vh;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
 .title-contact-container p{
   padding-top: 1vh;
   text-align: center;
@@ -3843,6 +3851,17 @@ iframe {
 }
 
 @media (max-width: 1033px){
+  .container-contact-boxes{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+    padding: 5vh;
+    align-items: center;
+    margin-bottom: 5vh;
+    margin: auto;
+    justify-content: center;
+  }
+
   .container-contact-boxs{
     display: grid;
     grid-template-columns: 1fr;

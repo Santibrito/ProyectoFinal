@@ -2271,6 +2271,15 @@ iframe {
   text-align: center;
 }
 
+.container-contact-boxes{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 5vh;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+
 .title-contact-container p{
   padding-top: 1vh;
   text-align: center;
@@ -2279,6 +2288,19 @@ iframe {
 
 .container-contact-boxes{
   padding: 5vh;
+}
+
+@media (max-width: 1033px){
+  .container-contact-boxes{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+    padding: 5vh;
+    align-items: center;
+    margin-bottom: 5vh;
+    margin: auto;
+    justify-content: center;
+  }
 }
 
 
