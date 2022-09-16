@@ -2032,6 +2032,29 @@ iframe {
   font-weight: 600;
 }
 /*Obra social*/
+.title-social-work{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+.title-social-work h2{
+  width: 50%;
+  margin-bottom: 5vh;
+}
+
+
+
+.container-extra-socialwork{
+  padding: 5vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 5vh;
+}
+
+
+
 .social-works{
   margin-bottom: 5vh;
   margin-top: 5vh;
@@ -2084,9 +2107,20 @@ iframe {
   font-size: 1.4rem;
   width: 50%;
   line-height: 150%;
+
 }
 /*Login*/
 
+
+.justify-center {
+  /* justify-content: center; */
+}
+
+/*
+.flex {
+  display: flex;
+  align-items: flex-end;
+}
 
 @media (min-width: 320px) and (max-width: 480px) { 
   .flex {
@@ -2097,3 +2131,4 @@ iframe {
     justify-content: space-evenly;
   }
 }
+*/
