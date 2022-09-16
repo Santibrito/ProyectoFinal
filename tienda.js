@@ -1,0 +1,453 @@
+const app = Vue.
+createApp({
+    data(){
+        return{
+            arrayProductos:[],
+            arrayProductosRespaldo:[],
+            nombreA:[],
+            nombrez:[],
+            productosDescuento:[],
+            precioMayor:[],
+            precioMenor:[],
+            tipos:[],
+            tipoSelec:[],
+            rango:2000,
+            arrayJuguetes:[],
+            arrayJuguetesRespaldo:[],
+            arrayMedicamentos:[],
+            arrayMedicamentosRespaldo:[],
+            buscador:"",
+            arrayProductosBuscados:[],
+            productoInfoModal:{},
+            opcionElegida:"",
+
+
+        }
+    },
+    created(){
+        this.getProductos()
+    },//arrayProductos == cartas 
+    // arrayProductosRespaldo == cartasFiltradas
+    //buscador == nombre
+    //tipos == categorias
+    //tipoSelec  == categoriasSelec
+    methods:{
+        getProductos(){
+            console.log("productos");
+            axios.get("https://apipetshop.herokuapp.com/api/articulos")
+            .then((response)=>{
+                console.log(response)
+                console.log(response.data);
+                console.log(response.data.response);
+                this.arrayProductos = response.data.response;
+                this.arrayProductosRespaldo = this.arrayProductos
+
+
+                this.filtroJuguete()
+                this.filtroMedicamento()
+                this.functGetCategorias()
+                
+                if (this.tipoSelec == "") {
+                    this.functFiltroNombre(this.arrayProductos)
+                } else if(this.tipoSelec == "juguete"){
+                    this.functFiltroNombreJ(this.arrayJuguetes)
+                } else if(this.tipoSelec == "medicamento"){
+                    this.functFiltroNombreM(this.arrayMedicamentos)
+                }else{
+                    this.functFiltroNombre(this.arrayProductos)
+                }
+                
+                this.arrayJuguetesRespaldo = this.arrayJuguetes
+                this.arrayMedicamentosRespaldo = this.arrayMedicamentos
+
+
+
+                this.filtroNombreA()
+                this.filtroNombreZ()
+                this.filtroDescuento()
+                this.filtroPrecioMayor()
+                this.filtroPrecioMenor()
+                //this.filtroCategoria()
+                this.modalProducto()
+
+
+            })
+        },
+        filtroPrecioMayor(){
+            let arrayPrecios = this.arrayProductos.map(producto => producto.precio)
+            console.log(arrayPrecios);
+            this.precioMayor = arrayPrecios.sort((a, b) => b - a)
+            console.log(this.precioMayor);
+        },
+        filtroPrecioMenor(){
+            let arrayPrecios = this.arrayProductos.map(producto => producto.precio)
+            console.log(arrayPrecios);
+            this.precioMenor = arrayPrecios.sort((a, b) => a - b)
+            console.log(this.precioMenor);
+        },
+        filtroNombreA(){
+            this.nombreA = this.arrayProductos.map(producto => producto.nombre)
+            console.log(this.nombreA);
+            this.nombreA = this.nombreA.sort(function(a, b) {
+                return a.localeCompare(b);
+            })
+            console.log(this.nombreA);
+        },
+        filtroNombreZ(){
+            this.nombreZ = this.arrayProductos.map(producto => producto.nombre)
+            this.nombreZ = this.nombreZ.sort(function(a, b) {
+                return b.localeCompare(a);
+            })
+            console.log(this.nombreZ);
+        },
+        filtroDescuento(){
+            this.productosDescuento = this.arrayProductos.filter(producto => producto.precio < 500)
+            console.log(this.productosDescuento);
+            console.log(this.productosDescuento = this.productosDescuento.map(precio => precio.precio));
+        },
+        /*filtroCategoria(){
+            this.tipos = this.arrayProductos.map(producto => producto.tipo)
+            this.tipos = new Set(this.tipos)
+            console.log(this.tipos);
+        },*/
+        filtroMarca(){
+
+        },
+        modalProducto(id){
+            console.log(id);
+            this.productoInfoModal = this.arrayProductos.filter(producto=>producto._id == id)
+            console.log(this.productoInfoModal);
+        },
+        filtroJuguete(){
+            this.arrayJuguetes = this.arrayProductos.filter(producto=> producto.tipo == "Juguete")
+            console.log(this.arrayJuguetes);
+        },
+        filtroMedicamento(){
+            this.arrayMedicamentos = this.arrayProductos.filter(producto=> producto.tipo == "Medicamento")
+            console.log(this.arrayMedicamentos);
+        },
+
+        functFiltroNombre(array){
+            this.arrayProductosRespaldo = array.filter(producto => {
+                return producto.nombre.toLowerCase().includes(this.buscador.toLowerCase())
+
+            })
+            console.log(this.arrayProductosRespaldo);
+        },
+        functFiltroNombreJ(array){
+            this.arrayJuguetesRespaldo = array.filter(producto => {
+                return producto.nombre.toLowerCase().includes(this.buscador.toLowerCase())
+
+            })
+            console.log(this.arrayJuguetesRespaldo);
+        },
+        functFiltroNombreM(array){
+            this.arrayMedicamentosRespaldo = array.filter(producto => {
+                return producto.nombre.toLowerCase().includes(this.buscador.toLowerCase())
+
+            })
+            console.log(this.arrayMedicamentosRespaldo);
+        },
+
+        functGetCategorias(){
+            this.tipos = this.arrayProductosRespaldo.map(producto => producto.tipo)
+            this.tipos = new Set(this.tipos)
+            console.log(this.tipos);
+        }, 
+
+
+
+
+
+
+
+    },
+    computed:{
+        buscado(){ 
+            if (this.tipoSelec == "") {
+                this.arrayProductosRespaldo = this.arrayProductos
+            }
+            if (this.buscador != '') {
+                this.functFiltroNombre(this.arrayProductos)
+            } 
+
+            /*if (this.tipoSelec == ""){
+                this.arrayProductosRespaldo = this.arrayProductos
+                            
+            }else if (this.tipoSelec == "Juguete") {
+                this.arrayJuguetesRespaldo = this.arrayProductos.filter(producto => { 
+                    return this.tipoSelec.includes(producto.tipo)
+            })
+            }else if (this.tipoSelec == "Medicamento") {
+                this.arrayMedicamentosRespaldo = this.arrayProductos.filter(producto => { 
+                    return this.tipoSelec.includes(producto.tipo)
+                })
+            }
+
+            if (this.buscador != 0) {
+                if (this.tipoSelec == "Juguete") {
+                    this.functFiltroNombreJ(this.arrayJuguetes)
+
+                }else if (this.tipoSelec == "Medicamento") {
+                    this.functFiltroNombreM(this.arrayMedicamentos)
+
+                }else if (this.tipoSelec == "") {
+                    this.functFiltroNombre(this.arrayProductos)
+
+                }else {
+                    this.functFiltroNombre(this.arrayProductos)
+                }
+                
+            } 
+
+*/
+        },
+        buscadoJ(){ 
+            if (this.tipoSelec == "Juguete") {
+                this.arrayJuguetesRespaldo = this.arrayJuguetes
+            }
+            if (this.buscador != '') {
+                this.functFiltroNombreJ(this.arrayJuguetes)
+            } 
+        },
+        buscadoM(){ 
+            if (this.tipoSelec == "Medicamento") {
+                this.arrayMedicamentosRespaldo = this.arrayMedicamentos
+            }
+            if (this.buscador != '') {
+                this.functFiltroNombreM(this.arrayMedicamentos)
+            } 
+        },
+        buscadoOtro(){ 
+            if (this.tipoSelec != "" && this.tipoSelec != "Juguete" && this.tipoSelec != "Medicamento") {
+                this.arrayProductosRespaldo = this.arrayProductos
+            }
+            if (this.buscador != '') {
+                this.functFiltroNombre(this.arrayProductos)
+            } 
+        },
+        seleccionado(){
+            if (this.opcionElegida == "mayor") {
+                if (this.tipoSelec == "") {
+                    this.arrayProductosRespaldo = this.arrayProductos
+                    this.arrayProductosRespaldo.sort((a, b) => {
+                        return b.precio - a.precio;
+                    });
+                }else if(this.tipoSelec == "Juguete"){
+                    this.arrayJuguetesRespaldo = this.arrayJuguetes
+                    this.arrayJuguetesRespaldo.sort((a, b) => {
+                        return b.precio - a.precio;
+                    });
+                }else if(this.tipoSelec == "Medicamento"){
+                    this.arrayMedicamentosRespaldo = this.arrayMedicamentos
+                    this.arrayMedicamentosRespaldo.sort((a, b) => {
+                        return b.precio - a.precio;
+                    });
+                }else{
+                    this.arrayProductosRespaldo = this.arrayProductos
+                    this.arrayProductosRespaldo.sort((a, b) => {
+                        return b.precio - a.precio;
+                    });
+                }
+
+            }else if (this.opcionElegida == "menor") {
+                if (this.tipoSelec == "") {
+                    this.arrayProductosRespaldo = this.arrayProductos
+                    this.arrayProductosRespaldo.sort((a, b) => {
+                        return a.precio - b.precio;
+                    });
+                }else if(this.tipoSelec == "Juguete"){
+                    this.arrayJuguetesRespaldo = this.arrayJuguetes
+                    this.arrayJuguetesRespaldo.sort((a, b) => {
+                        return a.precio - b.precio;
+                    });
+                }else if(this.tipoSelec == "Medicamento"){
+                    this.arrayMedicamentosRespaldo = this.arrayMedicamentos
+                    this.arrayMedicamentosRespaldo.sort((a, b) => {
+                        return a.precio - b.precio;
+                    });
+                }else{
+                    this.arrayProductosRespaldo = this.arrayProductos
+                    this.arrayProductosRespaldo.sort((a, b) => {
+                        return a.precio - b.precio;
+                    });
+                }
+
+            }else if (this.opcionElegida == "a-z") {
+                if (this.tipoSelec == "") {
+                    this.arrayProductosRespaldo = this.arrayProductos
+                    this.arrayProductosRespaldo.sort(function(a, b) {
+                        return a.nombre.localeCompare(b.nombre);
+                    })
+                }else if(this.tipoSelec == "Juguete"){
+                    this.arrayJuguetesRespaldo = this.arrayJuguetes
+                    this.arrayJuguetesRespaldo.sort(function(a, b) {
+                        return a.nombre.localeCompare(b.nombre);
+                    })
+                }else if(this.tipoSelec == "Medicamento"){
+                    this.arrayMedicamentosRespaldo = this.arrayMedicamentos
+                    this.arrayMedicamentosRespaldo.sort(function(a, b) {
+                        return a.nombre.localeCompare(b.nombre);
+                    })
+                }else{
+                    this.arrayProductosRespaldo = this.arrayProductos
+                    this.arrayProductosRespaldo.sort(function(a, b) {
+                        return a.nombre.localeCompare(b.nombre);
+                    })
+                }
+
+            }else if (this.opcionElegida == "z-a") {
+                if (this.tipoSelec == "") {
+                    this.arrayProductosRespaldo = this.arrayProductos
+                    this.arrayProductosRespaldo.sort(function(a, b) {
+                        return b.nombre.localeCompare(a.nombre);
+                    })
+                }else if(this.tipoSelec == "Juguete"){
+                    this.arrayJuguetesRespaldo = this.arrayJuguetes
+                    this.arrayJuguetesRespaldo.sort(function(a, b) {
+                        return b.nombre.localeCompare(a.nombre);
+                    })
+                }else if(this.tipoSelec == "Medicamento"){
+                    this.arrayMedicamentosRespaldo = this.arrayMedicamentos
+                    this.arrayMedicamentosRespaldo.sort(function(a, b) {
+                        return b.nombre.localeCompare(a.nombre);
+                    })
+                }else{
+                    this.arrayProductosRespaldo = this.arrayProductos
+                    this.arrayProductosRespaldo.sort(function(a, b) {
+                        return b.nombre.localeCompare(a.nombre);
+                    })
+                }
+
+            }else if (this.opcionElegida == "descuentos") {
+                if (this.tipoSelec == "") {
+                    this.arrayProductosRespaldo = this.arrayProductosRespaldo.filter(producto => producto.precio < 500)
+
+                }else if(this.tipoSelec == "Juguete"){
+                    this.arrayJuguetesRespaldo = this.arrayJuguetesRespaldo.filter(producto => producto.precio < 500)
+
+                }else if(this.tipoSelec == "Medicamento"){
+                    this.arrayMedicamentosRespaldo = this.arrayMedicamentosRespaldo.filter(producto => producto.precio < 500)
+                }else{
+                    this.arrayProductosRespaldo = this.arrayProductosRespaldo.filter(producto => producto.precio < 500)
+
+                }
+
+            }
+        }
+
+
+        /*filtroBusqueda(){
+            this.arrayProductos = this.arrayProductosRespaldo
+            this.arrayProductosBuscados = this.arrayProductos.filter(producto => {
+                return producto.nombre.toLowerCase().includes(this.buscador.toLowerCase())
+            })
+            this.arrayProductos = this.arrayProductosBuscados
+
+
+            this.arrayJuguetes = this.arrayJuguetesRespaldo
+            this.arrayProductosBuscados = this.arrayJuguetes.filter(producto => {
+                return producto.nombre.toLowerCase().includes(this.buscador.toLowerCase())
+            })
+            this.arrayJuguetes = this.arrayProductosBuscados
+
+
+            this.arrayMedicamentos = this.arrayMedicamentosRespaldo
+            this.arrayProductosBuscados = this.arrayMedicamentos.filter(producto => {
+                return producto.nombre.toLowerCase().includes(this.buscador.toLowerCase())
+            })
+            this.arrayMedicamentos = this.arrayProductosBuscados
+        },*/
+        /*filtroSelect(){
+            if (this.opcionElegida == "mayor") {
+
+                this.arrayProductos = this.arrayProductosRespaldo
+                this.arrayProductos.sort((a, b) => {
+                    return b.precio - a.precio;
+                });
+
+                this.arrayJuguetes = this.arrayJuguetesRespaldo
+                this.arrayJuguetes.sort((a, b) => {
+                    return b.precio - a.precio;
+                });
+
+                this.arrayMedicamentos = this.arrayMedicamentosRespaldo
+                this.arrayMedicamentos.sort((a, b) => {
+                    return b.precio - a.precio;
+                });
+
+
+            } else if (this.opcionElegida == "menor") {
+
+                this.arrayProductos = this.arrayProductosRespaldo
+                this.arrayProductos.sort((a, b) => {
+                    return a.precio - b.precio;
+                });
+
+                this.arrayJuguetes = this.arrayJuguetesRespaldo
+                this.arrayJuguetes.sort((a, b) => {
+                    return a.precio - b.precio;
+                });
+
+                this.arrayMedicamentos = this.arrayMedicamentosRespaldo
+                this.arrayMedicamentos.sort((a, b) => {
+                    return a.precio - b.precio;
+                });
+
+
+            } else if (this.opcionElegida == "a-z") {
+
+                this.arrayProductos = this.arrayProductosRespaldo
+                this.arrayProductos.sort(function(a, b) {
+                    return a.nombre.localeCompare(b.nombre);
+                })
+                
+                this.arrayJuguetes = this.arrayJuguetesRespaldo
+                this.arrayJuguetes.sort(function(a, b) {
+                    return a.nombre.localeCompare(b.nombre);
+                })
+
+                this.arrayMedicamentos = this.arrayMedicamentosRespaldo
+                this.arrayMedicamentos.sort(function(a, b) {
+                    return a.nombre.localeCompare(b.nombre);
+                })
+
+
+
+            } else if (this.opcionElegida == "z-a") {
+
+                this.arrayProductos = this.arrayProductosRespaldo
+                this.arrayProductos.sort(function(a, b) {
+                    return b.nombre.localeCompare(a.nombre);
+                })
+                                
+                this.arrayJuguetes = this.arrayJuguetesRespaldo
+                this.arrayJuguetes.sort(function(a, b) {
+                    return b.nombre.localeCompare(a.nombre);
+                })
+
+                this.arrayMedicamentos = this.arrayMedicamentosRespaldo
+                this.arrayMedicamentos.sort(function(a, b) {
+                    return b.nombre.localeCompare(a.nombre);
+                })
+
+
+            } else if (this.opcionElegida == "descuentos") {
+                this.arrayProductos = this.arrayProductosRespaldo
+                this.arrayProductos = this.arrayProductos.filter(producto => producto.precio < 500)
+                                
+                this.arrayJuguetes = this.arrayJuguetesRespaldo
+                this.arrayJuguetes = this.arrayJuguetes.filter(producto => producto.precio < 500)
+
+                this.arrayMedicamentos = this.arrayMedicamentosRespaldo
+                this.arrayMedicamentos = this.arrayMedicamentos.filter(producto => producto.precio < 500)
+
+            }else{
+                this.arrayProductos = this.arrayProductosRespaldo
+                this.arrayJuguetes = this.arrayJuguetesRespaldo
+                this.arrayMedicamentos = this.arrayMedicamentosRespaldo
+            }
+        },*/
+
+    },
+}).mount('#app')
