@@ -799,7 +799,7 @@
 /*Servicios carrusel*/
 
 .container-services{
-  background-color: rgba(143, 143, 143, 0.1);
+
   padding: 8vh;
 }
 .title-services{
@@ -849,8 +849,6 @@
   justify-content: center;
   align-items: center;
   width: auto;
-  height: 60%;
-  background-color: #f8f7f7;
   border-radius: 50%;
   padding: 10px;
   -webkit-border-radius: 50%;
@@ -859,8 +857,8 @@
   -o-border-radius: 50%;
 }
 .icon-services img{
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 .text-services{
   display: flex;
@@ -1893,7 +1891,7 @@ footer{
 
 .text-specialist p{
   font-size: 1rem;
-  font-weight: bolder;
+  
 }
 
 
@@ -2034,10 +2032,39 @@ iframe {
   font-weight: 600;
 }
 /*Obra social*/
+.social-works{
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.box-social-work span{
+  font-size: 1rem;
+  width: 20%;
+}
+.list-social-work{
+  width: 100%;
+}
+
+
+.title-social{
+  font-size: 1.6rem;
+}
+
+.social-works p{
+  width: 50%;
+  text-align: center;
+}
+
 .social-works-cards {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   padding: 5vh;
+  grid-gap: 5vh;
 }
 
 .title-social{
