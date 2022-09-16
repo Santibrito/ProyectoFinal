@@ -2053,11 +2053,14 @@ iframe {
   grid-gap: 5vh;
 }
 
+.title-social-work{
+  margin-top: 10vh;
+}
 
 
 .social-works{
   margin-bottom: 5vh;
-  margin-top: 5vh;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2088,6 +2091,22 @@ iframe {
   grid-template-columns: repeat(3,1fr);
   padding: 5vh;
   grid-gap: 5vh;
+}
+
+.container-works-card-mobile{
+  display: none;
+}
+
+@media (max-width: 1260px){
+
+  .social-works-cards{
+    display: none;
+  }
+
+  .container-works-card-mobile{
+    display: block;
+    
+  }
 }
 
 .title-social{
