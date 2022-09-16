@@ -541,6 +541,12 @@
  background-size: cover;
 }
 
+.slider-banner5{
+  background-image:  linear-gradient(rgba(48, 53, 53, 0.808), #191b1bce),url("../img/contact-banner.jpg");
+ background-position: center;
+ background-size: cover;
+}
+
 .img-banner-2 {
   background-image: url("../img/pruebaaaa.jpg");
   background-position:  30%  ;
@@ -586,6 +592,10 @@
   padding: 10vh;
 }
 
+.slider-banner5{
+  padding: 10vh;
+}
+
 
 @media (max-width: 1280px){
   .slider-banner1{
@@ -596,6 +606,9 @@
   }
 
   .slider-banner4{
+    padding: 5vh;
+  }
+  .slider-banner5{
     padding: 5vh;
   }
   .sub-banner {
@@ -671,6 +684,9 @@
   .slider-banner4{
     padding: 5vh;
   }
+  .slider-banner5{
+    padding: 5vh;
+  }
   .slider-banner3{
     padding: 5vh;
   }
@@ -689,6 +705,13 @@
   }
   .slider-banner4 {
     background-image:  linear-gradient(rgba(48, 53, 53, 0.808), #191b1bce),url("../img/social-works.png");
+ background-position: center;
+ background-size: cover;
+  
+  }
+
+  .slider-banner5 {
+    background-image:  linear-gradient(rgba(48, 53, 53, 0.808), #191b1bce),url("../img/contact-banner.jpg");
  background-position: center;
  background-size: cover;
   
@@ -2271,6 +2294,15 @@ iframe {
   text-align: center;
 }
 
+.container-contact-boxes{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 5vh;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+
 .title-contact-container p{
   padding-top: 1vh;
   text-align: center;
@@ -2279,6 +2311,37 @@ iframe {
 
 .container-contact-boxes{
   padding: 5vh;
+}
+
+@media (max-width: 1033px){
+  .container-contact-boxes{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+    padding: 5vh;
+    align-items: center;
+    margin-bottom: 5vh;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .title-contact-container p{
+    padding-top: 1vh;
+    text-align: center;
+    font-size: 1.5rem;
+    width:85%;
+    margin: auto;
+  }
+
+  .title-contact-container h3{
+    padding-top: 5vh;
+    font-size: 1.9rem;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    text-align: center;
+  }
+  
 }
 
 
