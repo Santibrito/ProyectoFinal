@@ -2051,7 +2051,57 @@ iframe {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-gap: 5vh;
+  height: 80vh;
 }
+.vacio{
+  
+}
+
+
+
+@media (max-width: 1024px){
+  .container-extra-socialwork{
+    padding: 1vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 1vh;
+    justify-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 150vh;
+  }
+
+
+  .vacio{
+    padding: 5vh;
+  }
+
+  .mr-8{
+    display: grid;
+    margin: auto !important;
+    align-items: center;
+    justify-content: center;
+    width: 96%;
+  }
+  
+
+
+}
+@media (max-width: 588px){
+.title-social-work h2{
+  width: 96%;
+}
+
+.container-extra-socialwork{
+ 
+  height: 180vh;
+}
+
+
+}
+
+
 
 .title-social-work{
   margin-top: 10vh;
@@ -2097,9 +2147,35 @@ iframe {
   display: none;
 }
 
-@media (max-width: 1260px){
+@media (max-width: 1250px){
 
-  .social-works-cards{
+  .social-works-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    padding: 5vh;
+    grid-gap: 5vh;
+  }
+
+}
+
+@media (max-width: 600px){
+  .social-works h2{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+  }
+  .social-works p {
+    width: 97%;
+    text-align: center;
+}
+
+  .social-works-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    padding: 5vh;
+    grid-gap: 5vh;
     display: none;
   }
 
