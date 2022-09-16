@@ -2396,3 +2396,33 @@ iframe {
   }
 }
 */
+
+
+
+
+/* TIENDA */
+.modal-body {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.div-img-modal-body{
+  width: 100% !important;
+  height: 100% !important;
+}
+.div-img-modal-body img{
+  width: 400px !important;
+  height: 400px !important;
+}
+
+.modal-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--bs-modal-header-padding);
+  border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+  border-top-left-radius: var(--bs-modal-inner-border-radius);
+  border-top-right-radius: var(--bs-modal-inner-border-radius);
+  flex-direction: column-reverse !important;
+}
