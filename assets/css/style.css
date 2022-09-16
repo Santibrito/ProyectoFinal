@@ -2046,6 +2046,15 @@ iframe {
 
 
 
+.container-extra-socialwork{
+  padding: 5vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 5vh;
+}
+
+
+
 .social-works{
   margin-bottom: 5vh;
   margin-top: 5vh;
@@ -2099,29 +2108,27 @@ iframe {
   width: 50%;
   line-height: 150%;
 
+}
 /*Login*/
 
-@media (min-width: 320px) {
-  .space-y-4>:not([hidden])~:not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-bottom: calc(1rem*var(--tw-space-y-reverse));
-    margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
-}
-.space-y-4>:not([hidden])~:not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-bottom: calc(1rem*var(--tw-space-y-reverse));
-  margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
-}
-.justify-center {
-  justify-content: space-evenly;
-}
 
 .justify-center {
   /* justify-content: center; */
 }
 
+/*
 .flex {
   display: flex;
   align-items: flex-end;
 }
-}}
+
+@media (min-width: 320px) and (max-width: 480px) { 
+  .flex {
+    display: flex;
+    align-items: flex-end;
+  }
+  .justify-center {
+    justify-content: space-evenly;
+  }
+}
+*/
