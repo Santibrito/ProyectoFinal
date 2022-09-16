@@ -13,7 +13,8 @@
     <!--Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel='stylesheet' href='https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css'>
-    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+
 </head>
 <body> 
 
@@ -76,9 +77,9 @@
                        <li class="submenu-item"><a href="#" class="submenu-link">Cardiologia</a></li>
                     </ul>
                  </li>
-                 <li class="menu-item"><a href="#" class="menu-link">Obra Social</a></li>
+                 <li class="menu-item"><a href="obra-social.html" class="menu-link">Obra Social</a></li>
                  <li class="menu-item"><a href="#" class="menu-link">Tienda</a></li>
-                 <li class="menu-item"><a href="#" class="menu-link">Contacto</a></li>
+                 <li class="menu-item"><a href="contacto.html" class="menu-link">Contacto</a></li>
 
                  <li class="menu-item"><a href="#" class="menu-link" id="login-btn">Iniciar Sesion</a></li>
                  <li class="menu-item"><a href="#" class="menu-link" id="card-shop-pc"><i class="bi bi-cart-check" style="font-size: 3vh;"></i></a></li>
@@ -88,6 +89,7 @@
         </section>
 
         <!--Banner-->
+        <!--
         <section id="img-banner">
         <section class="banner" >
             <div class="overflow-hidden flex flex-nowrap  slider-banner" id="slider">
@@ -106,126 +108,192 @@
 
         </section>
         </section>
-
+-->
      
     
     </header>
 
     <main>
 
-        <section class="grid grid-cols-1 grid-rows-2 laptop:grid-cols-2 desktop:grid-cols-2 container mx-auto container-info-main">
+        <section class="container mx-auto container-info-main">
 
+         
             <div class="container-inf-services">
             <div class="title-inf-services">
-                <h6>CUIDAMOS A TU MASCOTA</h6>
-                <h2 class="sub-title">Cardiología</h2>
+                <h6 class="paragraph">CUIDAMOS A TU MASCOTA</h6>
+                <h2 class="title">Cardiología</h2>
                 <br>
                 <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque libero beatae quis neque saepe, dignissimos odit nobis rem exercitationem omnis vel impedit amet eaque ex et dolorem reprehenderit nihil asperiores.</p>
             </div>
-            <div class="img-inf-services">
+            <!--INFO V-PC -->
+            <div class="img-inf-services img-service-main-pc">
 
-                <div class="img-info-services-box1"></div>
-                <div class="img-info-services-box2"></div>
-                <div class="img-info-services-box3"></div>
-                <div class="img-info-services-box4"></div>
+                <div class="img-info-services-box1" id="img1"></div>
+                <div class="img-info-services-box2" id="img2"></div>
+                <div class="img-info-services-box3" id="img3"></div>
+                <div class="img-info-services-box4" id="img4"></div>
             </div>
 
+       
+
 
 
             </div>
 
-            <div class="container-info-list">
+      
+      
+        <div class="container-info-list">
                 <div class="title-ul-service">
-                    <h6>SERVICIOS POR ESPECIALIDAD</h6>
-                    <h2 class="sub-title">Detalles</h2>
+                    <h6 class="paragraph">SERVICIOS POR ESPECIALIDAD</h6>
+                    <h2 class="title">Detalles</h2>
                 </div>
                 <div class="img-inf-services-list">
-    
-                    <div class="bg-white" x-data="{selected:1}">
-
-               
-
-                        <div class="container-inf-services-details">
-                           
-                        
-                              <ul class="shadow-box">   
-            
-                              <li class="relative border-b border-gray-200">
-                                  <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
-                                      <div class="flex items-center justify-between">
-                                          <span><b><i class="bi bi-arrow-right"></i>
-                                              Exploración física	</b></span>
-                                      </div>
-                                  </button>
-                                  <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
-                                    <div class="p-6">
-                                        <p class="paragraph ">La exploración semiológica es la base de una consulta cardiológica. Luego de la reseña y un completo interrogatorio se procede a la revisión del paciente, con especial énfasis en la auscultación y fonocardiograma, toma del pulso y medición de presión arterial.
-                                            En casos que así lo requieran se complementan los hallazgos con termografía (imágenes térmicas del cuerpo del paciente).
-                                          </p>
-                                  </div>
-                              </li>
-            
-                              <li class="relative border-b border-gray-200">
-                      
-                                  <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 2 ? selected = 2 : selected = null">
-                                      <div class="flex items-center justify-between">
-                                          <span><b><i class="bi bi-arrow-right"></i>
-                                              Electrocardiografía					</b></span>
-                                      </div>
-                                                  </button>
-                      
-                                  <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
-                                      <div class="p-6">
-                                          <p class="paragraph ">La electrocardiografía consta de la obtención de un registro de la actividad eléctrica del corazón, obtenido por medio de unos conectores colocados en la piel del paciente. El ECG nos permite evaluar rápidamente el ritmo, la conducción eléctrica, el eje eléctrico medio y la frecuencia cardíaca. Este método brinda información acerca del equilibrio hidroelectrolítico del animal y permite evidenciar la generación y el avance de las ondas eléctricas que mantienen en movimiento al corazón.</p>
-                                      </div>
-                                  </div>
-                      
-                              </li>
-                      
-                          
-                              <li class="relative border-b border-gray-200">
-                      
-                                  <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 3 ? selected = 3 : selected = null">
-                                      <div class="flex items-center justify-between">
-                                          <span><b><i class="bi bi-arrow-right"></i>
-                                              Ecocardiografía			</b>		</span>
-                                      </div>
-                                                  </button>
-                      
-                                  <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
-                                      <div class="p-6">
-                                          
-                                        <p class="paragraph ">La ecocardiografía permite evaluar mediante ondas ultrasónicas la estructura y función de las distintas porciones del músculo cardíaco.
-                                            Es un método fundamental para explorar la anatomía del corazón, permite medir con exactitud distintas paredes y cámaras y evaluar fehacientemente la contracción miocárdica.
-                                        </p>
-                                      </div>
-                                  </div>
-                      
-                              </li>
-                      
-                                  </ul>
-                        
-                                   <div class="text-center">
-                              <br>
-                            <a href="" id="sub-footer">Solicitar turno</a>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item bg-white border border-gray-200">
+                              <h2 class="accordion-header mb-0" id="headingOne">
+                                <button class="
+                                  accordion-button
+                                  relative
+                                  flex
+                                  items-center
+                                  w-full
+                                  py-4
+                                  px-5
+                                  text-base text-gray-800 text-left
+                                  bg-white
+                                  border-0
+                                  rounded-none
+                                  transition
+                                  focus:outline-none
+                                " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                  aria-controls="collapseOne">
+                                  Exploracion fisica
+                                </button>
+                              </h2>
+                              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body py-4 px-5">
+                                    La exploración semiológica es la base de una consulta cardiológica. Luego de la reseña y un completo interrogatorio se procede a la revisión del paciente, con especial énfasis en la auscultación y fonocardiograma, toma del pulso y medición de presión arterial. En casos que así lo requieran se complementan los hallazgos con termografía (imágenes térmicas del cuerpo del paciente).
+                                </div>
+                              </div>
                             </div>
-                        </div>
-            
-                        </div>
+                            <div class="accordion-item bg-white border border-gray-200">
+                              <h2 class="accordion-header mb-0" id="headingTwo">
+                                <button class="
+                                  accordion-button
+                                  collapsed
+                                  relative
+                                  flex
+                                  items-center
+                                  w-full
+                                  py-4
+                                  px-5
+                                  text-base text-gray-800 text-left
+                                  bg-white
+                                  border-0
+                                  rounded-none
+                                  transition
+                                  focus:outline-none
+                                " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                  aria-controls="collapseTwo">
+                                  Electrocardiografía
+                                </button>
+                              </h2>
+                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body py-4 px-5">
+                                    La electrocardiografía consta de la obtención de un registro de la actividad eléctrica del corazón, obtenido por medio de unos conectores colocados en la piel del paciente. El ECG nos permite evaluar rápidamente el ritmo, la conducción eléctrica, el eje eléctrico medio y la frecuencia cardíaca. Este método brinda información acerca del equilibrio hidroelectrolítico del animal y permite evidenciar la generación y el avance de las ondas eléctricas que mantienen en movimiento al corazón.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item bg-white border border-gray-200">
+                              <h2 class="accordion-header mb-0" id="headingThree">
+                                <button class="
+                                  accordion-button
+                                  collapsed
+                                  relative
+                                  flex
+                                  items-center
+                                  w-full
+                                  py-4
+                                  px-5
+                                  text-base text-gray-800 text-left
+                                  bg-white
+                                  border-0
+                                  rounded-none
+                                  transition
+                                  focus:outline-none
+                                " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                  aria-controls="collapseThree">
+                                  Ecocardiografía
+                                </button>
+                              </h2>
+                              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body py-4 px-5">
+                                    La ecocardiografía permite evaluar mediante ondas ultrasónicas la estructura y función de las distintas porciones del músculo cardíaco. Es un método fundamental para explorar la anatomía del corazón, permite medir con exactitud distintas paredes y cámaras y evaluar fehacientemente la contracción miocárdica.
+
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                 </div>
     
     
     
-            </div>
-
-
-
-
-           
+        </div>
 
         </section>
 
 
+        <!--Especialistas-->
+        <section class="container mx-auto container-main-specialists">
+
+        <div class="div-h2-specialist">
+            <h2 class="title">Nuestros Especialistas</h2>
+            <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, sunt.</p>
+        </div>
+
+        <div class="container-specialists">
+
+            <div class="box-specialist ">
+                <div class="div-img-specialist1">
+                </div>
+
+                <div class="div-info-specialist">
+                    <div class="name-specialist">
+                        <h3 class="sub-title">Bautista Santos</h3>
+                        <p  class="paragraph">Cirujano</p>
+                    </div>
+                    <br>
+                    <div class="text-specialist">
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quis ad explicabo laudantium nobis at officiis, iste autem provident reiciendis ut odit deleniti saepe voluptates dolorem consectetur. Esse, dolorum nihil!</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="box-specialist ">
+                <div class="div-img-specialist2">
+                </div>
+
+                <div class="div-info-specialist">
+                    <div class="name-specialist">
+                        <h3 class="sub-title">Santiago Brito</h3>
+                        <p  class="paragraph">Cirujano</p>
+                    </div>
+                    <br>
+                    <div class="text-specialist">
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quis ad explicabo laudantium nobis at officiis, iste autem provident reiciendis ut odit deleniti saepe voluptates dolorem consectetur. Esse, dolorum nihil!</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        </section>
 
     </main>
 
@@ -279,9 +347,11 @@
       </footer>
 
 
+
+
     <!--JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
-    <script src='https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js'></script>
     <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="assets/js/scripts.js"></script>

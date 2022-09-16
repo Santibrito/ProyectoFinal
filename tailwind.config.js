@@ -2,7 +2,9 @@
 module.exports = {
   content: [
   "./*.html",
-  "./assets/css/*.css"
+  "./assets/css/*.css",
+  './src/**/*.{html,js}', 
+  './node_modules/tw-elements/dist/js/**/*.js'
 
   ],
   theme: {
@@ -18,5 +20,7 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    
+]
 }

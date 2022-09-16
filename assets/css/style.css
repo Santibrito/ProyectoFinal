@@ -50,7 +50,7 @@
 /*Tailwind*/
 
 .title{
-  @apply text-3xl laptop:text-4xl desktop:text-6xl text-[#262b59] font-['Title'] dark:text-[#ffffff]
+  @apply text-3xl laptop:text-4xl desktop:text-6xl text-[#262b59] font-['Title'] 
 }
 
 .sub-title{
@@ -58,7 +58,7 @@
 }
 
 .paragraph{
-  @apply text-base laptop:text-base desktop:text-lg text-[#4b4b4c] font-['Paragraph'] dark:text-[#e4e3e3]
+  @apply text-base laptop:text-base desktop:text-lg text-[#4b4b4c] font-['Paragraph'] 
 }
 
 /*Social*/
@@ -504,7 +504,12 @@
 }
 
 .slider-banner3{
-  background-image:  linear-gradient(rgba(33, 34, 34, 0.507), #191b1b7a),url("../img/servicios/cardiologia.jpg");
+  background-image:  linear-gradient(rgba(33, 34, 34, 0.507), #056b6b7a),url("../img/servicios/cardiologia.jpg");
+ background-position: center;
+ background-size: cover;
+}
+.slider-banner4{
+  background-image:  linear-gradient(rgba(48, 53, 53, 0.808), #191b1bce),url("../img/social-works.png");
  background-position: center;
  background-size: cover;
 }
@@ -550,12 +555,20 @@
   padding: 10vh;
 }
 
+.slider-banner4{
+  padding: 10vh;
+}
+
 
 @media (max-width: 1280px){
   .slider-banner1{
     padding: 5vh;
   }
   .slider-banner3{
+    padding: 5vh;
+  }
+
+  .slider-banner4{
     padding: 5vh;
   }
   .sub-banner {
@@ -628,6 +641,9 @@
   .slider-banner1{
     padding: 5vh;
   }
+  .slider-banner4{
+    padding: 5vh;
+  }
   .slider-banner3{
     padding: 5vh;
   }
@@ -644,6 +660,14 @@
     background-repeat: no-repeat;
   
   }
+  .slider-banner4 {
+    background-image: linear-gradient(rgba(16, 156, 221, 0.507), #0730577e),url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
+    background-position: 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+  }
+  
 
   .slider-banner3 {
     background-image: linear-gradient(rgba(16, 156, 221, 0.507), #0730577e),url("../img/servicios/cardiologia.jpg");
@@ -1086,10 +1110,6 @@ background-size: cover;
   font-size: 1.2rem;
   border-radius: 10px;
 }
-
-
-
-
 
 
 
@@ -1740,26 +1760,162 @@ footer{
 }
 }
 
+
+
+/*Nuestros Especialista*/
+.container-main-specialists{
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.div-info-specialist{
+ 
+  padding: 2vh;
+}
+.container-specialists{
+  padding-top: 5vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 2vh;
+}
+
+.box-specialist{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 3vh;
+}
+
+
+
+.div-h2-specialist{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+
+
+.div-img-specialist1{
+  background-image: url("https://eunamed.com/wp-content/uploads/2021/02/medico-especialista-en-chile-650x650-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: inherit;
+}
+.div-img-specialist2{
+  background-image: url("https://medicointernistatijuana.com/wp-content/uploads/2021/01/smiling-doctor-with-stethoscope-at-hospital-PVS8FJU.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: inherit;
+}
+
+@media (max-width: 1278px){
+  .container-specialists{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  .div-img-specialist2{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .div-img-specialist1{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media (max-width: 616px){
+  .container-specialists{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  .div-img-specialist2{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .div-img-specialist1{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .box-specialist{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+    padding: 2vh;
+  }
+  
+}
+
+.name-specialist{
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: start;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+}
+.name-specialist h3{
+  font-size: 1.8rem;
+  padding: 5px 0px;
+}
+.name-specialist p{
+  font-size: 1.3rem;
+  padding-left: 5px;
+  
+}
+
+
+.text-specialist{
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: start;
+  padding: 2px;
+}
+
+
+.text-specialist p{
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+
 /* Sevices */
 
 .container-info-main{
   padding: 5vh;
   display: grid;
   grid-gap: 2vh;
- 
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }
 
 .container-inf-services {
   display: grid;
   grid-template-rows: 200px 1fr;
-
 }
 
 .container-info-list{
   display: grid;
   grid-template-rows: 100px 1fr;
-  height: 35vh;
-
+  height: 60vh;
 }
 
 .img-inf-services{
@@ -1768,7 +1924,58 @@ footer{
   grid-template-rows: repeat(2,1fr);
   grid-gap: 1vh;
   margin-top: 2vh;
- 
+}
+
+@media (max-width: 700px){
+  .div-img-specialist2{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: inherit;
+  }
+
+  .div-img-specialist1{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: inherit;
+  }
+  .container-info-list{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    height: 90vh;
+  }
+}
+@media (max-width: 1010px){
+  .container-info-main{
+    padding: 5vh;
+    display: grid;
+    grid-gap: 2vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  .container-inf-services {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+  }
+  .img-inf-services{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1vh;
+    margin-top: 2vh;
+  }
+  .title-ul-service{
+    margin-top: 2vh;
+  }
+
+  #img1,#img3{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #img2,#img4{
+    display: none;
+  }
 }
 
 .title-inf-services{
@@ -1810,4 +2017,44 @@ footer{
 .container-inf-services h6 {
   color: var(--main);
   font-weight: 600;
+}
+
+
+/* MAP */
+iframe {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Modal Social Works */
+
+.title-modal {
+  font-size: 2rem;
+  color: var(--main);
+  font-weight: 600;
+}
+/*Obra social*/
+.social-works-cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 5vh;
+}
+
+.title-social{
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.title-social i{
+  font-size: 1rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.p-banner-social-works{
+  color: black;
+  font-size: 1.4rem;
+  width: 50%;
+  line-height: 150%;
 }
