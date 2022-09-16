@@ -681,16 +681,16 @@ video {
   margin-right: -0.5rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
 
 .mb-1 {
   margin-bottom: 0.25rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
 }
 
 .mr-2 {
@@ -2148,10 +2148,9 @@ video {
   }
 
   .slider-banner4 {
-    background-image: linear-gradient(rgba(16, 156, 221, 0.507), #0730577e),url("../img/handsome-veterinarian-at-vet-clinic-examining-cute-black-pug-dog-pointing-finger-at-pet-during-check-up-with-stethoscope-white-background.jpg");
-    background-position: 35%;
+    background-image:  linear-gradient(rgba(48, 53, 53, 0.808), #191b1bce),url("../img/social-works.png");
+    background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
   }
 
   .slider-banner3 {
@@ -3569,7 +3568,7 @@ iframe {
   }
 
   .container-extra-socialwork{
-    height: 180vh;
+    height: 170vh;
   }
 }
 
@@ -3593,6 +3592,13 @@ iframe {
 
 .list-social-work{
   width: 100%;
+}
+
+.p-banner-social-works{
+  color: black;
+  font-size: 1.4rem;
+  width: 50%;
+  line-height: 150%;
 }
 
 .title-social{
@@ -3623,6 +3629,13 @@ iframe {
     padding: 5vh;
     grid-gap: 5vh;
   }
+
+  .p-banner-social-works{
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+    width: 100%;
+    line-height: 150%;
+  }
 }
 
 @media (max-width: 600px){
@@ -3651,6 +3664,12 @@ iframe {
   }
 }
 
+.container-contact-boxs{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 5vh;
+}
+
 .title-social{
   text-align: center;
   display: flex;
@@ -3663,17 +3682,26 @@ iframe {
   align-items: center;
 }
 
-.p-banner-social-works{
-  color: black;
-  font-size: 1.4rem;
-  width: 50%;
-  line-height: 150%;
+.contact-font{
+  font-size: 2rem;
+  color: var(--paragraph);
+  line-height: 100%;
 }
 
-/*Login*/
+.img-contact-pets{
+  background-image: url("../img/Contact.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
 
-.justify-center {
-  /* justify-content: center; */
+@media (max-width: 991px){
+  .active{
+    color: var(--secondary) !important;
+    border-bottom:none;
+    padding-bottom:2px;
+  }
 }
 
 /*
@@ -3786,10 +3814,6 @@ iframe {
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark\:hidden {
-    display: none;
-  }
-
   .dark\:border {
     border-width: 1px;
   }
@@ -3812,11 +3836,6 @@ iframe {
   .dark\:bg-blue-600 {
     --tw-bg-opacity: 1;
     background-color: rgb(37 99 235 / var(--tw-bg-opacity));
-  }
-
-  .dark\:bg-gray-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   }
 
   .dark\:bg-gray-700 {
