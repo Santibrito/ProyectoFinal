@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
 </head>
 <body>
     <div id="app">
@@ -72,7 +76,7 @@
                 </div>
             </div>
 
-            <div v-else v-for="producto in arrayProductosRespaldo">
+            <div v-else v-for="producto in arrayProductosRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
                     <p>{{producto.nombre}}</p>
                     <p>{{producto.tipo}}</p>
@@ -91,7 +95,7 @@
                 </div>
             </div>
 
-            <div v-else v-for="producto in arrayJuguetesRespaldo">
+            <div v-else v-for="producto in arrayJuguetesRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
                     <p>{{producto.nombre}}</p>
                     <p>{{producto.tipo}}</p>
@@ -110,7 +114,7 @@
                 </div>
             </div>
 
-            <div v-else v-for="producto in arrayMedicamentosRespaldo">
+            <div v-else v-for="producto in arrayMedicamentosRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
                     <p>{{producto.nombre}}</p>
                     <p>{{producto.tipo}}</p>
@@ -129,7 +133,7 @@
                 </div>
             </div>
 
-            <div v-else v-for="producto in arrayProductosRespaldo">
+            <div v-else v-for="producto in arrayProductosRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
                     <p>{{producto.nombre}}</p>
                     <p>{{producto.tipo}}</p>
@@ -139,8 +143,48 @@
 
         </div>
 
+  
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content"  v-for="producto in productoInfoModal">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">{{producto.nombre}}</h5>
+                        <p>{{producto.tipo}}</p>
+                        <!--<p>{{producto.marca}}</p>  -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="div-img-modal-body">
+                            <img :src="producto.imagen" :alt="producto.nombre">
+                        </div>
+                        <div>
+                            <p>{{producto.descripcion}}</p>
+                            <p>Stock: {{producto.stock}}</p>
+                            <p>Precio: ${{producto.precio}}</p>
+                            <!-- <p>{{producto.descuento}}</p> -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>{{producto.contador}}
+                        <button v-show="producto.contador > 0"  type="button" class="btn btn-danger sacar" @click="quitarDelCarrito(producto)">Sacar del Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
+  </div>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
 <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
 <script src="https://unpkg.com/vue@3"></script> 
 <script src="./tienda.js"></script>
