@@ -927,6 +927,12 @@
   font-family: var(--font-subtitle);
 }
 
+.paragraph-list {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+
 
 @media (max-width: 1770px){
   .container-services-into{
