@@ -70,10 +70,10 @@
                  <li class="menu-item menu-dropdown">
                     <span class="menu-link " data-toggle="submenu">Servicios<i class="bx bx-chevron-down"></i></span>
                     <ul class="submenu">
-                       <li class="submenu-item"><a href="servicios.html" class="submenu-link">Cardiologia</a></li>
-                       <li class="submenu-item"><a href="#" class="submenu-link">Cardiologia</a></li>
-                       <li class="submenu-item"><a href="#" class="submenu-link">Cardiologia</a></li>
-                       <li class="submenu-item"><a href="#" class="submenu-link">Cardiologia</a></li>
+                       <li class="submenu-item"><a href="servicioClinicoM.html" class="submenu-link">Clínica Médica</a></li>
+                       <li class="submenu-item"><a href="servicioOftalmologia.html" class="submenu-link">Oftalmología</a></li>
+                       <li class="submenu-item"><a href="servicioCardiologia.html" class="submenu-link">Cardiologia</a></li>
+                       <li class="submenu-item"><a href="servicioCirugía.html" class="submenu-link">Cirugía</a></li>
                     </ul>
                  </li>
                  <li class="menu-item"><a href="/obra-social.html" class="menu-link">Obra Social</a></li>
@@ -284,7 +284,7 @@
     <section class="container-services">
       <div class="title-services">
       <h3 class="title ">Nuestros Servicios</h3>
-      <p class="paragraph" style="margin-top:10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, odio!</p>
+      <p class="paragraph" style="margin-top:10px;">Contamos con distintos servicios médicos para que puedas darle todas las atenciones a tu mascotas en un mismo lugar.</p>
     </div>
       <div x-data="{swiper: null}" x-init="swiper = new Swiper($refs.container, {
         loop: true,
@@ -326,8 +326,8 @@
       </div>
       <br>
       <div class="text-services">
-        <h5 class="sub-title">Oftalmologia</h5>
-        <a href="#" class="paragraph"><p>Conoce mas</p></a>
+        <h5 class="sub-title">Clínica Médica</h5>
+        <a href="servicioClinicoM.html" class="paragraph"><p>Conoce mas</p></a>
       </div>
     </div>
 
@@ -346,10 +346,10 @@
                 <br>
                 <div class="text-services">
                   <h5 class="sub-title">Oftalmologia</h5>
-                  <a href="#" class="paragraph"><p>Conoce mas</p></a>
+                  <a href="servicioOftalmologia.html" class="paragraph"><p>Conoce mas</p></a>
                 </div>
               </div>                 
-    </div>
+            </div>
           </div>
         </div>
   
@@ -362,8 +362,25 @@
                 </div>
                 <br>
                 <div class="text-services">
-                  <h5 class="sub-title">Oftalmologia</h5>
-                  <a href="#" class="paragraph"><p>Conoce mas</p></a>
+                  <h5 class="sub-title">Cardiología</h5>
+                  <a href="servicioCardiologia.html" class="paragraph"><p>Conoce mas</p></a>
+                </div>
+              </div>                 
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide p-4">
+          <div class="flex flex-col rounded  overflow-hidden">
+            <div class="flex-shrink-0">
+              <div class="box-services">
+                <div class="icon-services">
+                  <img src="assets/img/service-iconos/Sin título-3.png" alt="servicesIcon">
+                </div>
+                <br>
+                <div class="text-services">
+                  <h5 class="sub-title">Cirugía</h5>
+                  <a href="servicioCirugía.html" class="paragraph"><p>Conoce mas</p></a>
                 </div>
               </div>                 
             </div>
@@ -388,33 +405,38 @@
       <div class="container-social-work-into">
           <div class="box-social-work">
             
-            <h2 class="title title-social">Obra social 1</h2>
+            <h2 class="title title-social">Obra social Plan 200</h2>
             <br>
             <span class="paragraph">Solamente</span>
-            <h5 class="sub-title">$3.000</h5>
+            <h5 class="sub-title">$600</h5>
             <span class="paragraph">por mes*</span>
             <br>
             <div class="list-social-work">
 
-              <div class="list-chek">
-                <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
-              </div>
+             <div class="list-chek">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span class="paragraph">Veterinario en Línea las 24 h</span>
+                  </div>
+    
+                  <div class="list-chek">
+                    <i class="bi bi-x-circle-fill" style="color: red;"></i>
+                    <span class="paragraph"> Cuidado de tu mascota (controles, vacunas, traslados, pipetas y desparasitaciones).</span>
+                  </div>
+    
+                  <div class="list-chek">
+                    <i class="bi bi-x-circle-fill" style="color: red;"></i>
+                    <span class="paragraph">  Castraciones de tu mascota (simples, operaciones para esterilización).</span>
+                  </div>
 
-              <div class="list-chek">
-                <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
-              </div>
+                  <div class="list-chek">
+                    <i class="bi bi-x-circle-fill" style="color: red;"></i>
+                    <span class="paragraph">   Bienestar de tu mascota (guardería, terapias alternativas, adiestramiento).</span>
+                  </div>
 
-              <div class="list-chek">
-                <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
-              </div>
-
-              <br>
-            <div class="btn-social-work">
-              <a href="#" id="btn-social-work">Regístrate ahora</a>
-            </div> 
+                  <div class="list-chek">
+                    <i class="bi bi-x-circle-fill" style="color: red;"></i>
+                    <span class="paragraph">  Belleza de tu mascota (baños, peluquería, corte de uñas).</span>
+                  </div> 
 
             </div>
 
@@ -422,33 +444,38 @@
 
           <div class="box-social-work">
             
-            <h2 class="title title-social">Obra social 1</h2>
+            <h2 class="title title-social">Obra social Plan 400</h2>
             <br>
             <span class="paragraph">Solamente</span>
-            <h5 class="sub-title">$3.000</h5>
+            <h5 class="sub-title">$1.200</h5>
             <span class="paragraph">por mes*</span>
             <br>
             <div class="list-social-work">
 
-              <div class="list-chek">
-                <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
-              </div>
+               <div class="list-chek">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span class="paragraph">Veterinario en Línea las 24 h</span>
+                  </div>
+    
+                  <div class="list-chek">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span class="paragraph"> Cuidado de tu mascota (controles, vacunas, traslados, pipetas y desparasitaciones).</span>
+                  </div>
+    
+                  <div class="list-chek">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span class="paragraph">  Castraciones de tu mascota (simples, operaciones para esterilización).</span>
+                  </div>
 
-              <div class="list-chek">
-                <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
-              </div>
+                  <div class="list-chek">
+                    <i class="bi bi-x-circle-fill" style="color: red;"></i>
+                    <span class="paragraph">   Bienestar de tu mascota (guardería, terapias alternativas, adiestramiento).</span>
+                  </div>
 
-              <div class="list-chek">
-                <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
-              </div>
-
-              <br>
-            <div class="btn-social-work">
-              <a href="#" id="btn-social-work">Regístrate ahora</a>
-            </div> 
+                  <div class="list-chek">
+                    <i class="bi bi-x-circle-fill" style="color: red;"></i>
+                    <span class="paragraph">  Belleza de tu mascota (baños, peluquería, corte de uñas).</span>
+                  </div>
 
             </div>
 
@@ -456,33 +483,38 @@
 
           <div class="box-social-work">
             
-            <h2 class="title title-social">Obra social 1</h2>
+            <h2 class="title title-social">Obra social Plan 600</h2>
             <br>
             <span class="paragraph">Solamente</span>
-            <h5 class="sub-title">$3.000</h5>
+            <h5 class="sub-title">$1.800</h5>
             <span class="paragraph">por mes*</span>
             <br>
             <div class="list-social-work">
 
-              <div class="list-chek">
-                <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
-              </div>
+               <div class="list-chek">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span class="paragraph">Veterinario en Línea las 24 h</span>
+                  </div>
+    
+                  <div class="list-chek">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span class="paragraph"> Cuidado de tu mascota (controles, vacunas, traslados, pipetas y desparasitaciones).</span>
+                  </div>
+    
+                  <div class="list-chek">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span class="paragraph">  Castraciones de tu mascota (simples, operaciones para esterilización).</span>
+                  </div>
 
-              <div class="list-chek">
-                <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
-              </div>
+                  <div class="list-chek">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span class="paragraph">   Bienestar de tu mascota (guardería, terapias alternativas, adiestramiento).</span>
+                  </div>
 
-              <div class="list-chek">
-                <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
-              </div>
-
-              <br>
-            <div class="btn-social-work">
-              <a href="#" id="btn-social-work">Regístrate ahora</a>
-            </div> 
+                  <div class="list-chek">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span class="paragraph">  Belleza de tu mascota (baños, peluquería, corte de uñas).</span>
+                  </div>
 
             </div>
 
@@ -529,27 +561,28 @@
           
           <!--Contenido-->
           <div class="box-social-work">
-            <h2 class="title title-social">Obra social 1</h2>
+            <h2 class="title title-social">Obra social Plan 200</h2>
             <br>
             <span class="paragraph">Solamente</span>
-            <h5 class="sub-title">$3.000</h5>
+            <h5 class="sub-title">$600</h5>
             <span class="paragraph">por mes*</span>
             <br>
             <div class="list-social-work">
     
-              <div class="list-chek">
+             
+                <div class="list-chek">
                 <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
+                <span class="paragraph">Cuidado de tu mascota</span>
               </div>
-    
+
               <div class="list-chek">
                 <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
+                <span class="paragraph">Castraciones de tu mascota</span>
               </div>
-    
+
               <div class="list-chek">
                 <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
+                <span class="paragraph"> Bienestar de tu mascota</span>
               </div>
     
               <br>
@@ -572,27 +605,28 @@
           
           <div class="box-social-work">
         
-            <h2 class="title title-social">Obra social 1</h2>
+            <h2 class="title title-social">Obra social Plan 400</h2>
             <br>
             <span class="paragraph">Solamente</span>
-            <h5 class="sub-title">$3.000</h5>
+            <h5 class="sub-title">$1.200</h5>
             <span class="paragraph">por mes*</span>
             <br>
             <div class="list-social-work">
     
-              <div class="list-chek">
+             
+                <div class="list-chek">
                 <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
+                <span class="paragraph">Cuidado de tu mascota</span>
               </div>
-    
+
               <div class="list-chek">
                 <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
+                <span class="paragraph">Castraciones de tu mascota</span>
               </div>
-    
+
               <div class="list-chek">
                 <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
+                <span class="paragraph"> Bienestar de tu mascota</span>
               </div>
     
               <br>
@@ -614,27 +648,28 @@
         <div class="flex-shrink-0">
           <div class="box-social-work">
         
-            <h2 class="title title-social">Obra social 1</h2>
+            <h2 class="title title-social">Obra social Plan 600</h2>
             <br>
             <span class="paragraph">Solamente</span>
-            <h5 class="sub-title">$3.000</h5>
+            <h5 class="sub-title">$1.800</h5>
             <span class="paragraph">por mes*</span>
             <br>
             <div class="list-social-work">
     
-              <div class="list-chek">
+             
+                <div class="list-chek">
                 <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
+                <span class="paragraph">Cuidado de tu mascota</span>
               </div>
-    
+
               <div class="list-chek">
                 <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
+                <span class="paragraph">Castraciones de tu mascota</span>
               </div>
-    
+
               <div class="list-chek">
                 <i class="bi bi-check-lg"></i>
-                <span class="paragraph"> Lorem ipsum dolor sit amet.</span>
+                <span class="paragraph"> Bienestar de tu mascota</span>
               </div>
     
               <br>
@@ -665,7 +700,7 @@
 
     <div class="shop-title">
       <h2 class="title">Ayúdanos y salva más mascotas</h2>
-      <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, amet.</p>
+      <p class="paragraph">Salva dos vidas, la del animal que adoptas y la del que ocupa su lugar en nuestro Centro de Adopción.</p>
     </div>
 
 
@@ -874,12 +909,12 @@
 
         <div class="div-footer">
             <ul class="list-footer">
-                <h6 class="h6-footer sub-title">SERVICIOS</h6>
-                <a href="" class="paragraph">Vacunas</a>
-                <a href="" class="paragraph">Cirugía</a>
-                <a href="" class="paragraph">Cardiología</a>
-                <a href="" class="paragraph">Traumatología</a>
-            </ul>
+              <h6 class="h6-footer sub-title">SERVICIOS</h6>
+              <a href="servicioClinicoM.html" class="paragraph">Clínica Médica</a>
+              <a href="servicioCirugía.html" class="paragraph">Cirugía</a>
+              <a href="servicioCardiologia.html" class="paragraph">Cardiología</a>
+              <a href="servicioOftalmologia.html" class="paragraph">Otalmología</a>
+          </ul>
         </div>
 
         <div class="div-footer">
