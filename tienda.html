@@ -167,7 +167,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Agregar Carrito</button>
+                        <button type="button" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>{{producto.contador}}
+                        <button v-show="producto.contador > 0"  type="button" class="btn btn-danger sacar" @click="quitarDelCarrito(producto)">Sacar del Carrito</button>
                     </div>
                 </div>
             </div>

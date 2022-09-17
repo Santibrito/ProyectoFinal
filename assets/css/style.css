@@ -2436,6 +2436,9 @@ iframe {
 
 }
 
+.modal-header {
+  flex-direction: column-reverse !important;
+}
 .container-filter h2{
   font-size: 1.6rem;
 }
