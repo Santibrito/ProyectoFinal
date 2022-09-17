@@ -2284,6 +2284,7 @@ iframe {
   align-items: center;
 }
 
+<<<<<<< Updated upstream
 
 .contact-font{
   font-size: 2rem;
@@ -2315,8 +2316,17 @@ iframe {
   padding: 5vh;
   align-items: center;
   margin-bottom: 5vh;
+=======
+.p-banner-social-works{
+  color: black;
+  font-size: 1.4rem;
+  width: 50%;
+  line-height: 150%;
+>>>>>>> Stashed changes
 }
+/*Login*/
 
+<<<<<<< Updated upstream
 
 .title-contact-container p{
   padding-top: 1vh;
@@ -2401,6 +2411,8 @@ iframe {
   align-items: flex-end;
 }
 
+=======
+>>>>>>> Stashed changes
 @media (min-width: 320px) and (max-width: 480px) { 
   .flex {
     display: flex;
@@ -2409,6 +2421,7 @@ iframe {
   .justify-center {
     justify-content: space-evenly;
   }
+<<<<<<< Updated upstream
 }
 */
 
@@ -2478,4 +2491,6 @@ iframe {
 
 .container-products>*{
   margin: 1vh;
+=======
+>>>>>>> Stashed changes
 }
