@@ -1115,12 +1115,13 @@ background-size: cover;
 
 
 .card-shop{
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-  padding: 3vh;
+  padding: 2vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 30%;
+  border:3px solid rgb(233, 230, 230);border-radius:10px;
 }
 
 .card-shop-title h4{
@@ -1848,14 +1849,12 @@ footer{
 
 
 .div-img-specialist1{
-  background-image: url("https://eunamed.com/wp-content/uploads/2021/02/medico-especialista-en-chile-650x650-1.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: inherit;
 }
 .div-img-specialist2{
-  background-image: url("https://medicointernistatijuana.com/wp-content/uploads/2021/01/smiling-doctor-with-stethoscope-at-hospital-PVS8FJU.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: inherit;
 }
@@ -1963,7 +1962,14 @@ footer{
 .container-info-list{
   display: grid;
   grid-template-rows: 100px 1fr;
-  height: 60vh;
+}
+
+.details-list{
+  display: flex;
+}
+
+.details-list i{
+  margin-right: 10px;
 }
 
 .img-inf-services{
@@ -1989,7 +1995,7 @@ footer{
   .container-info-list{
     display: grid;
     grid-template-rows: 100px 1fr;
-    height: 90vh;
+  
   }
 }
 @media (max-width: 1010px){
@@ -2026,9 +2032,14 @@ footer{
   }
 }
 
+.img-inf-services-list{
+  width: auto;
+  height: 2vh;
+}
 .title-inf-services{
   display: flex;
   flex-direction: column;
+  margin: auto;
 
 }
 
@@ -2039,25 +2050,23 @@ footer{
 }
 
 .img-info-services-box1{
-  background-image: url("../img/servicios/servicescardiology.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .img-info-services-box2{
-  background-image: url("../img/servicios/cardiologia.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .img-info-services-box3{
-  background-image: url("../img/servicios/cardiologia3.jpg");
+
   background-position: center;
   background-size: cover;
 }
 
 .img-info-services-box4{
-  background-image: url("../img/servicios/cardiologia4.jpg");
+
   background-position: center;
   background-size: cover;
 }
@@ -2401,28 +2410,63 @@ iframe {
 
 
 /* TIENDA */
-.modal-body {
-  display: flex !important;
-  flex-direction: row !important;
+.container-shop {  
+  padding-top: 5vh;
+  display: grid;
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 0.4fr 1.6fr; 
+  grid-template-rows: 0.2fr 1.8fr; 
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "container-filter container-filter2"
+    "container-filter container-products";
 }
 
-.div-img-modal-body{
-  width: 100% !important;
-  height: 100% !important;
-}
-.div-img-modal-body img{
-  width: 400px !important;
-  height: 400px !important;
+.container-filter { 
+  grid-area: container-filter;
+  height: 100vh;
+  position: fixed;
+
 }
 
-.modal-header {
+.container-filter h2{
+  font-size: 1.6rem;
+}
+
+.container-filter h3{
+  font-size: 1.4rem;
+}
+
+.container-filter2 { 
+  grid-area: container-filter2; 
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-top: auto;
+}
+
+.container-search{
+  width: 80%;
+}
+
+.container-select-shop{
+  width: 100%;
   display: flex;
-  flex-shrink: 0;
+  margin-left: auto !important;
+  justify-content: end;
+}
+
+.container-products { 
+  padding-top: 2vh;
+  grid-area: container-products; 
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
   align-items: center;
-  justify-content: space-between;
-  padding: var(--bs-modal-header-padding);
-  border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
-  border-top-left-radius: var(--bs-modal-inner-border-radius);
-  border-top-right-radius: var(--bs-modal-inner-border-radius);
-  flex-direction: column-reverse !important;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-products>*{
+  margin: 1vh;
 }

@@ -646,6 +646,10 @@ video {
   z-index: 50;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -702,6 +706,18 @@ video {
   margin-right: 2rem;
 }
 
+.-mt-px {
+  margin-top: -1px;
+}
+
+.ml-3\.5 {
+  margin-left: 0.875rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -736,10 +752,6 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.ml-3 {
-  margin-left: 0.75rem;
 }
 
 .ml-1 {
@@ -786,12 +798,20 @@ video {
   height: 1.5rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-5 {
   height: 1.25rem;
+}
+
+.h-\[2\.875rem\] {
+  height: 2.875rem;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .h-48 {
@@ -800,10 +820,6 @@ video {
 
 .h-8 {
   height: 2rem;
-}
-
-.h-4 {
-  height: 1rem;
 }
 
 .h-3 {
@@ -866,6 +882,14 @@ video {
   width: 33.333333%;
 }
 
+.w-\[2\.875rem\] {
+  width: 2.875rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
 .w-1 {
   width: 0.25rem;
 }
@@ -886,8 +910,16 @@ video {
   width: 10rem;
 }
 
+.w-44 {
+  width: 11rem;
+}
+
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
 }
 
 .max-w-2xl {
@@ -1010,6 +1042,11 @@ video {
   gap: 2rem;
 }
 
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1026,6 +1063,17 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.divide-y > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+}
+
+.divide-gray-100 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(243 244 246 / var(--tw-divide-opacity));
 }
 
 .overflow-hidden {
@@ -1052,8 +1100,22 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
 .rounded-none {
   border-radius: 0px;
+}
+
+.rounded-l-md {
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.rounded-r-md {
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
 }
 
 .rounded-t {
@@ -1064,6 +1126,16 @@ video {
 .rounded-b {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-l-lg {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-r-lg {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .border-0 {
@@ -1086,6 +1158,10 @@ video {
   border-top-width: 1px;
 }
 
+.border-l-2 {
+  border-left-width: 2px;
+}
+
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -1094,6 +1170,15 @@ video {
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-transparent {
+  border-color: transparent;
 }
 
 .border-gray-700 {
@@ -1111,6 +1196,21 @@ video {
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
 }
 
+.border-blue-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(29 78 216 / var(--tw-border-opacity));
+}
+
+.border-l-gray-50 {
+  --tw-border-opacity: 1;
+  border-left-color: rgb(249 250 251 / var(--tw-border-opacity));
+}
+
+.border-l-gray-700 {
+  --tw-border-opacity: 1;
+  border-left-color: rgb(55 65 81 / var(--tw-border-opacity));
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -1123,6 +1223,11 @@ video {
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
 .bg-blue-700 {
@@ -1259,6 +1364,11 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1282,6 +1392,10 @@ video {
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.pr-9 {
+  padding-right: 2.25rem;
 }
 
 .text-left {
@@ -1323,14 +1437,14 @@ video {
   line-height: 2.5rem;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-xl {
@@ -1370,12 +1484,12 @@ video {
   font-weight: 500;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
 .font-semibold {
   font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .uppercase {
@@ -1430,6 +1544,11 @@ video {
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
 .text-\[\#262b59\] {
   --tw-text-opacity: 1;
   color: rgb(38 43 89 / var(--tw-text-opacity));
@@ -1465,14 +1584,14 @@ video {
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2703,12 +2822,14 @@ video {
 }
 
 .card-shop{
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-  padding: 3vh;
+  padding: 2vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 30%;
+  border:3px solid rgb(233, 230, 230);
+  border-radius:10px;
 }
 
 .card-shop-title h4{
@@ -3431,15 +3552,13 @@ footer{
 }
 
 .div-img-specialist1{
-  background-image: url("https://eunamed.com/wp-content/uploads/2021/02/medico-especialista-en-chile-650x650-1.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: inherit;
 }
 
 .div-img-specialist2{
-  background-image: url("https://medicointernistatijuana.com/wp-content/uploads/2021/01/smiling-doctor-with-stethoscope-at-hospital-PVS8FJU.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: inherit;
 }
@@ -3541,7 +3660,14 @@ footer{
 .container-info-list{
   display: grid;
   grid-template-rows: 100px 1fr;
-  height: 60vh;
+}
+
+.details-list{
+  display: flex;
+}
+
+.details-list i{
+  margin-right: 10px;
 }
 
 .img-inf-services{
@@ -3568,7 +3694,6 @@ footer{
   .container-info-list{
     display: grid;
     grid-template-rows: 100px 1fr;
-    height: 90vh;
   }
 }
 
@@ -3608,9 +3733,15 @@ footer{
   }
 }
 
+.img-inf-services-list{
+  width: auto;
+  height: 2vh;
+}
+
 .title-inf-services{
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 
 .container-inf-services-details{
@@ -3619,25 +3750,21 @@ footer{
 }
 
 .img-info-services-box1{
-  background-image: url("../img/servicios/servicescardiology.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .img-info-services-box2{
-  background-image: url("../img/servicios/cardiologia.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .img-info-services-box3{
-  background-image: url("../img/servicios/cardiologia3.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .img-info-services-box4{
-  background-image: url("../img/servicios/cardiologia4.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -3956,36 +4083,92 @@ iframe {
 
 /* TIENDA */
 
-.modal-body {
-  display: flex !important;
-  flex-direction: row !important;
+.container-shop {
+  padding-top: 5vh;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 0.4fr 1.6fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "container-filter container-filter2"
+    "container-filter container-products";
 }
 
-.div-img-modal-body{
-  width: 100% !important;
-  height: 100% !important;
+.container-filter {
+  grid-area: container-filter;
+  height: 100vh;
+  position: fixed;
 }
 
-.div-img-modal-body img{
-  width: 400px !important;
-  height: 400px !important;
+.container-filter h2{
+  font-size: 1.6rem;
 }
 
-.modal-header {
+.container-filter h3{
+  font-size: 1.4rem;
+}
+
+.container-filter2 {
+  grid-area: container-filter2;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-top: auto;
+}
+
+.container-search{
+  width: 80%;
+}
+
+.container-select-shop{
+  width: 100%;
   display: flex;
-  flex-shrink: 0;
+  margin-left: auto !important;
+  justify-content: end;
+}
+
+.container-products {
+  padding-top: 2vh;
+  grid-area: container-products;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
   align-items: center;
-  justify-content: space-between;
-  padding: var(--bs-modal-header-padding);
-  border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
-  border-top-left-radius: var(--bs-modal-inner-border-radius);
-  border-top-right-radius: var(--bs-modal-inner-border-radius);
-  flex-direction: column-reverse !important;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-products>*{
+  margin: 1vh;
+}
+
+.first\:mt-0:first-child {
+  margin-top: 0px;
+}
+
+.first\:rounded-t-lg:first-child {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.last\:rounded-b-lg:last-child {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.hover\:bg-blue-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.focus\:z-10:focus {
+  z-index: 10;
 }
 
 .focus\:border-blue-600:focus {
@@ -4002,6 +4185,17 @@ iframe {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-2:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-blue-500:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
 }
 
 .peer:-moz-placeholder-shown ~ .peer-placeholder-shown\:translate-y-0 {
@@ -4056,9 +4250,19 @@ iframe {
     border-color: rgb(75 85 99 / var(--tw-border-opacity));
   }
 
+  .dark\:border-gray-700 {
+    --tw-border-opacity: 1;
+    border-color: rgb(55 65 81 / var(--tw-border-opacity));
+  }
+
   .dark\:bg-gray-700 {
     --tw-bg-opacity: 1;
     background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
   }
 
   .dark\:text-gray-400 {
@@ -4071,6 +4275,11 @@ iframe {
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 
+  .dark\:text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+  }
+
   .dark\:placeholder-gray-400::-moz-placeholder {
     --tw-placeholder-opacity: 1;
     color: rgb(156 163 175 / var(--tw-placeholder-opacity));
@@ -4081,6 +4290,16 @@ iframe {
     color: rgb(156 163 175 / var(--tw-placeholder-opacity));
   }
 
+  .dark\:checked\:border-blue-500:checked {
+    --tw-border-opacity: 1;
+    border-color: rgb(59 130 246 / var(--tw-border-opacity));
+  }
+
+  .dark\:checked\:bg-blue-500:checked {
+    --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  }
+
   .dark\:focus\:border-blue-500:focus {
     --tw-border-opacity: 1;
     border-color: rgb(59 130 246 / var(--tw-border-opacity));
@@ -4089,6 +4308,10 @@ iframe {
   .dark\:focus\:ring-blue-500:focus {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
+  }
+
+  .dark\:focus\:ring-offset-gray-800:focus {
+    --tw-ring-offset-color: #1f2937;
   }
 
   .peer:focus ~ .peer-focus\:dark\:text-blue-500 {
