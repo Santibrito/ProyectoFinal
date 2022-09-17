@@ -7,6 +7,142 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="app">
+
+        <!--{{this.nombreA}}  
+        {{this.nombreZ}}
+        {{this.productosDescuento}}
+
+        {{this.precioMayor}}
+        {{this.precioMenor}}
+        {{this.tipo}}-->
+
+
+
+        <form>
+
+            <!-- El buscador -->
+            <input type="text" placeholder="Buscar..." v-model="buscador" v-on:keyup="filtroBusqueda"> {{buscador}}
+
+            <!-- El rango -->
+            <label>
+                <input type="range" name="rango" id="rango" min="0" max="2000" v-model="rango">
+            </label>
+
+            <!-- Para las categorias -->
+            <label>Juguete
+                <input type="checkbox" id="tipo" name="tipo" value="Juguete" v-model="tipoSelec">
+            </label>
+            <label>Medicamento
+                <input type="checkbox" id="tipo" name="tipo" value="Medicamento" v-model="tipoSelec">
+            </label>
+            
+            <!-- Para las marcas -->
+            <!-- <label>Juguete
+                <input type="checkbox" id="tipo" name="tipo" value="juguete" v-model="tipoSelec">
+            </label>
+            <label>Medicamento
+                <input type="checkbox" id="tipo" name="tipo" value="medicamento" v-model="tipoSelec">
+            </label> -->
+            
+            <!-- El select para los filtros -->
+            <select v-model="opcionElegida">
+                <option disabled value="" selected>Elija un filtro</option>
+                <option value="mayor">Precio Mayor</option>
+                <option value="menor">Precio Menor</option>
+                <option value="a-z">Ordenar A-Z</option>
+                <option value="z-a">Ordenar Z-A</option>
+                <option value="descuentos">Descuentos</option>
+            </select>
+
+
+        </form>
+
+        {{filtroSelect}}
+        {{opcionElegida}}
+        {{seleccionado}}
+
+
+        <div v-if="tipoSelec == ''">
+            {{buscado}}
+            <div v-if="arrayProductosRespaldo.length == 0">
+                <div>
+                    <h5>no hay nada</h5>
+                    <p>ajuste los parametros de busqueda</p>
+                </div>
+            </div>
+
+            <div v-else v-for="producto in arrayProductosRespaldo">
+                <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
+                    <p>{{producto.nombre}}</p>
+                    <p>{{producto.tipo}}</p>
+                    <p>{{producto.precio}}</p>
+                </div>
+            </div>
+
+        </div>
+        <div v-else-if="tipoSelec == 'Juguete'">
+            {{buscadoJ}}
+            <p>j</p>
+            <div v-if="arrayJuguetesRespaldo.length == 0">
+                <div>
+                    <h5>no hay nada</h5>
+                    <p>ajuste los parametros de busqueda</p>
+                </div>
+            </div>
+
+            <div v-else v-for="producto in arrayJuguetesRespaldo">
+                <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
+                    <p>{{producto.nombre}}</p>
+                    <p>{{producto.tipo}}</p>
+                    <p>{{producto.precio}}</p>
+                </div>
+            </div>
+
+        </div>
+        <div v-else-if="tipoSelec == 'Medicamento'">
+            {{buscadoM}}
+            <p>m</p>
+            <div v-if="arrayMedicamentosRespaldo.length == 0">
+                <div>
+                    <h5>no hay nada</h5>
+                    <p>ajuste los parametros de busqueda</p>
+                </div>
+            </div>
+
+            <div v-else v-for="producto in arrayMedicamentosRespaldo">
+                <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
+                    <p>{{producto.nombre}}</p>
+                    <p>{{producto.tipo}}</p>
+                    <p>{{producto.precio}}</p>
+                </div>
+            </div>
+
+        </div>
+        <div v-else>
+            {{buscadoOtro}}
+            <p>2</p>
+            <div v-if="arrayProductosRespaldo.length == 0">
+                <div>
+                    <h5>no hay nada</h5>
+                    <p>ajuste los parametros de busqueda</p>
+                </div>
+            </div>
+
+            <div v-else v-for="producto in arrayProductosRespaldo">
+                <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
+                    <p>{{producto.nombre}}</p>
+                    <p>{{producto.tipo}}</p>
+                    <p>{{producto.precio}}</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+<!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>-->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+<script src="https://unpkg.com/vue@3"></script> 
+<script src="./tienda.js"></script>
 </body>
 </html>

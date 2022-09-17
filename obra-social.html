@@ -96,7 +96,7 @@
                 <div class=" text-white  flex-none w-full  slider-banner4">
                     
                     <h1 class="title sub-banner1 h1-p" style="color: white;">SERVICIOS<br>Y PRECIOS</h1>
-                    <h1 class="title sub-banner1 h1-m"><span id="todo">TODO</span> PARA <br>TU MASCOTA</h1>
+                    <h1 class="title sub-banner1 h1-m" style="color: white;">SERVICIOS<br>Y PRECIOS</h1>
                     <h3 class="paragraph p-banner-social-works" style="color: white;">Olvídese de las conjeturas al brindarle a su mascota la atención que necesita. Ya sea que elija un servicio individual o un paquete de servicios combinados, nuestras Clínicas comunitarias y Centros de bienestar permanentes ofrecen precios transparentes y por adelantado sin cargos por visitas al consultorio.
                     </h3>
                    
@@ -112,6 +112,7 @@
 
         <div class="social-works">
         <h2 class="title">Nuestas Obras Sociales</h2>
+        <br>
         <p class="paragraph">Cada uno de nuestros paquetes de servicios combinados incluye una serie preestablecida de vacunas y exámenes de detección recomendados por veterinarios a una tarifa conveniente y con descuento</p>
     </div>
 
@@ -268,11 +269,227 @@
         
     
                 </div>
-            </div>
-
-           
-                
+            </div>      
         </section>
+
+
+        <section class="container-works-card-mobile container mx-auto">
+        <div x-data="{swiper: null}" x-init="swiper = new Swiper($refs.container, {
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 0,
+      
+          breakpoints: {
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 0,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 0,
+            },
+          },
+        })" class="relative w-10/12 mx-auto flex flex-row">
+      <div class="absolute inset-y-0 left-0 z-10 flex items-center">
+        <button @click="swiper.slidePrev()" class="bg-white -ml-2 lg:-ml-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+          <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6">
+            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    
+      <div class="swiper-container" x-ref="container">
+        <div class="swiper-wrapper">
+      
+          <div class="swiper-slide p-4">
+            <div class="flex flex-col rounded  overflow-hidden">
+              <div class="flex-shrink-0">
+                <div class="box-social-work">
+            
+                  <h2 class="title title-social">Plan Northem 200</h2>
+                  <br>
+                  <span class="paragraph">Solamente</span>
+                  <h5 class="sub-title">$600</h5>
+                  <span class="paragraph">por mes*</span>
+                  <br>
+                  <div class="list-social-work">
+      
+                    <div class="list-chek">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="paragraph">Veterinario en Línea las 24 h
+  
+                      </span>
+                    </div>
+      
+                    <div class="list-chek">
+                      <i class="bi bi-x-circle-fill" style="color: red;"></i>
+                      <span class="paragraph"> Cuidado de tu mascota (controles, vacunas, traslados, pipetas y desparasitaciones).</span>
+                    </div>
+      
+                    <div class="list-chek">
+                      <i class="bi bi-x-circle-fill" style="color: red;"></i>
+                      <span class="paragraph">  Castraciones de tu mascota (simples, operaciones para esterilización).
+  
+                      </span>
+                    </div>
+                    <div class="list-chek">
+                      <i class="bi bi-x-circle-fill" style="color: red;"></i>
+                      <span class="paragraph">   Bienestar de tu mascota (guardería, terapias alternativas, adiestramiento).
+  
+                      </span>
+                    </div>
+                    <div class="list-chek">
+                      <i class="bi bi-x-circle-fill" style="color: red;"></i>
+                      <span class="paragraph">  Belleza de tu mascota (baños, peluquería, corte de uñas).
+  
+                      </span>
+                    </div>
+                   
+      
+                    <br>
+                  <div class="btn-social-work">
+                    <a href="#" id="btn-social-work">Adquirir Plan</a> 
+              </div> 
+          
+      
+                  </div>
+              </div>
+  
+  
+              </div>
+            </div>
+          </div>
+    
+          <div class="swiper-slide p-4">
+            <div class="flex flex-col rounded  overflow-hidden">
+              <div class="flex-shrink-0">
+                <div class="box-social-work">
+            
+                  <h2 class="title title-social">Plan Northem 500</h2>
+                  <br>
+                  <span class="paragraph">Solamente</span>
+                  <h5 class="sub-title">$1.200</h5>
+                  <span class="paragraph">por mes*</span>
+                  <br>
+                  <div class="list-social-work">
+      
+                    <div class="list-chek">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="paragraph">Veterinario en Línea las 24 h
+  
+                      </span>
+                    </div>
+      
+                    <div class="list-chek">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="paragraph"> Cuidado de tu mascota (controles, vacunas, traslados, pipetas y desparasitaciones).</span>
+                    </div>
+      
+                    <div class="list-chek">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="paragraph">  Castraciones de tu mascota (simples, operaciones para esterilización).
+  
+                      </span>
+                    </div>
+                    <div class="list-chek">
+                      <i class="bi bi-x-circle-fill" style="color: red;"></i>
+                      <span class="paragraph">   Bienestar de tu mascota (guardería, terapias alternativas, adiestramiento).
+  
+                      </span>
+                    </div>
+                    <div class="list-chek">
+                      <i class="bi bi-x-circle-fill" style="color: red;"></i>
+                      <span class="paragraph">  Belleza de tu mascota (baños, peluquería, corte de uñas).
+  
+                      </span>
+                    </div>
+                   
+      
+                    <br>
+                  <div class="btn-social-work">
+                    <a href="#" id="btn-social-work">Adquirir Plan</a> 
+              </div> 
+          
+      
+                  </div>
+              </div>                
+      </div>
+            </div>
+          </div>
+    
+          <div class="swiper-slide p-4">
+            <div class="flex flex-col rounded  overflow-hidden">
+              <div class="flex-shrink-0">
+                <div class="box-social-work">
+            
+                  <h2 class="title title-social">Plan Northem 800</h2>
+                  <br>
+                  <span class="paragraph">Solamente</span>
+                  <h5 class="sub-title">$1.800</h5>
+                  <span class="paragraph">por mes*</span>
+                  <br>
+                  <div class="list-social-work">
+      
+                    <div class="list-chek">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="paragraph">Veterinario en Línea las 24 h
+  
+                      </span>
+                    </div>
+      
+                    <div class="list-chek">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="paragraph"> Cuidado de tu mascota (controles, vacunas, traslados, pipetas y desparasitaciones).</span>
+                    </div>
+      
+                    <div class="list-chek">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="paragraph">  Castraciones de tu mascota (simples, operaciones para esterilización).
+  
+                      </span>
+                    </div>
+                    <div class="list-chek">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="paragraph">   Bienestar de tu mascota (guardería, terapias alternativas, adiestramiento).
+  
+                      </span>
+                    </div>
+                    <div class="list-chek">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="paragraph">  Belleza de tu mascota (baños, peluquería, corte de uñas).
+  
+                      </span>
+                    </div>
+                   
+      
+                    <br>
+                  <div class="btn-social-work">
+                    <a href="#" id="btn-social-work">Adquirir Plan</a> 
+              </div> 
+          
+      
+                  </div>
+              </div>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="absolute inset-y-0 right-0 z-10 flex items-center">
+        <button @click="swiper.slideNext()" class="bg-white -mr-2 lg:-mr-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+          <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      </div>
+
+    </section>
 
         <div class="title-social-work">
         <h2 class="title">Complementos para los Planes de la Obra Social</h2>
@@ -281,6 +498,7 @@
 
         <section class="container mx-auto container-extra-socialwork"> 
         
+          <div class="box-extra-social">
         <div class="mr-8">
     
           <div class="bg-white max-w-xl mx-auto border border-gray-200" x-data="{selected:1}">
@@ -299,7 +517,7 @@
           
                       <div class="relative overflow-hidden transition-all max-h-0 duration-700"  x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
                           <div class="p-6">
-                              <p class="paragraph text-justify">Todos los perros deben estar vacunados contra el virus de la rabia. La rabia es una infección viral del sistema nervioso central que puede afectar a todos los mamíferos, incluidos los humanos, y es 100 % mortal si no se trata. Se transmite de animal a animal o de animal a humano principalmente a través de la mordedura de un animal infectado. El virus de la rabia viaja en los nervios desde el sitio de la mordedura hasta el cerebro y la médula espinal.</p>
+                              <p class="paragraph text-justify">Todos los perros deben estar vacunados contra el virus de la rabia. La rabia es una infección viral del sistema nervioso central que puede afectar a todos los mamíferos, incluidos los humanos, y es 100 % mortal si no se trata. </p>
                       </div>
           
                   </li>
@@ -326,7 +544,7 @@
               
                   <li class="relative border-b border-gray-200">
           
-                      <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 3 ? selected = 3 : selected = null">
+                      <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 4 ? selected = 4 : selected = null">
                           <div class="flex items-center justify-between">
                               <span><b>
                                   Prueba de enfermedad del gusano del corazón			</b>		</span>
@@ -334,7 +552,7 @@
                           </div>
                                       </button>
           
-                      <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
+                      <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
                           <div class="p-6">
                               
                             <p class="paragraph text-justify">La enfermedad del parásito del corazón es una enfermedad grave que ocasiona una enfermedad pulmonar severa, insuficiencia cardíaca, daño a otro órgano, y muerte en las mascotas, sobre todo en los perros, los gatos y los hurones. Es causada por una lombriz parasítica conocida como Dirofilaria immitis.</p>
@@ -363,9 +581,11 @@
                   </li>
           
                       </ul>
-              </div>
+          </div>
         </div>
+      </div>
 
+      <div class="box-extra-social">
         <div class="mr-8">
     
           <div class="bg-white max-w-xl mx-auto border border-gray-200" x-data="{selected:1}">
@@ -383,7 +603,7 @@
           
                       <div class="relative overflow-hidden transition-all max-h-0 duration-700"  x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
                           <div class="p-6">
-                              <p class="paragraph text-justify">El virus de la influenza canina es una enfermedad respiratoria altamente infecciosa que se observa con mayor frecuencia en perros socialmente activos. El riesgo más alto incluye a los perros que asisten con frecuencia a parques para perros, guarderías para perros, clases de entrenamiento, alojamiento e instalaciones de aseo. Sin embargo, los casos pueden aparecer ocasionalmente en perros confinados en una casa o patio, ya que la enfermedad se transmite ocasionalmente de perro a perro a través de una cerca o una puerta mosquitera.</p>
+                              <p class="paragraph text-justify">El virus de la influenza canina es una enfermedad respiratoria altamente infecciosa que se observa con mayor frecuencia en perros socialmente activos. El riesgo más alto incluye a los perros que asisten con frecuencia a parques para perros, guarderías para perros, clases de entrenamiento, alojamiento e instalaciones de aseo.</p>
                       </div>
           
                   </li>
@@ -401,7 +621,7 @@
           
                       <div class="relative overflow-hidden transition-all max-h-0 duration-700"  x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
                           <div class="p-6">
-                              <p class="paragraph text-justify">Se compone de un panel de pruebas conocido como Perfil Bioquímico y Conteo Sanguíneo Completo (CBC). Es para gatos y perros, de cualquier edad, para detectar problemas médicos internos. El veterinario combinará los hallazgos, el historial médico de su mascota y otra información para evaluar el estado de salud de su mascota y determinar si se recomiendan pruebas o medicamentos adicionales.</p>
+                              <p class="paragraph text-justify">Se compone de un panel de pruebas conocido como Perfil Bioquímico y Conteo Sanguíneo Completo (CBC). Es para gatos y perros, de cualquier edad, para detectar problemas médicos internos.</p>
                           </div>
                       </div>
           
@@ -429,7 +649,7 @@
 
                   <li class="relative border-b border-gray-200">
           
-                      <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 3 ? selected = 3 : selected = null">
+                      <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 5 ? selected = 5 : selected = null">
                           <div class="flex items-center justify-between">
                               <span><b>
                                   Examen para detectar Distemper			</b>		</span>
@@ -437,7 +657,7 @@
                           </div>
                                       </button>
           
-                      <div class="relative overflow-hidden transition-all max-h-0 duration-700"  x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
+                      <div class="relative overflow-hidden transition-all max-h-0 duration-700"  x-ref="container5" x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''">
                           <div class="p-6">
                               
                             <p class="paragraph text-justify">El distemper canino es una enfermedad altamente contagiosa causada por un virus que afecta los aparatos respiratorio, gastrointestinal, y a menudo, el sistema nervioso de los cachorritos y perros adultos. El virus también infecta a cánidos salvajes (por ejemplo, zorros, lobos, coyotes, mapaches, zorrillos, y hurones).</p>
@@ -449,119 +669,13 @@
                       </ul>
               </div>
         </div>
-   <!--
-        <div class="accordion" id="accordionExample">
-    <div class="accordion-item bg-white border border-gray-200">
-      <h2 class="accordion-header mb-0" id="headingOne">
-        <button class="
-          accordion-button
-          relative
-          flex
-          items-center
-          w-full
-          py-4
-          px-5
-          text-base text-gray-800 text-left
-          bg-white
-          border-0
-          rounded-none
-          transition
-          focus:outline-none
-        " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-          aria-controls="collapseOne">
-          Accordion Item #1
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-        data-bs-parent="#accordionExample">
-        <div class="accordion-body py-4 px-5">
-          <strong>This is the first item's accordion body.</strong> It is shown by default,
-          until the collapse plugin adds the appropriate classes that we use to style each
-          element. These classes control the overall appearance, as well as the showing and
-          hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-          our default variables. It's also worth noting that just about any HTML can go within
-          the <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
       </div>
-    </div>
-    <div class="accordion-item bg-white border border-gray-200">
-      <h2 class="accordion-header mb-0" id="headingTwo">
-        <button class="
-          accordion-button
-          collapsed
-          relative
-          flex
-          items-center
-          w-full
-          py-4
-          px-5
-          text-base text-gray-800 text-left
-          bg-white
-          border-0
-          rounded-none
-          transition
-          focus:outline-none
-        " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-          aria-controls="collapseTwo">
-          Accordion Item #2
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-        data-bs-parent="#accordionExample">
-        <div class="accordion-body py-4 px-5">
-          <strong>This is the second item's accordion body.</strong> It is hidden by default,
-          until the collapse plugin adds the appropriate classes that we use to style each
-          element. These classes control the overall appearance, as well as the showing and
-          hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-          our default variables. It's also worth noting that just about any HTML can go within
-          the <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item bg-white border border-gray-200">
-      <h2 class="accordion-header mb-0" id="headingThree">
-        <button class="
-          accordion-button
-          collapsed
-          relative
-          flex
-          items-center
-          w-full
-          py-4
-          px-5
-          text-base text-gray-800 text-left
-          bg-white
-          border-0
-          rounded-none
-          transition
-          focus:outline-none
-        " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-          aria-controls="collapseThree">
-          Accordion Item #3
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-        data-bs-parent="#accordionExample">
-        <div class="accordion-body py-4 px-5">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default,
-          until the collapse plugin adds the appropriate classes that we use to style each
-          element. These classes control the overall appearance, as well as the showing and
-          hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-          our default variables. It's also worth noting that just about any HTML can go within
-          the <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-        </div>
-
-      
--->
 
         </section>
 
+        <div class="vacio"></div>
     </main>
 
-   
 
     <footer>
     <div class="container mx-auto container-footer">
@@ -613,9 +727,7 @@
 
         <!--JavaScript-->
         <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-
         <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
-
         <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
         <script src='https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js'></script>
         <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js'></script>
