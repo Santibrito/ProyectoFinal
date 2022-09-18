@@ -1,192 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Clinica Northem | Inicio</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/northem_icon.ico">
 
+    <!--Tailwind css-->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel='stylesheet' href='https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css'>
 </head>
+
 <body>
+
+    <header>
+
+        <!--Social-->
+        <section class="info-clinic">
+          <div class="container-contact">
+              <div class="location">
+                  <i class="bi bi-geo-alt"></i>
+                  <p>Zeballos 1232, Rosario Santa Fe</p>
+              </div>
+
+              <div class="mail" style="margin-left: 1.5vh; margin-right: 1.5vh;">
+                  <i class="bi bi-envelope"></i>
+                  <p>northem@contacto.com</p>
+              </div>
+
+              <div class="phone">
+                  <i class="bi bi-telephone-forward"></i>
+                  <p>+54 3412632166</p>
+              </div>
+
+          </div>
+          <div class="container-social">
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-twitter"></i>
+          </div>
+      </section>
+
+      <!--Navbar-->
+      <section id="header" class="">
+      <section class="wrapper transition-banner">
+          
+         <img src="assets/img/logo.png" class="brand" width="165">
+         <i class="bi bi-cart-check" style="font-size: 3vh;"  id="card-shop-mobile"></i>
+         <div class="burger" id="burger">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+         </div>
+         
+         <span class="overlay">
+          
+         </span>
+         
+         <nav class="navbar" id="navbar">
+          
+            <ul class="menu" id="menu">
+              <img src="assets/img/logo.png" class="brand" width="200" style="margin-left: 10px;" id="img-nav-mobile">
+               <li class="menu-item"><a href="index.html" class="menu-link">Inicio</a></li>
+               
+               <li class="menu-item menu-dropdown">
+                <span class="menu-link " data-toggle="submenu">Especialistas<i class="bx bx-chevron-down"></i></span>
+                <ul class="submenu">
+                   <li class="submenu-item"><a href="servicios/clinica-medica.html" class="submenu-link">Clínica Médica</a></li>
+                   <li class="submenu-item"><a href="servicios/oftalmología.html" class="submenu-link">Oftalmología</a></li>
+                   <li class="submenu-item"><a href="servicios/cardiologia.html" class="submenu-link">Cardiologia</a></li>
+                   <li class="submenu-item"><a href="servicios/cirugías.html" class="submenu-link">Cirugía</a></li>
+                </ul>
+             </li>
+               <li class="menu-item"><a href="/obra-social.html" class="menu-link">Obra Social</a></li>
+               <li class="menu-item active"><a href="/tienda.html" class="menu-link">Tienda</a></li>
+               <li class="menu-item"><a href="/contacto.html" class="menu-link">Contacto</a></li>
+
+               <li class="menu-item"><a href="/iniciar-sesion.html" class="menu-link" id="login-btn">Iniciar Sesion</a></li>
+               <li class="menu-item"><a href="#" class="menu-link" id="card-shop-pc"><i class="bi bi-cart-check" style="font-size: 3vh;"></i></a></li>
+            </ul>
+         </nav>
+      </section>
+      </section>
+
+         <!--Banner-->
+         <section id="img-banner">
+          <section class="banner" >
+           
+  
+          </section>
+          </section>
+           <span class="overlay">
+            
+           </span>
+           
+           
+        </section>
+        </section>
+
+        
+    
+    </header>
     <div id="app">
 
-        <!--{{this.nombreA}}  
-        {{this.nombreZ}}
-        {{this.productosDescuento}}
+    <main>
+      <div class="shop-vacio"></div>
+      <section class="container-shop container mx-auto">
+        
 
-        {{this.precioMayor}}
-        {{this.precioMenor}}
-        {{this.tipo}}-->
+        <div class="container-filter">
+            <h2 class="title">Filtra productos</h2>
+              <br>
+            <h3 class="sub-title" style="margin-bottom: 10px;">CATEGORÍA</h3>
+            <ul class="max-w-sm flex flex-col">
+                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                  <div class="relative flex items-start w-full">
+                    <div class="flex items-center h-5">
+                      <input type="checkbox" id="tipo" name="tipo" value="Juguete" v-model="tipoSelec" >
+                    </div>
+                    <label for="hs-list-group-item-checkbox-1" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                      Juguetes
+                    </label>
+                  </div>
+                </li>
+              
+                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                  <div class="relative flex items-start w-full">
+                    <div class="flex items-center h-5">
+                      <input input type="checkbox" id="tipo" name="tipo" value="Medicamento" v-model="tipoSelec">
+                    </div>
+                    <label for="hs-list-group-item-checkbox-2" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                      Medicamentos
+                    </label>
+                  </div>
+                </li>
+              
+                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                  <div class="relative flex items-start w-full">
+                    <div class="flex items-center h-5">
+                      <input id="hs-list-group-item-checkbox-3" name="hs-list-group-item-checkbox-3" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                    </div>
+                    <label for="hs-list-group-item-checkbox-3" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                      Alimentos
+                    </label>
+                  </div>
+                </li>
+            </ul>
+            <br>
 
+            <h3 class="sub-title" style="margin-bottom: 10px;">MARCA</h3>
+            <ul class="max-w-sm flex flex-col">
+                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                  <div class="relative flex items-start w-full">
+                    <div class="flex items-center h-5">
+                      <input id="hs-list-group-item-checkbox-4" name="hs-list-group-item-checkbox-4" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" >
+                    </div>
+                    <label for="hs-list-group-item-checkbox-4" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                      Whiskas
+                    </label>
+                  </div>
+                </li>
+              
+                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                  <div class="relative flex items-start w-full">
+                    <div class="flex items-center h-5">
+                      <input id="hs-list-group-item-checkbox-8" name="hs-list-group-item-checkbox-8" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                    </div>
+                    <label for="hs-list-group-item-checkbox-8" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                      Royal Canin
+                    </label>
+                  </div>
+                </li>
+              
+                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                  <div class="relative flex items-start w-full">
+                    <div class="flex items-center h-5">
+                      <input id="hs-list-group-item-checkbox-5" name="hs-list-group-item-checkbox-5" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                    </div>
+                    <label for="hs-list-group-item-checkbox-5" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                      Sabrositos
+                    </label>
+                  </div>
+                </li>
+                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                  <div class="relative flex items-start w-full">
+                    <div class="flex items-center h-5">
+                      <input id="hs-list-group-item-checkbox-6" name="hs-list-group-item-checkbox-6" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                    </div>
+                    <label for="hs-list-group-item-checkbox-6" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                      Purina
+                    </label>
+                  </div>
+                </li>
+                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                  <div class="relative flex items-start w-full">
+                    <div class="flex items-center h-5">
+                      <input id="hs-list-group-item-checkbox-7" name="hs-list-group-item-checkbox-7" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                    </div>
+                    <label for="hs-list-group-item-checkbox-7" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                      Petco
+                    </label>
+                  </div>
+                </li>
+            </ul>
+            <br>
+            <h3 class="sub-title" style="margin-bottom: 10px;">GAMA DE PRECIOS</h3>
+            <div class="container-filter-price">   
+            <input type="range" name="rango" id="rango" min="0" max="2000" v-model="rango">
+            <p>$0 - ${{rango}}</p>
+          </div>
 
+        </div>
 
-        <form>
+        <div class="container-filter2">
 
-            <!-- El buscador -->
-            <input type="text" placeholder="Buscar..." v-model="buscador" v-on:keyup="filtroBusqueda"> {{buscador}}
-
-            <!-- El rango -->
-            <label>
-                <input type="range" name="rango" id="rango" min="0" max="2000" v-model="rango">
-            </label>
-
-            <!-- Para las categorias -->
-            <label>Juguete
-                <input type="checkbox" id="tipo" name="tipo" value="Juguete" v-model="tipoSelec">
-            </label>
-            <label>Medicamento
-                <input type="checkbox" id="tipo" name="tipo" value="Medicamento" v-model="tipoSelec">
-            </label>
-            
-            <!-- Para las marcas -->
-            <!-- <label>Juguete
-                <input type="checkbox" id="tipo" name="tipo" value="juguete" v-model="tipoSelec">
-            </label>
-            <label>Medicamento
-                <input type="checkbox" id="tipo" name="tipo" value="medicamento" v-model="tipoSelec">
-            </label> -->
-            
-            <!-- El select para los filtros -->
-            <select v-model="opcionElegida">
-                <option disabled value="" selected>Elija un filtro</option>
-                <option value="mayor">Precio Mayor</option>
+            <div class="container-search">
+                <div class="flex rounded-md shadow-sm">
+                    <input type="text" placeholder="Buscar..." v-model="buscador" v-on:keyup="filtroBusqueda"  id="hs-trailing-button-add-on-with-icon"
+                    name="hs-trailing-button-add-on-with-icon"
+                    class="py-3 px-4 block w-full border-black shadow-sm rounded-l-md text-sm focus:z-10"placeholder="Encuentra tu producto">
+                    <button type="button"
+                        class="inline-flex flex-shrink-0 justify-center items-center h-[2.875rem] w-[2.875rem] rounded-r-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm">
+                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <form>
+              <div class="container-select-shop">
+              <select v-model="opcionElegida" class="py-3 px-4 pr-9 block title-filter">
+                <option  value="" disabled selected>Elija un filtro</option>
+                  <option value="mayor">Precio Mayor</option>
                 <option value="menor">Precio Menor</option>
                 <option value="a-z">Ordenar A-Z</option>
                 <option value="z-a">Ordenar Z-A</option>
                 <option value="descuentos">Descuentos</option>
-            </select>
-
-
-        </form>
-
-        {{filtroSelect}}
-        {{opcionElegida}}
-        {{seleccionado}}
-
-
-        <div v-if="tipoSelec == ''">
-            {{buscado}}
-            <div v-if="arrayProductosRespaldo.length == 0">
-                <div>
-                    <h5>no hay nada</h5>
-                    <p>ajuste los parametros de busqueda</p>
-                </div>
-            </div>
-
-            <div v-else v-for="producto in arrayProductosRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
-                    <p>{{producto.nombre}}</p>
-                    <p>{{producto.tipo}}</p>
-                    <p>{{producto.precio}}</p>
-                </div>
-            </div>
-
-        </div>
-        <div v-else-if="tipoSelec == 'Juguete'">
-            {{buscadoJ}}
-            <p>j</p>
-            <div v-if="arrayJuguetesRespaldo.length == 0">
-                <div>
-                    <h5>no hay nada</h5>
-                    <p>ajuste los parametros de busqueda</p>
-                </div>
-            </div>
-
-            <div v-else v-for="producto in arrayJuguetesRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
-                    <p>{{producto.nombre}}</p>
-                    <p>{{producto.tipo}}</p>
-                    <p>{{producto.precio}}</p>
-                </div>
-            </div>
-
-        </div>
-        <div v-else-if="tipoSelec == 'Medicamento'">
-            {{buscadoM}}
-            <p>m</p>
-            <div v-if="arrayMedicamentosRespaldo.length == 0">
-                <div>
-                    <h5>no hay nada</h5>
-                    <p>ajuste los parametros de busqueda</p>
-                </div>
-            </div>
-
-            <div v-else v-for="producto in arrayMedicamentosRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
-                    <p>{{producto.nombre}}</p>
-                    <p>{{producto.tipo}}</p>
-                    <p>{{producto.precio}}</p>
-                </div>
-            </div>
-
-        </div>
-        <div v-else>
-            {{buscadoOtro}}
-            <p>2</p>
-            <div v-if="arrayProductosRespaldo.length == 0">
-                <div>
-                    <h5>no hay nada</h5>
-                    <p>ajuste los parametros de busqueda</p>
-                </div>
-            </div>
-
-            <div v-else v-for="producto in arrayProductosRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
-                    <p>{{producto.nombre}}</p>
-                    <p>{{producto.tipo}}</p>
-                    <p>{{producto.precio}}</p>
-                </div>
-            </div>
-
-        </div>
-
+              </select>
+              </div>
   
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content"  v-for="producto in productoInfoModal">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">{{producto.nombre}}</h5>
-                        <p>{{producto.tipo}}</p>
-                        <!--<p>{{producto.marca}}</p>  -->
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="div-img-modal-body">
-                            <img :src="producto.imagen" :alt="producto.nombre">
-                        </div>
-                        <div>
-                            <p>{{producto.descripcion}}</p>
-                            <p>Stock: {{producto.stock}}</p>
-                            <p>Precio: ${{producto.precio}}</p>
-                            <!-- <p>{{producto.descuento}}</p> -->
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>{{producto.contador}}
-                        <button v-show="producto.contador > 0"  type="button" class="btn btn-danger sacar" @click="quitarDelCarrito(producto)">Sacar del Carrito</button>
-                    </div>
+          </form>
+        </div>
+        
+        
+
+          
+        <div v-if="tipoSelec == ''" style="display: flex;flex-wrap: wrap;">
+          {{buscado}}
+          <div v-if="arrayProductosRespaldo.length == 0">
+              <div>
+                  <h5>no hay nada</h5>
+                  <p>ajuste los parametros de busqueda</p>
+              </div>
+          </div>
+
+          <div v-else v-for="producto in arrayProductosRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <div  v-if="rango > producto.precio" @click=modalProducto(producto._id) class="card-shop">
+              
+              
+                  <div class="card-shop-img">
+                    <img :src="producto.imagen" :alt="producto.nombre" width="150">
+                    
+                  </div>
+                  <br>
+         
+                  <div class="card-shop-title">
+                    <h4 class="sub-title">{{producto.nombre}}</h4>
+                  </div>
+          
+             
+                  <div class="card-shop-price">
+                    <h5 class="sub-title">$ {{producto.precio}}</h5>
+                    <p class="paragraph">Hasta 4 cuotas sin interes de $2.200 con Bancos seleccionados</p>
                 </div>
+              
+      
+              </div>
+          </div>
+
+      </div>
+      <div v-else-if="tipoSelec == 'Juguete'"  style="display: flex;flex-wrap: wrap;">
+          {{buscado}}
+          <div v-if="arrayJuguetesRespaldo.length == 0">
+              <div>
+                  <h5>no hay nada</h5>
+                  <p>ajuste los parametros de busqueda</p>
+              </div>
+          </div>
+
+          <div v-else v-for="producto in arrayJuguetesRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div  v-if="rango > producto.precio" @click=modalProducto(producto._id) class="card-shop">
+              
+              
+              <div class="card-shop-img">
+                <img :src="producto.imagen" :alt="producto.nombre" width="150">
+                
+              </div>
+              <br>
+     
+              <div class="card-shop-title">
+                <h4 class="sub-title">{{producto.nombre}}</h4>
+              </div>
+      
+         
+              <div class="card-shop-price">
+                <h5 class="sub-title">$ {{producto.precio}}</h5>
+                <p class="paragraph">Hasta 4 cuotas sin interes de $2.200 con Bancos seleccionados</p>
             </div>
+          
+  
+          </div>
+          </div>
+
+      </div>
+
+        
+
+     
+      <div v-else-if="tipoSelec == 'Medicamento'" style="display: flex;flex-wrap: wrap;">
+          {{buscadoM}}
+          <div v-if="arrayMedicamentosRespaldo.length == 0">
+              <div>
+                  <h5>no hay nada</h5>
+                  <p>ajuste los parametros de busqueda</p>
+              </div>
+          </div>
+
+          <div v-else v-for="producto in arrayMedicamentosRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <div  v-if="rango > producto.precio" @click=modalProducto(producto._id) class="card-shop">
+                <div class="card-shop-img">
+                  <img :src="producto.imagen" :alt="producto.nombre" width="150">
+                  
+                </div>
+                <br>
+       
+                <div class="card-shop-title">
+                  <h4 class="sub-title">{{producto.nombre}}</h4>
+                </div>
+        
+           
+                <div class="card-shop-price">
+                  <h5 class="sub-title">$ {{producto.precio}}</h5>
+                  <p class="paragraph">Hasta 4 cuotas sin interes de $2.200 con Bancos seleccionados</p>
+              </div>
+              </div>
+          </div>
+
+      </div>
+      {{filtroSelect}}
+      {{opcionElegida}}
+      {{seleccionado}}
+      <div v-else>
+     
+          <div v-if="arrayProductosRespaldo.length == 0" style="display: flex;flex-wrap: wrap;">
+              <div>
+                  <h5>no hay nada</h5>
+                  <p>ajuste los parametros de busqueda</p>
+              </div>
+          </div>
+
+          <div v-else v-for="producto in arrayProductosRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
+                <div class="card-shop-img">
+                  <img :src="producto.imagen" :alt="producto.nombre" width="150" class="card-shop">
+                  
+                </div>
+                <br>
+       
+                <div class="card-shop-title">
+                  <h4 class="sub-title">{{producto.nombre}}</h4>
+                </div>
+        
+           
+                <div class="card-shop-price">
+                  <h5 class="sub-title">$ {{producto.precio}}</h5>
+                  <p class="paragraph">Hasta 4 cuotas sin interes de $2.200 con Bancos seleccionados</p>
+              </div>
+              </div>
+          </div>
+
+      </div>
+
+
         </div>
 
+    </section>
 
+    
+    </main>
 
-    </div>
   </div>
 
 
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
-<script src="https://unpkg.com/vue@3"></script> 
-<script src="./tienda.js"></script>
+
+    <!--JavaScript-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
+    <script src='https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+    <script src="https://unpkg.com/vue@3"></script> 
+    <script src="assets/js/tienda.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+
 </body>
+
 </html>
