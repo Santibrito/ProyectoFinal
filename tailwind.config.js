@@ -2,6 +2,7 @@
 module.exports = {
   content: [
   "./*.html",
+  "./servicisos/*.html",
   "./assets/css/*.css",
   './src/**/*.{html,js}', 
   './node_modules/tw-elements/dist/js/**/*.js'

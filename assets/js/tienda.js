@@ -31,11 +31,7 @@ createApp({
     },
     created(){
         this.getProductos()
-    },//arrayProductos == cartas 
-    // arrayProductosRespaldo == cartasFiltradas
-    //buscador == nombre
-    //tipos == categorias
-    //tipoSelec  == categoriasSelec
+    },
     methods:{
         getProductos(){
             console.log("productos");
