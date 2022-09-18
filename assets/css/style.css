@@ -560,9 +560,10 @@
  background-size: cover;
 }
 .slider-banner4{
-  background-image:  linear-gradient(rgba(48, 53, 53, 0.808), #191b1bce),url("../img/social-works.png");
- background-position: center;
+  background-image:  url("../img/index-banner.jpg");
+ background-position:center;
  background-size: cover;
+ background-repeat: no-repeat;
 }
 
 .slider-banner5{
@@ -1049,6 +1050,18 @@ background-size: cover;
   width: 70%;
 }
 
+.box-social-work-social{
+  background-color: #f8f7f7;
+  padding: 3vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .list-chek{
   margin-bottom: 1vh;
 }
@@ -1087,8 +1100,13 @@ background-size: cover;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 2vh;
-    width: 80%;
+    width: 100%;
   }
+  .box-social-work{
+    text-align: center;
+    width: 100%;
+  }
+  
 }
 @media (max-width: 1368px){
   .container-social-work-into{
@@ -2281,12 +2299,19 @@ iframe {
     width: 100%;
     line-height: 150%;
   }
+  .box-social-work span{
+    font-size: 1rem;
+    width: 100%;
+  }
 
 }
 
 @media (max-width: 600px){
  
-  
+  .box-social-work span{
+    font-size: 1rem;
+    width: 100%;
+  }
   .social-works h2{
     width: 70%;
     margin: auto;
@@ -2633,4 +2658,96 @@ iframe {
 }
 
 
+/*
 
+.espacio{
+  margin-top: 50vh;
+}
+.container-main-header{
+  display: grid;
+
+}
+
+
+.container-header-text{
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 10vh;
+  
+}
+.span-header{
+  display: flex;  
+  align-items: center; 
+  font-family: Paragraph;
+  font-size: 1.3rem;
+  color: #009eb8;
+
+}
+
+.line{
+  margin-right: 5px;
+  width: 9px;
+  height: 1px;
+  background-color: black;
+  
+}
+
+.title-header{
+  width: 40%;
+}
+
+.title-header span{
+  font-size: 5rem;
+  font-family: title;
+  color: hsl(234, 40%, 25%);;
+}
+
+.p-header{
+  width: 40%;
+}
+.p-header p{
+  font-family: Paragraph;
+  font-size: 1.5rem;
+  color: #4b4b4c;
+}
+
+
+.button-headers a{
+  padding: 1vh;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+}
+
+#btn-1{
+  padding: 1vh;
+  background-color: hsl(234, 40%, 25%);;
+  margin-right: 1.5vh;
+  font-family: sub-title;
+}
+
+#btn-2{
+  color: rgb(255, 255, 255);
+  background-color: #009eb8;
+  font-family: sub-title;
+}
+
+
+.container-header-img{
+  right: 0;
+  margin-right: auto;
+  position: absolute;
+  z-index: 1;
+  padding: 43.5vh;
+  background-image: url("../img/social-works.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 110vh;
+  border-top-left-radius: 0vh;
+  border-bottom-left-radius: 90vh;
+  background-repeat: no-repeat;
+
+}
+*/
