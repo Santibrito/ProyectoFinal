@@ -1180,6 +1180,11 @@ video {
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
+.bg-blue-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
+}
+
 .bg-blue-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
@@ -1203,6 +1208,10 @@ video {
 .bg-gray-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.bg-bottom {
+  background-position: bottom;
 }
 
 .p-4 {
@@ -2677,14 +2686,18 @@ video {
 }
 
 .card-shop{
-  padding: 2vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 30%;
-  border:3px solid rgb(233, 230, 230);
-  border-radius:10px;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  width: 32vh;
+  padding: 1vh;
+  margin: 1vh;
+  height: 40vh;
+  border: 2px solid rgb(228, 228, 228);
+  border-radius: 10px;
 }
 
 .card-shop-title h4{
@@ -3943,8 +3956,8 @@ iframe {
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: 0.4fr 1.6fr;
-  grid-template-rows: 0.2fr 1.8fr;
-  gap: 0px 0px;
+  grid-template-rows: 0.2fr 2fr;
+  gap: 10px 2vh;
   grid-auto-flow: row;
   grid-template-areas:
     "container-filter container-filter2"
@@ -3953,8 +3966,6 @@ iframe {
 
 .container-filter {
   grid-area: container-filter;
-  height: 100vh;
-  position: fixed;
 }
 
 .container-filter h2{
@@ -3970,6 +3981,27 @@ iframe {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   margin-top: auto;
+  margin-left: 2vh;
+  margin-right: 2vh;
+}
+
+.container-search input{
+  outline: none;
+  border: none;
+  border: 1px solid var(--main);
+  font-family: var(--font-subtitle);
+}
+
+.container-filter label{
+  font-family: var(--font-title);
+}
+
+.container-search button{
+  background-color: var(--secondary);
+}
+
+.container-search button:hover{
+  background-color: #00a0b8cb;
 }
 
 .container-search{
@@ -3981,6 +4013,14 @@ iframe {
   display: flex;
   margin-left: auto !important;
   justify-content: end;
+}
+
+.title-filter{
+  border: none;
+  border: 1px solid var(--main);
+  font-family: var(--font-subtitle);
+  border-radius: 10px;
+  outline: none;
 }
 
 .container-products {
@@ -3996,6 +4036,20 @@ iframe {
 
 .container-products>*{
   margin: 1vh;
+}
+
+.container-filter-price{
+  padding: 1vh;
+  border-radius: 10px;
+  border: 1px solid rgb(235, 233, 233);
+}
+
+.container-filter-price input{
+  width: 100%;
+}
+
+.container-filter-price p{
+  text-align: right;
 }
 
 .first\:mt-0:first-child {
