@@ -22,15 +22,16 @@ createApp({
             opcionElegida:"",
 
 
+
+            arrayCarritoDeCompras: [],
+            idProductosSolicitados:[],
+
+
         }
     },
     created(){
         this.getProductos()
-    },//arrayProductos == cartas 
-    // arrayProductosRespaldo == cartasFiltradas
-    //buscador == nombre
-    //tipos == categorias
-    //tipoSelec  == categoriasSelec
+    },
     methods:{
         getProductos(){
             console.log("productos");
@@ -71,6 +72,11 @@ createApp({
                 this.modalProducto()
 
 
+                let productosEnStorage = JSON.parse(localStorage.getItem('productosEnElCarrito')) // se usa el parse ya que sino no es un objeto, por lo tanto no podes aplicarle funciones de prden superior
+                if (productosEnStorage) {
+                    this.arrayCarritoDeCompras = JSON.parse(localStorage.getItem('productosEnElCarrito'))
+                }//cargamos el localStorage en el carrito para tener los mismos valores en las paginas
+                console.log(this.arrayCarritoDeCompras);
             })
         },
         filtroPrecioMayor(){
@@ -154,6 +160,49 @@ createApp({
             this.tipos = new Set(this.tipos)
             console.log(this.tipos);
         }, 
+
+        agregarAlCarrito(producto) {
+            this.idProductosSolicitados = this.arrayCarritoDeCompras.map(product => product._id)
+            if (!this.idProductosSolicitados.includes(producto._id)) {
+                this.arrayCarritoDeCompras.push(producto)
+                producto.contador = 1
+                localStorage.setItem('productosEnElCarrito', JSON.stringify(this.arrayCarritoDeCompras))
+            } else if (producto.contador < producto.stock) {
+                let productoModificado = this.arrayCarritoDeCompras.filter(pro => pro._id == producto._id)[0]
+                productoModificado.contador++
+                this.arrayCarritoDeCompras.forEach(pro => {
+                    if (productoModificado._id == pro._id) {
+                        pro = productoModificado;
+                        producto.contador = productoModificado.contador
+                    }
+                })
+                localStorage.setItem('productosEnElCarrito', JSON.stringify(this.arrayCarritoDeCompras))
+            }
+            console.log(localStorage);
+        },//agrega producto al carro 
+
+
+        quitarDelCarrito(producto) {
+            this.idProductosSolicitados = this.arrayCarritoDeCompras.map(producto => producto._id)
+            if (this.idProductosSolicitados.includes(producto._id)) {
+                this.arrayCarritoDeCompras = this.arrayCarritoDeCompras.filter(pro => pro._id != producto._id)
+                producto.contador = 0
+                localStorage.setItem('productosEnElCarrito', JSON.stringify(this.arrayCarritoDeCompras))
+            }
+
+        },//quita del carro
+
+
+
+
+
+
+
+
+
+
+
+
     },
     computed:{
         buscado(){ 
