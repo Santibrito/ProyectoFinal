@@ -1185,7 +1185,7 @@ background-size: cover;
   margin: auto;
   justify-content: center;
   text-align: center;
-  width: 32vh;
+  width: 30vh;
   padding: 1vh;
   margin: 1vh;
   height: 40vh;
@@ -2518,9 +2518,11 @@ iframe {
     "container-filter container-products";
 }
 
+
+
 .container-filter { 
   grid-area: container-filter;
-
+  
 }
 
 .modal-header {
@@ -2584,15 +2586,16 @@ iframe {
 }
 
 .container-products { 
-  
+  overflow-y:scroll;
+  height:100vh;
   padding-top: 2vh;
-  grid-area: container-products; 
   display: flex;
   flex-wrap: wrap;
   margin: auto;
   align-items: center;
   justify-content: center;
   width: 100%;
+  
 }
 
 .container-products>*{
@@ -2611,6 +2614,12 @@ iframe {
 
 .container-filter-price p{ 
   text-align: right;
+}
+
+@media (max-width: 985px){
+  
+
+  
 }
 
 /*PRUEBA*/
@@ -3264,4 +3273,130 @@ iframe {
 .inwardTable
 .tableCell:nth-child(8){
   width: 15%;
+}
+
+/*Tienda*/
+
+.warning-search{
+  display: flex;
+  flex-direction: column;
+  margin-top: -45vh;
+}
+
+.warning-search h5{
+  font-size: 2.6rem;
+  font-family: var(--font-subtitle);
+  color: var(--main);
+  text-align: center;
+}
+
+.warning-search p{
+  font-size: 1.5rem;
+  font-family: var(--font-paragraph);
+  color: var(--main);
+  text-align: center;
+}
+
+/*MODAL*/
+.flex-col {
+  flex-direction: column;
+  margin: auto;
+}
+
+.container-item-shop{
+  display: flex;
+}
+
+
+.img-item-shop{
+  border-radius: 5px;
+  display: flex;
+  margin-bottom: auto;
+  margin-top: 15px;
+  
+}
+.information-item-shop{
+  margin-bottom: auto;
+  padding-left: 2vh;
+}
+
+.information-item-shop h2{
+  font-size: 2rem;
+  width: 60%;
+  font-family: var(--font-title);
+  color: var(--main);
+  width: 45vh
+}
+
+.information-item-shop p{
+  font-size: 1.2rem;
+  width: 45vh;
+  font-family: var(--font-paragraph);
+  color: var(--paragraph);
+}
+
+.information-item-shop h3{
+  font-size: 2.4rem;
+  width: 60%;
+  font-family: var(--font-title);
+  color: var(--main);
+}
+
+.button-card-shop{
+  padding-bottom: 1vh;
+}
+#add-card{
+  background-color: var(--main);
+  font-family: var(--font-subtitle);
+  font-size: 1rem;
+  color: white;
+  padding: 1vh;
+  border-radius: 10px;
+}
+
+#delete-card{
+  background-color: rgb(202, 11, 11);
+  font-family: var(--font-subtitle);
+  font-size: 1rem;
+  color: white;
+  padding: 1vh;
+  border-radius: 10px;
+}
+
+.card-shop-img img{
+  width: 160px;
+}
+
+@media (max-width: 768px){
+  .card-shop-img img{
+    width: 130px;
+  }
+  .container-item-shop{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .information-item-shop h2{
+    font-size: 1.4rem;
+    width: 60%;
+    font-family: var(--font-title);
+    color: var(--main);
+    width: 45vh
+  }
+  
+  .information-item-shop p{
+    font-size: 1rem;
+    width: 45vh;
+    font-family: var(--font-paragraph);
+    color: var(--paragraph);
+  }
+  
+  .information-item-shop h3{
+    font-size: 2.4rem;
+    width: 60%;
+    font-family: var(--font-title);
+    color: var(--main);
+  }
 }

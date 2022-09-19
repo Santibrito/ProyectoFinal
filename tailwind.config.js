@@ -5,6 +5,7 @@ module.exports = {
   "./servicisos/*.html",
   "./assets/css/*.css",
   './src/**/*.{html,js}', 
+  './assets/node_modules/preline/dist/*.js',
   './node_modules/tw-elements/dist/js/**/*.js'
 
   ],
@@ -22,6 +23,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    
+    require('./assets/node_modules/preline/plugin.js'),
 ]
 }
