@@ -3265,3 +3265,87 @@ iframe {
 .tableCell:nth-child(8){
   width: 15%;
 }
+
+/* Carrito de compras */
+
+.container-productos {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.container-table-productos {
+  width: 60vw;
+  background-color: #ececec;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.container-table-productos img {
+  width: 15vw;
+  padding: 1rem;
+}
+
+th {
+  padding: 1rem;
+}
+
+td {
+  text-align: center;
+}
+
+.img-carrito {
+  display: flex;
+  align-items: center;
+}
+
+.btn-counter {
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  background-color: var(--secondary);
+  color: white;
+  font-family: var(--font-subtitle);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.container-pagos {
+  position: fixed;
+  left: 65vw;
+  background-color: #ececec;
+  width: 30vw;
+  border-radius: 1rem;
+  padding: 2rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.total-precio {
+  display: flex;
+  justify-content: space-between;
+}
+
+.paragraph-pagos {
+    font-weight: 600;
+  font-size: 1.5rem !important;
+}
+
+.button-pagos{
+  background-color: var(--main);
+  padding: 1vh;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  font-family: title;
+  margin-top: 1rem;
+}
+
