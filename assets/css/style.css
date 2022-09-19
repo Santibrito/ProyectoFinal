@@ -3294,6 +3294,7 @@ th {
 
 td {
   text-align: center;
+  border-top: 1px solid rgb(216, 216, 216);
 }
 
 .img-carrito {
