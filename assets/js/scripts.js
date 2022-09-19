@@ -148,4 +148,22 @@ function count(){
  
  people();
 
- 
+ $(document).ready(function() {
+   $('.subTables').hide();
+   $('.open').on('click', function() {
+     $(this).parent('div').parent('div').find('.subTables').slideToggle();
+     //$(this).find('.glyphicon-chevron-down').toggleClass('glyphicon-chevron-up');
+     if ($(this).find('i').hasClass('glyphicon-chevron-down')) {
+       $(this).find('i').removeClass('glyphicon-chevron-down');
+       $(this).find('i').addClass('glyphicon-chevron-up');
+     } else {
+       $(this).find('i').removeClass('glyphicon-chevron-up');
+       $(this).find('i').addClass('glyphicon-chevron-down');
+     }
+   });
+
+   $("#checkAll").change(function(){
+     var status = $(this).is(":checked") ? true : false;
+     $(".checkChange").prop("checked",status);
+   });
+ });
