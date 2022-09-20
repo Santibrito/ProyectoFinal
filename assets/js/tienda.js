@@ -21,7 +21,7 @@ createApp({
             productoInfoModal:[],
             opcionElegida:"",
 
-
+            //productoBoton:{},
 
             arrayCarritoDeCompras: [],
             idProductosSolicitados:[],
@@ -44,6 +44,7 @@ createApp({
                 this.arrayProductosRespaldo = this.arrayProductos
 
 
+                //this.eeeee()
                 this.filtroJuguete()
                 this.filtroMedicamento()
                 this.functGetCategorias()
@@ -165,15 +166,15 @@ createApp({
             this.idProductosSolicitados = this.arrayCarritoDeCompras.map(product => product._id)
             if (!this.idProductosSolicitados.includes(producto._id)) {
                 this.arrayCarritoDeCompras.push(producto)
-                producto.contador = 1
+                producto.quantity = 1
                 localStorage.setItem('productosEnElCarrito', JSON.stringify(this.arrayCarritoDeCompras))
-            } else if (producto.contador < producto.stock) {
+            } else if (producto.quantity < producto.stock) {
                 let productoModificado = this.arrayCarritoDeCompras.filter(pro => pro._id == producto._id)[0]
-                productoModificado.contador++
+                productoModificado.quantity++
                 this.arrayCarritoDeCompras.forEach(pro => {
                     if (productoModificado._id == pro._id) {
                         pro = productoModificado;
-                        producto.contador = productoModificado.contador
+                        producto.quantity = productoModificado.quantity
                     }
                 })
                 localStorage.setItem('productosEnElCarrito', JSON.stringify(this.arrayCarritoDeCompras))
@@ -186,7 +187,7 @@ createApp({
             this.idProductosSolicitados = this.arrayCarritoDeCompras.map(producto => producto._id)
             if (this.idProductosSolicitados.includes(producto._id)) {
                 this.arrayCarritoDeCompras = this.arrayCarritoDeCompras.filter(pro => pro._id != producto._id)
-                producto.contador = 0
+                producto.quantity = 0
                 localStorage.setItem('productosEnElCarrito', JSON.stringify(this.arrayCarritoDeCompras))
             }
 
@@ -195,9 +196,23 @@ createApp({
 
 
 
+        /* actualizarBoton(id){
+            let lllllll = this.arrayCarritoDeCompras
+            this.productoBoton = lllllll.find(producto => producto._id == id)
+            console.log(this.productoBoton);
+        }, */
 
 
 
+
+        /*eeeee(){
+            for (let producto = 0; producto < this.arrayProductos.length; producto++) {
+                //const element = array[index];
+                if (this.arrayCarritoDeCompras.includes(producto)) {
+                    producto.quantity==0
+                }
+            }
+        },*/
 
 
 
@@ -349,7 +364,15 @@ createApp({
                 }
 
             }
-        }
+        },
+        dsdsd(){
+            for (let producto = 0; producto < this.arrayProductos.length; producto++) {
+                //const element = array[index];
+                if (this.arrayCarritoDeCompras.includes(producto)) {
+                    producto.quantity==1
+                }
+            }
+        },
 
     },
 }).mount('#app')

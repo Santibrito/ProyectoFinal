@@ -22,10 +22,10 @@ createApp({
                 console.log(response.data);
                 console.log(response.data.response);
                 this.arrayProductos = response.data.response;
-
+                
                 
                 this.modalProducto()
-
+                
 
                 let productosEnStorage = JSON.parse(localStorage.getItem('productosEnElCarrito')) // se usa el parse ya que sino no es un objeto, por lo tanto no podes aplicarle funciones de prden superior
                 if (productosEnStorage) {
