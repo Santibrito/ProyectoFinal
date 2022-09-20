@@ -2185,7 +2185,7 @@ iframe {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-gap: 5vh;
-  height: 80vh;
+  height: 75vh;
 }
 
 
@@ -2200,13 +2200,9 @@ iframe {
     justify-items: center;
     justify-content: center;
     margin: auto;
-    height: 150vh;
+    height: 95vh;
   }
 
-
-  .vacio{
-    padding: 5vh;
-  }
 
   .mr-8{
     display: grid;
@@ -2223,16 +2219,7 @@ iframe {
 .title-social-work h2{
   width: 96%;
 }
-
-.container-extra-socialwork{
- 
-  height: 170vh;
 }
-
-
-}
-
-
 
 .title-social-work{
   margin-top: 10vh;
@@ -3418,6 +3405,15 @@ iframe {
   padding-top: 5vh;
 }
 
+@media (max-width: 1024px){
+.container-chekout{
+  display: flex;
+  flex-direction: column;
+}
+
+
+}
+
 .container-productos {
   display: flex;
   margin-top: 2rem;
@@ -3985,4 +3981,17 @@ td {
 }
 
 
+.container-display-responsive {
+    display: none;
+  }
+
+
+@media (max-width: 1024px){
+  .container-display {
+    display: none;
+  }
+
+  .container-display-responsive {
+    display: block;
+  }
 }
