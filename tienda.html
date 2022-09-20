@@ -19,7 +19,6 @@
 </head>
 
 <body>
-
     <header>
 
         <!--Social-->
@@ -84,7 +83,7 @@
                <li class="menu-item"><a href="/contacto.html" class="menu-link">Contacto</a></li>
 
                <li class="menu-item"><a href="/iniciar-sesion.html" class="menu-link" id="login-btn">Iniciar Sesion</a></li>
-               <li class="menu-item"><a href="#" class="menu-link" id="card-shop-pc"><i class="bi bi-cart-check" style="font-size: 3vh;"></i></a></li>
+               <li class="menu-item"><a href="/c.html" class="menu-link" id="card-shop-pc"><i class="bi bi-cart-check" style="font-size: 3vh;"></i></a></li>
             </ul>
          </nav>
       </section>
@@ -108,162 +107,259 @@
         
     
     </header>
-    <div id="app">
 
-      
-    <main>
-
-      <div class="shop-vacio"></div>
-      <section class="container-shop container mx-auto">
-        
-
-         <!--Filtro de categoria-->
-        <div class="container-filter">
+<div id="app">
+    <div class="mobile-filter">
+        <div id="side">
             <h2 class="title">Filtra productos</h2>
-              <br>
-            <h3 class="sub-title" style="margin-bottom: 10px;">CATEGORÍA</h3>
-            <ul class="max-w-sm flex flex-col">
-                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
-                  <div class="relative flex items-start w-full">
-                    <div class="flex items-center h-5">
-                      <input type="checkbox" id="tipo" name="tipo" value="Juguete" v-model="tipoSelec" >
-                    </div>
-                    <label for="hs-list-group-item-checkbox-1" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
-                      Juguetes
-                    </label>
-                  </div>
-                </li>
-              
-                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
-                  <div class="relative flex items-start w-full">
-                    <div class="flex items-center h-5">
-                      <input input type="checkbox" id="tipo" name="tipo" value="Medicamento" v-model="tipoSelec">
-                    </div>
-                    <label for="hs-list-group-item-checkbox-2" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
-                      Medicamentos
-                    </label>
-                  </div>
-                </li>
-              
-                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
-                  <div class="relative flex items-start w-full">
-                    <div class="flex items-center h-5">
-                      <input id="hs-list-group-item-checkbox-3" name="hs-list-group-item-checkbox-3" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
-                    </div>
-                    <label for="hs-list-group-item-checkbox-3" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
-                      Alimentos
-                    </label>
-                  </div>
-                </li>
-            </ul>
             <br>
-
-            <h3 class="sub-title" style="margin-bottom: 10px;">MARCA</h3>
-            <ul class="max-w-sm flex flex-col">
-                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
-                  <div class="relative flex items-start w-full">
-                    <div class="flex items-center h-5">
-                      <input id="hs-list-group-item-checkbox-4" name="hs-list-group-item-checkbox-4" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" >
-                    </div>
-                    <label for="hs-list-group-item-checkbox-4" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
-                      Whiskas
-                    </label>
+          <h3 class="sub-title" style="margin-bottom: 10px;">CATEGORÍA</h3>
+          <ul class="max-w-sm flex flex-col">
+              <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                <div class="relative flex items-start w-full">
+                  <div class="flex items-center h-5">
+                    <input type="checkbox" id="tipo" name="tipo" value="Juguete" v-model="tipoSelec" >
                   </div>
-                </li>
-              
-                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
-                  <div class="relative flex items-start w-full">
-                    <div class="flex items-center h-5">
-                      <input id="hs-list-group-item-checkbox-8" name="hs-list-group-item-checkbox-8" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
-                    </div>
-                    <label for="hs-list-group-item-checkbox-8" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
-                      Royal Canin
-                    </label>
-                  </div>
-                </li>
-              
-                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
-                  <div class="relative flex items-start w-full">
-                    <div class="flex items-center h-5">
-                      <input id="hs-list-group-item-checkbox-5" name="hs-list-group-item-checkbox-5" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
-                    </div>
-                    <label for="hs-list-group-item-checkbox-5" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
-                      Sabrositos
-                    </label>
-                  </div>
-                </li>
-                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
-                  <div class="relative flex items-start w-full">
-                    <div class="flex items-center h-5">
-                      <input id="hs-list-group-item-checkbox-6" name="hs-list-group-item-checkbox-6" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
-                    </div>
-                    <label for="hs-list-group-item-checkbox-6" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
-                      Purina
-                    </label>
-                  </div>
-                </li>
-                <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
-                  <div class="relative flex items-start w-full">
-                    <div class="flex items-center h-5">
-                      <input id="hs-list-group-item-checkbox-7" name="hs-list-group-item-checkbox-7" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
-                    </div>
-                    <label for="hs-list-group-item-checkbox-7" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
-                      Petco
-                    </label>
-                  </div>
-                </li>
-            </ul>
-            <br>
-            <h3 class="sub-title" style="margin-bottom: 10px;">GAMA DE PRECIOS</h3>
-            <div class="container-filter-price">   
-            <input type="range" name="rango" id="rango" min="241" max="2000" v-model="rango">
-            <p>$240 - ${{rango}}</p>
-          </div>
-
-        </div>
-
-        <!--Filtro de busque y ordernar-->
-        <div class="container-filter2">
-
-            <div class="container-search">
-                <div class="flex rounded-md shadow-sm">
-                    <input type="text" placeholder="Buscar..." v-model="buscador" v-on:keyup="filtroBusqueda"  id="hs-trailing-button-add-on-with-icon"
-                    name="hs-trailing-button-add-on-with-icon"
-                    class="py-3 px-4 block w-full border-black shadow-sm rounded-l-md text-sm focus:z-10"placeholder="Encuentra tu producto">
-                    <button type="button"
-                        class="inline-flex flex-shrink-0 justify-center items-center h-[2.875rem] w-[2.875rem] rounded-r-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm">
-                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                            fill="currentColor" viewBox="0 0 16 16">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                        </svg>
-                    </button>
+                  <label for="hs-list-group-item-checkbox-1" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                    Juguetes
+                  </label>
                 </div>
-            </div>
-            <form>
-              <div class="container-select-shop">
-              <select v-model="opcionElegida" class="py-3 px-4 pr-9 block title-filter">
-                <option  value="" disabled selected>Elija un filtro</option>
-                  <option value="mayor">Precio Mayor</option>
-                <option value="menor">Precio Menor</option>
-                <option value="a-z">Ordenar A-Z</option>
-                <option value="z-a">Ordenar Z-A</option>
-                <option value="descuentos">Descuentos</option>
-              </select>
-              </div>
-  
-          </form>
+              </li>
+            
+              <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                <div class="relative flex items-start w-full">
+                  <div class="flex items-center h-5">
+                    <input input type="checkbox" id="tipo" name="tipo" value="Medicamento" v-model="tipoSelec">
+                  </div>
+                  <label for="hs-list-group-item-checkbox-2" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                    Medicamentos
+                  </label>
+                </div>
+              </li>
+            
+              <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                <div class="relative flex items-start w-full">
+                  <div class="flex items-center h-5">
+                    <input id="hs-list-group-item-checkbox-3" name="hs-list-group-item-checkbox-3" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                  </div>
+                  <label for="hs-list-group-item-checkbox-3" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                    Alimentos
+                  </label>
+                </div>
+              </li>
+          </ul>
+          <br>
+    
+          <h3 class="sub-title" style="margin-bottom: 10px;">MARCA</h3>
+          <ul class="max-w-sm flex flex-col">
+              <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                <div class="relative flex items-start w-full">
+                  <div class="flex items-center h-5">
+                    <input id="hs-list-group-item-checkbox-4" name="hs-list-group-item-checkbox-4" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" >
+                  </div>
+                  <label for="hs-list-group-item-checkbox-4" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                    Whiskas
+                  </label>
+                </div>
+              </li>
+            
+              <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                <div class="relative flex items-start w-full">
+                  <div class="flex items-center h-5">
+                    <input id="hs-list-group-item-checkbox-8" name="hs-list-group-item-checkbox-8" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                  </div>
+                  <label for="hs-list-group-item-checkbox-8" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                    Royal Canin
+                  </label>
+                </div>
+              </li>
+            
+              <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                <div class="relative flex items-start w-full">
+                  <div class="flex items-center h-5">
+                    <input id="hs-list-group-item-checkbox-5" name="hs-list-group-item-checkbox-5" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                  </div>
+                  <label for="hs-list-group-item-checkbox-5" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                    Sabrositos
+                  </label>
+                </div>
+              </li>
+              <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                <div class="relative flex items-start w-full">
+                  <div class="flex items-center h-5">
+                    <input id="hs-list-group-item-checkbox-6" name="hs-list-group-item-checkbox-6" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                  </div>
+                  <label for="hs-list-group-item-checkbox-6" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                    Purina
+                  </label>
+                </div>
+              </li>
+              <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+                <div class="relative flex items-start w-full">
+                  <div class="flex items-center h-5">
+                    <input id="hs-list-group-item-checkbox-7" name="hs-list-group-item-checkbox-7" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                  </div>
+                  <label for="hs-list-group-item-checkbox-7" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                    Petco
+                  </label>
+                </div>
+              </li>
+          </ul>
+          <br>
+          <h3 class="sub-title" style="margin-bottom: 10px;">GAMA DE PRECIOS</h3>
+          <div class="container-filter-price">   
+          <input type="range" name="rango" id="rango" min="241" max="2000" v-model="rango">
+          <p>$240 - ${{rango}}</p>
         </div>
-        
-        <!--Productos-->
-        <div class="container-products">
+    
+        </div>
+    </div>
 
-          
-          
+    <section class="filter-container-all container mx-auto"> 
+    <div class="filter-cat-brands">
+        <h2 class="title">Filtra productos</h2>
+        <br>
+      <h3 class="sub-title" style="margin-bottom: 10px;">CATEGORÍA</h3>
+      <ul class="max-w-sm flex flex-col">
+          <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+            <div class="relative flex items-start w-full">
+              <div class="flex items-center h-5">
+                <input type="checkbox" id="tipo" name="tipo" value="Juguete" v-model="tipoSelec" >
+              </div>
+              <label for="hs-list-group-item-checkbox-1" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                Juguetes
+              </label>
+            </div>
+          </li>
+        
+          <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+            <div class="relative flex items-start w-full">
+              <div class="flex items-center h-5">
+                <input input type="checkbox" id="tipo" name="tipo" value="Medicamento" v-model="tipoSelec">
+              </div>
+              <label for="hs-list-group-item-checkbox-2" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                Medicamentos
+              </label>
+            </div>
+          </li>
+        
+          <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+            <div class="relative flex items-start w-full">
+              <div class="flex items-center h-5">
+                <input id="hs-list-group-item-checkbox-3" name="hs-list-group-item-checkbox-3" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+              </div>
+              <label for="hs-list-group-item-checkbox-3" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                Alimentos
+              </label>
+            </div>
+          </li>
+      </ul>
+      <br>
+
+      <h3 class="sub-title" style="margin-bottom: 10px;">MARCA</h3>
+      <ul class="max-w-sm flex flex-col">
+          <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+            <div class="relative flex items-start w-full">
+              <div class="flex items-center h-5">
+                <input id="hs-list-group-item-checkbox-4" name="hs-list-group-item-checkbox-4" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" >
+              </div>
+              <label for="hs-list-group-item-checkbox-4" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                Whiskas
+              </label>
+            </div>
+          </li>
+        
+          <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+            <div class="relative flex items-start w-full">
+              <div class="flex items-center h-5">
+                <input id="hs-list-group-item-checkbox-8" name="hs-list-group-item-checkbox-8" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+              </div>
+              <label for="hs-list-group-item-checkbox-8" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                Royal Canin
+              </label>
+            </div>
+          </li>
+        
+          <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+            <div class="relative flex items-start w-full">
+              <div class="flex items-center h-5">
+                <input id="hs-list-group-item-checkbox-5" name="hs-list-group-item-checkbox-5" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+              </div>
+              <label for="hs-list-group-item-checkbox-5" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                Sabrositos
+              </label>
+            </div>
+          </li>
+          <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+            <div class="relative flex items-start w-full">
+              <div class="flex items-center h-5">
+                <input id="hs-list-group-item-checkbox-6" name="hs-list-group-item-checkbox-6" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+              </div>
+              <label for="hs-list-group-item-checkbox-6" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                Purina
+              </label>
+            </div>
+          </li>
+          <li class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+            <div class="relative flex items-start w-full">
+              <div class="flex items-center h-5">
+                <input id="hs-list-group-item-checkbox-7" name="hs-list-group-item-checkbox-7" type="checkbox" class="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+              </div>
+              <label for="hs-list-group-item-checkbox-7" class="ml-3.5 block w-full text-sm text-gray-600 dark:text-gray-500">
+                Petco
+              </label>
+            </div>
+          </li>
+      </ul>
+      <br>
+      <h3 class="sub-title" style="margin-bottom: 10px;">GAMA DE PRECIOS</h3>
+      <div class="container-filter-price">   
+      <input type="range" name="rango" id="rango" min="241" max="2000" v-model="rango">
+      <p>$240 - ${{rango}}</p>
+    </div>
+
+    </div>
+
+    <div class="container-filter-search">
+    <div class="box1-filter">
+        <div class="container-search">
+            <div class="flex rounded-md shadow-sm">
+                <input type="text" placeholder="Buscar..." v-model="buscador" v-on:keyup="filtroBusqueda"  id="hs-trailing-button-add-on-with-icon"
+                name="hs-trailing-button-add-on-with-icon"
+                class="py-3 px-4 block w-full border-black shadow-sm rounded-l-md text-sm focus:z-10"placeholder="Encuentra tu producto">
+                <button type="button"
+                    class="inline-flex flex-shrink-0 justify-center items-center h-[2.875rem] w-[2.875rem] rounded-r-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <form>
+          <div class="container-select-shop">
+          <select v-model="opcionElegida" class="py-3 px-4 block title-filter">
+            <option  value="" disabled selected>Elija un filtro</option>
+              <option value="mayor">Precio Mayor</option>
+            <option value="menor">Precio Menor</option>
+            <option value="a-z">Ordenar A-Z</option>
+            <option value="z-a">Ordenar Z-A</option>
+            <option value="descuentos">Descuentos</option>
+          </select>
+          </div>
+      </form>
+    </div>
+
+    <div class="box2-products">
+        {{filtroSelect}}
+        
+        {{seleccionado}}
+
         
 
-          <!--Filtro por busqueda-->
-          <div v-if="tipoSelec == ''" style="display: flex;flex-wrap: wrap;">
+         <!--Filtro por busqueda-->
+         <div v-if="tipoSelec == ''" style="display: flex;flex-wrap: wrap;">
             {{buscado}}
             <div v-if="arrayProductosRespaldo.length == 0" >
                 <div class="warning-search">
@@ -271,36 +367,44 @@
                     <p>ajuste los parametros de busqueda</p>
                 </div>
             </div>
-            <div v-else v-for="producto in arrayProductosRespaldo" data-hs-overlay="#hs-vertically-centered-modal" >
+            <div v-else v-for="producto in arrayProductosRespaldo"  >
                 <div  v-if="rango > producto.precio" @click=modalProducto(producto._id) >
                   
-                  <div class="card-shop">
-                    <!--Imagen de producto-->
-                      <div class="card-shop-img">
-                        <img :src="producto.imagen">
-                      </div>
-              
-                    <!--Descripcion producto-->
-                      <div class="card-shop-title">
-                        <h4 class="sub-title">{{producto.nombre}}</h4>
-                      </div>
-              
-                    <!--Precio producto-->
-                      <div class="card-shop-price">
-                        <h5 class="sub-title">$ {{producto.precio}}</h5>
-                        <p class="paragraph">Hasta 4 cuotas sin interes de ${{producto.precio/4}} con Bancos seleccionados</p>
+                 <div class="container-shop-card">
+
+                    <div class="container-shop-card-img" v-bind:style="{ backgroundImage: 'url(' + producto.imagen + ')' }">
+                        
+                    </div>
+                    
+                    <div class="container-shop-card-info">
+                        <h2>{{producto.nombre}}</h2>
+                        <h3>$ {{producto.precio}}</h3>
+                    </div>
+
+                    <div class="container-buttons-info">
+                        <div v-if="producto.contador == null">
+                            <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div>
+                          
+                          <div v-else-if="producto.contador > 0">
+                            <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Quitar del Carrito</button>
+                          </div>
+  
+                          <div v-else>
+                          <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                        </div>
                        
-                      </div>
-              
-              
-                  </div>
+                        <button data-hs-overlay="#hs-vertically-centered-modal" id="view-product">Ver producto</button>
+                    </div>
+                    
+                 </div>
                   
                
                 </div>
             </div>
 
 
-          <!--Filtro-->
+          <!--Filtro Medicamento-->
          
 
           <div id="hs-vertically-centered-modal" class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
@@ -365,40 +469,180 @@
           </div>
 
         </div>
-      </div>
-       <!--modal-->
-       
+
+        <!--Filtro Juguete-->
+        <div v-else-if="tipoSelec == 'Juguete'"  style="display: flex;flex-wrap: wrap;">
+            {{buscadoJ}}
+            
+            <div v-if="arrayJuguetesRespaldo.length == 0">
+                <div class="warning-search">
+                    <h5>No se encontraron productos</h5>
+                    <p>ajuste los parametros de busqueda</p>
+                </div>
+            </div>
+
+            <div v-else v-for="producto in arrayJuguetesRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
+                    <div class="container-shop-card">
+
+                        <div class="container-shop-card-img" v-bind:style="{ backgroundImage: 'url(' + producto.imagen + ')' }">
+                            
+                        </div>
+                        
+                        <div class="container-shop-card-info">
+                            <h2>{{producto.nombre}}</h2>
+                            <h3>$ {{producto.precio}}</h3>
+                        </div>
+    
+                        <div class="container-buttons-info">
+                            <div v-if="producto.contador == null">
+                                <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                              </div>
+                              
+                              <div v-else-if="producto.contador > 0">
+                                <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Quitar del Carrito</button>
+                              </div>
       
+                              <div v-else>
+                              <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                            </div>
+                           
+                            <button data-hs-overlay="#hs-vertically-centered-modal" id="view-product">Ver producto</button>
+                        </div>
+                        
+                     </div>
+                </div>
+            </div>
 
-      </div>
+        </div>
 
-    </section>
-    </main>
+        <!--Filtro Medicamento-->
+        <div v-else-if="tipoSelec == 'Medicamento'" style="display: flex;flex-wrap: wrap;">
+            {{buscadoM}}
+            <div v-if="arrayMedicamentosRespaldo.length == 0">
+                <div class="warning-search">
+                    <h5>No se encontraron productos</h5>
+                    <p>ajuste los parametros de busqueda</p>
+                </div>
+            </div>
+
+            <div v-else v-for="producto in arrayMedicamentosRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
+                    <div class="container-shop-card">
+
+                        <div class="container-shop-card-img" v-bind:style="{ backgroundImage: 'url(' + producto.imagen + ')' }">
+                            
+                        </div>
+                        
+                        <div class="container-shop-card-info">
+                            <h2>{{producto.nombre}}</h2>
+                            <h3>$ {{producto.precio}}</h3>
+                        </div>
+    
+                        <div class="container-buttons-info">
+                            <div v-if="producto.contador == null">
+                                <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                              </div>
+                              
+                              <div v-else-if="producto.contador > 0">
+                                <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Quitar del Carrito</button>
+                              </div>
+      
+                              <div v-else>
+                              <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                            </div>
+                           
+                            <button data-hs-overlay="#hs-vertically-centered-modal" id="view-product">Ver producto</button>
+                        </div>
+                        
+                     </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Nose que filtra, preguntale a bauti-->
+        <div v-else style="display: flex;flex-wrap: wrap;">
+            {{buscadoOtro}}
+            <div v-if="arrayProductosRespaldo.length == 0">
+                <div class="container-shop-card-info">
+                    <h2>{{producto.nombre}}</h2>
+                    <h3>$ {{producto.precio}}</h3>
+                </div>
+            </div>
+
+            <div v-else v-for="producto in arrayProductosRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
+                    <div class="container-shop-card">
+
+                        <div class="container-shop-card-img" v-bind:style="{ backgroundImage: 'url(' + producto.imagen + ')' }">
+                            
+                        </div>
+                        
+                        <div class="container-shop-card-info">
+                            <h2>{{producto.nombre}}</h2>
+                            <h3>$ {{producto.precio}}</h3>
+                        </div>
+    
+                        <div class="container-buttons-info">
+                            <div v-if="producto.contador == null">
+                                <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                              </div>
+                              
+                              <div v-else-if="producto.contador > 0">
+                                <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Quitar del Carrito</button>
+                              </div>
+      
+                              <div v-else>
+                              <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                            </div>
+                           
+                            <button data-hs-overlay="#hs-vertically-centered-modal" id="view-product">Ver producto</button>
+                        </div>
+                        
+                     </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
-  
-  
-  <footer>
-    <div class="container mx-auto container-footer">
-      <div class="div-footer">
-          <ul class="list-footer">
-              <h6 class="h6-footer sub-title">NUESTRA EMPRESA</h6>
-              <a href="" class="paragraph">Quienes somos?</a>
-              <a href="" class="paragraph">Visión</a>
-              <a href="" class="paragraph">Misión</a>
-              <a href=""></a>
-              <a href=""></a>
-          </ul>
-      </div>
 
-    
-      <div class="div-footer">
+    </div>
+
+
+
+
+
+    </section>
+
+</div>
+
+<div class="container-footer-img">   
+</div>
+
+<footer>
+  <div class="container mx-auto container-footer">
+    <div class="div-footer">
+        <ul class="list-footer">
+            <h6 class="h6-footer sub-title">NUESTRA EMPRESA</h6>
+            <br>
+            <a href="" class="paragraph">Quienes somos?</a>
+            <a href="" class="paragraph">Visión</a>
+            <a href="" class="paragraph">Misión</a>
+            <a href=""></a>
+            <a href=""></a>
+        </ul>
+    </div>
+
+    <div class="div-footer">
         <ul class="list-footer">
             <h6 class="h6-footer sub-title">PRODUCTOS</h6>
             <br>
-            <a href="#" class="paragraph">Farmacia</a>
-            <a href="#" class="paragraph">Alimento</a>
-            <a href="#" class="paragraph">Juguetes</a>
+            <a href="/tienda.html" class="paragraph">Farmacia</a>
+            <a href="/tienda.html" class="paragraph">Alimento</a>
+            <a href="/tienda.html" class="paragraph">Juguetes</a>
         </ul>
     </div>
 
@@ -412,33 +656,30 @@
         <a href="/servicios/oftalmología.html" class="paragraph">Oftalmología</a>
     </ul>
   </div>
-      <div class="div-footer">
-          <ul>
-              <h6 class="h6-footer sub-title">SUSCRIBETE</h6>
-              
-              <input type="text" placeholder="Ingresa tu email">
-              <div>
-                <br>
-              <a href="" id="sub-footer">Suscribirse</a>
-              </div>
-          </ul>
-      </div>
+
+    <div class="div-footer">
+        <ul>
+            <h6 class="h6-footer sub-title">SUSCRIBETE</h6>
+            
+            <input type="text" placeholder="Ingresa tu email">
+            <div>
+              <br>
+            <a href="" id="sub-footer">Suscribirse</a>
+            </div>
+        </ul>
     </div>
-  </footer>
+  </div>
+</footer>
 
-    <!--JavaScript-->
-
-    <script src="./assets/node_modules/preline/dist/preline.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
-    <script src='https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
-    <script src="https://unpkg.com/vue@3"></script> 
-    <script src="assets/js/tienda.js"></script>
-    <script src="assets/js/scripts.js"></script>
-
+<script src="./assets/node_modules/preline/dist/preline.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
+<script src='https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js'></script>
+<script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+<script src="https://unpkg.com/vue@3"></script> 
+<script src="assets/js/tienda.js"></script>
+<script src="assets/js/scripts.js"></script>
 
 </body>
-
 </html>

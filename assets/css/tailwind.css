@@ -740,6 +740,10 @@ video {
   margin-right: 0.5rem;
 }
 
+.mr-8 {
+  margin-right: 2rem;
+}
+
 .-mt-px {
   margin-top: -1px;
 }
@@ -754,10 +758,6 @@ video {
 
 .mt-0 {
   margin-top: 0px;
-}
-
-.mr-8 {
-  margin-right: 2rem;
 }
 
 .mt-1 {
@@ -972,6 +972,20 @@ video {
   min-height: calc(100% - 3.5rem);
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.min-h-full {
+  min-height: 100%;
+}
+
+.min-h-fit {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
 .w-full {
   width: 100%;
 }
@@ -1036,12 +1050,12 @@ video {
   width: 3.5rem;
 }
 
-.max-w-sm {
-  max-width: 24rem;
-}
-
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
 }
 
 .max-w-2xl {
@@ -1544,11 +1558,6 @@ video {
   padding-right: 1.25rem;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1557,6 +1566,11 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .py-1 {
@@ -5297,14 +5311,22 @@ iframe {
 
 /* Carrito de compras */
 
+.container-chekout{
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  grid-gap:1vh;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+}
+
 .container-productos {
   display: flex;
   margin-top: 2rem;
 }
 
 .container-table-productos {
-  width: 60vw;
-  background-color: #ececec;
+  width: 100%;
+  background-color: #f8f8f8;
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
@@ -5323,12 +5345,31 @@ th {
 
 td {
   text-align: center;
-  border-top: 1px solid rgb(216, 216, 216);
+  border-top: 1px solid rgb(212, 212, 212);
 }
 
 .img-carrito {
   display: flex;
   align-items: center;
+}
+
+.img-carrito img{
+  width: 150px;
+}
+
+.text-product h6{
+  font-size: 1.3rem;
+  text-align: left;
+  font-family: var(--font-title);
+  color: var(--main);
+}
+
+.text-product p{
+  width: 40vh;
+  font-size: 1rem;
+  text-align: left;
+  font-family: var(--font-paragraph);
+  color: var(--paragraph);
 }
 
 .btn-counter {
@@ -5346,11 +5387,9 @@ td {
   -o-border-radius: 5px;
 }
 
-.container-pagos {
-  position: fixed;
-  left: 65vw;
+.container-payments {
+  width: auto;
   background-color: #ececec;
-  width: 30vw;
   border-radius: 1rem;
   padding: 2rem;
   -webkit-border-radius: 1rem;
@@ -5742,6 +5781,10 @@ a:hover {
   }
 }
 
+.arreglo{
+  min-height: 35.2vh;
+}
+
 .first\:mt-0:first-child {
   margin-top: 0px;
 }
@@ -6041,4 +6084,3 @@ a:hover {
     line-height: 1.75rem;
   }
 }
-
