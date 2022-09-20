@@ -101,7 +101,7 @@ function count(){
      onUpdate: function () {
        var number = Math.ceil(counter.var);
        $('.counter').html(number);
-       if(number === counter.var){ count.kill(); }
+       if(number === counter.var){ counter.kill(); }
      },
      onComplete: function(){
        count();
