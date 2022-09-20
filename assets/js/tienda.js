@@ -31,6 +31,7 @@ createApp({
     },
     created(){
         this.getProductos()
+        
     },
     methods:{
         getProductos(){
