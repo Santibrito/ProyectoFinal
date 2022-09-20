@@ -135,10 +135,10 @@
                                 <button type="button" class="btn-counter"  @click="agregarAlCarrito(producto)">+</button>
                             </div>
                             <div>
-                                <button @click="quitarUnidadProducto(producto)" style="color: red;font-family: var(--font-title);">Eliminar</button>
+                                <button @click=" quitarDelCarrito(producto)" style="color: red;font-family: var(--font-title);font-size: 0.8rem;">Eliminar</button>
                             </div>
                         </td>
-                        <td>{{dinero(producto.precio * producto.contador)}}</td>
+                        <td style="font-family: var(--font-title);font-size: 1rem;">{{dinero(producto.precio * producto.contador)}}</td>
                     </tr>
 
                 </tbody>

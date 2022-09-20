@@ -3452,7 +3452,7 @@ td {
 }
 
 .text-product h6{
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-align: left;
   font-family: var(--font-title);
   color: var(--main);
@@ -3510,6 +3510,14 @@ td {
   border-radius: 10px;
   font-family: title;
   margin-top: 1rem;
+}
+
+.btn-group {
+  display: flex;
+}
+
+@media (max-width: 768px){ 
+  
 }
 
 
