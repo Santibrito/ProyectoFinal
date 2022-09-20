@@ -187,41 +187,41 @@
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" style="color: #4b4b4c;">APELLIDO:</label>
                         <input type="text" name="lastname" id="lastname"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Apellido" required="">
+                            placeholder="Apellido" required="" v-model="personalData.lastName">
                     </div>
                     <div>
                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" style="color: #4b4b4c;">D.N.I:</label>
                         <input type="text" name="name" id="name"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Nombre" required="" v-model="personalData.name">
+                            placeholder="Nombre" required="" v-model="personalData.dni">
                     </div>
                     <div>
                         <label for="lastname"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" style="color: #4b4b4c;">FECHA DE NACIMIENTO:</label>
                         <input type="text" name="lastname" id="lastname"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Apellido" required="">
+                            placeholder="Apellido" required="" v-model="personalData.dateOfBirth">
                     </div>
                     <div>
                         <label for="lastname"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" style="color: #4b4b4c;">PROVINCIA:</label>
                         <input type="text" name="lastname" id="lastname"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Apellido" required="">
+                            placeholder="Apellido" required="" v-model="personalData.state">
                     </div>
                     <div>
                         <label for="lastname"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" style="color: #4b4b4c;">CUIDAD:</label>
                         <input type="text" name="lastname" id="lastname"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Apellido" required="">
+                            placeholder="Apellido" required="" v-model="personalData.city">
                     </div>
                     <div>
                         <label for="lastname"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" style="color: #4b4b4c;">DIRECCION:</label>
                         <input type="text" name="lastname" id="lastname"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Apellido" required="">
+                            placeholder="Apellido" required="" v-model="personalData.address">
                     </div>
                  
 
@@ -231,14 +231,14 @@
                             EMAIL</label>
                         <input type="email" name="email" id="email"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="name@gmail.com" required="">
+                            placeholder="name@gmail.com" required="" v-model="personalData.emailRegister">
                     </div>
                     <div>
                         <label for="password"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" style="color: #4b4b4c;">CONTRASEÑA:</label>
                         <input type="password" name="password" id="password" placeholder="••••••••"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            required="">
+                            required="" v-model="personalData.passwordRegister">
                     </div>
                     <div>
                         <label for="confirm-password"
@@ -246,7 +246,7 @@
                         <input type="confirm-password" name="confirm-password" id="confirm-password"
                             placeholder="••••••••"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            required="">
+                            required="" v-model="personalData.password">
                     </div>
                     <div class="flex justify-center items-center">
                   <button data-modal-toggle="popup-modal" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
