@@ -53,7 +53,7 @@
         <section class="wrapper transition-banner">
             
            <img src="../assets/img/logo.png" class="brand" width="165">
-           <i class="bi bi-cart-check" style="font-size: 3vh;"  id="card-shop-mobile"></i>
+            <a href="/carrito.html" class="mx-5"><i class="bi bi-cart-check" style="font-size: 3vh;"  id="card-shop-mobile"></i></a>
            <div class="burger" id="burger">
               <span class="burger-line"></span>
               <span class="burger-line"></span>
@@ -82,9 +82,8 @@
                  <li class="menu-item"><a href="../obra-social.html" class="menu-link">Obra Social</a></li>
                  <li class="menu-item"><a href="../tienda.html" class="menu-link">Tienda</a></li>
                  <li class="menu-item"><a href="../contacto.html" class="menu-link">Contacto</a></li>
-
                  <li class="menu-item"><a href="../iniciar-sesion.html" class="menu-link" id="login-btn">Iniciar Sesion</a></li>
-                 <li class="menu-item"><a href="#" class="menu-link" id="card-shop-pc"><i class="bi bi-cart-check" style="font-size: 3vh;"></i></a></li>
+                 <li class="menu-item"><a href="../carrito.html" class="menu-link" id="card-shop-pc"><i class="bi bi-cart-check" style="font-size: 3vh;"></i></a></li>
               </ul>
            </nav>
         </section>
@@ -135,10 +134,10 @@
                                 <button type="button" class="btn-counter"  @click="agregarAlCarrito(producto)">+</button>
                             </div>
                             <div>
-                                <button @click="quitarUnidadProducto(producto)" style="color: red;font-family: var(--font-title);">Eliminar</button>
+                                <button @click=" quitarDelCarrito(producto)" style="color: red;font-family: var(--font-title);font-size: 0.8rem;">Eliminar</button>
                             </div>
                         </td>
-                        <td>{{dinero(producto.precio * producto.contador)}}</td>
+                        <td style="font-family: var(--font-title);font-size: 1rem;">{{dinero(producto.precio * producto.contador)}}</td>
                     </tr>
 
                 </tbody>

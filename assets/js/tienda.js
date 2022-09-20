@@ -190,6 +190,7 @@ createApp({
                 producto.quantity = 0
                 localStorage.setItem('productosEnElCarrito', JSON.stringify(this.arrayCarritoDeCompras))
             }
+            console.log(this.arrayCarritoDeCompras)
 
         },//quita del carro
 
