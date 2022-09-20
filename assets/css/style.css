@@ -2993,7 +2993,6 @@ iframe {
   border-spacing: 0 !important;
 }
 .table1 table thead tr th {
-  text-align: left !important;
   border-bottom: solid 5px var(--main) !important;
   padding: 8px !important;
   background-color: var(--main) !important;
@@ -3007,6 +3006,15 @@ iframe {
   color: black;
   font-family: var(--font-paragraph);
 }
+
+.container-pets-main{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+
+
+
 
 .table1 table tbody td span:first-child {
   font-size: small;
@@ -3042,7 +3050,6 @@ iframe {
 
 /*Mascotas*/
 .container-pet-list{
-  padding: 2vh;
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-gap: 2vh;
@@ -3057,7 +3064,6 @@ iframe {
   }
 
   .container-pet-list{
-    padding: 2vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2,1fr);
@@ -3534,21 +3540,7 @@ td {
   box-shadow: 0 14px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* formatting for links, not necessary for sidebar menu to function */
-a {
-  color: #00693f;
-  text-decoration: none;
-  background-image: linear-gradient(darkGreen, darkGreen);
-  background-size: 0 2px, auto;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  transition: all 0.2s ease-out;
-  padding-bottom: 1px;
-}
 
-a:hover {
-  background-size: 100% 2px, auto;
-}
 
 .credit {
   padding-top: 50px;
@@ -3903,4 +3895,94 @@ a:hover {
 
 .arreglo{
   min-height: 35.2vh;
+}
+
+
+.box-card-social{
+  display: flex;
+  padding: 2vh;
+}
+
+.list-social-work h1{
+  font-size: 2rem;
+  font-family: var(--font-title);
+  color: var(--main);
+}
+
+.list-social-work h2{
+  font-size: 2rem;
+  font-family: var(--font-subtitle);
+  color: var(--main);
+}
+
+@media (max-width: 500px){
+  .table1 table tbody tr td {
+    transition: all 0.15s ease !important;
+    padding: 8px !important;
+    color: black;
+    font-family: var(--font-paragraph);
+    font-size: 0.9rem;
+  }
+
+  .container-customer-shifts {
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    padding: 1vh;
+    border-radius: 10px;
+}
+
+.container-pets-main{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2,1fr);
+}
+
+.perfil-pet {
+
+  display: flex;
+  display: grid;
+    align-items: center;
+ text-align: left;
+  flex-wrap: wrap;
+  margin-bottom: 5vh;
+}
+
+.client-dashboard h1{
+  font-size: 1.5rem;
+}
+.pet-shifts h2 {
+  padding-top: 10px;
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  color: rgb(44, 44, 44);
+}
+
+.name-pet h4 {
+  padding-top: 3px;
+  font-family: var(--font-subtitle);
+  font-size: 1.4rem;
+  margin: auto;
+  text-align: center;
+  color: rgb(44, 44, 44);
+}
+
+.container-profile-info h4 {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  font-size: 1rem;
+  color: rgb(114, 113, 113);
+  font-family: var(--font-paragraph);
+}
+
+#table-shop{
+  padding: 1vh;
+  border-radius: 10px !important;
+}
+
+.container-purchase-history h1 {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  color: var(--main);
+}
+
+
 }
