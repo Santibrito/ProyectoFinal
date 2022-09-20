@@ -440,6 +440,34 @@
                     <div v-else-if="producto.contador > 0">
                       <button type="button" id="delete-card" @click="quitarDelCarrito(producto)">Quitar del
                         Carrito</button>
+                    <div class="container-buttons-info">
+                      {{dsdsd}}
+                      <div v-if="!producto.quantity || producto.quantity == 0" > true
+                        <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                      </div>
+                      
+                      <div v-else-if="producto.quantity || producto.quantity > 0" > false
+                        <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Sacar del Carrito</button>
+                      </div>
+
+                     <!-- <div v-else-if="!producto.quantity">
+                      <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                      </div> -->
+
+
+                      <!--<div v-if="producto.contador == null">
+                            <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div>
+                          
+                          <div v-else-if="producto.contador > 0">
+                            <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Quitar del Carrito</button>
+                          </div>
+  
+                          <div v-else>
+                          <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                        </div> -->
+                       
+                        <button data-hs-overlay="#hs-vertically-centered-modal" id="view-product">Ver producto</button>
                     </div>
 
                     <div v-else>
@@ -511,6 +539,19 @@
                             <button type="button" id="add-card" class="btn btn-primary agregar"
                               @click="agregarAlCarrito(producto)">Agregar Carrito</button>
                           </div>
+                        
+                          {{dsdsd}}
+                          <div v-if="!producto.quantity || producto.quantity == 0" > true
+                            <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div>
+                          
+                          <div v-else-if="producto.quantity || producto.quantity > 0" > false
+                            <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Sacar del Carrito</button>
+                          </div>
+    
+                         <!-- <div v-else-if="!producto.quantity">
+                          <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div> -->
 
                           <div v-else-if="producto.contador > 0">
                             <button type="button" id="delete-card" @click="quitarDelCarrito(producto)">Sacar del
@@ -688,6 +729,138 @@
 
 
       </div>
+            <div v-else v-for="producto in arrayJuguetesRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
+                    <div class="container-shop-card">
+
+                        <div class="container-shop-card-img" v-bind:style="{ backgroundImage: 'url(' + producto.imagen + ')' }">
+                            
+                        </div>
+                        
+                        <div class="container-shop-card-info">
+                            <h2>{{producto.nombre}}</h2>
+                            <h3>$ {{producto.precio}}</h3>
+                        </div>
+    
+                        <div class="container-buttons-info">
+                          {{dsdsd}}
+                          <div v-if="!producto.quantity || producto.quantity == 0" > true
+                            <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div>
+                          
+                          <div v-else-if="producto.quantity || producto.quantity > 0" > false
+                            <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Sacar del Carrito</button>
+                          </div>
+    
+                         <!-- <div v-else-if="!producto.quantity">
+                          <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div> -->
+                           
+                            <button data-hs-overlay="#hs-vertically-centered-modal" id="view-product">Ver producto</button>
+                        </div>
+                        
+                     </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Filtro Medicamento-->
+        <div v-else-if="tipoSelec == 'Medicamento'" style="display: flex;flex-wrap: wrap;">
+            {{buscadoM}}
+            <div v-if="arrayMedicamentosRespaldo.length == 0">
+                <div class="warning-search">
+                    <h5>No se encontraron productos</h5>
+                    <p>ajuste los parametros de busqueda</p>
+                </div>
+            </div>
+
+            <div v-else v-for="producto in arrayMedicamentosRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
+                    <div class="container-shop-card">
+
+                        <div class="container-shop-card-img" v-bind:style="{ backgroundImage: 'url(' + producto.imagen + ')' }">
+                            
+                        </div>
+                        
+                        <div class="container-shop-card-info">
+                            <h2>{{producto.nombre}}</h2>
+                            <h3>$ {{producto.precio}}</h3>
+                        </div>
+    
+                        <div class="container-buttons-info">
+                          {{dsdsd}}
+                          <div v-if="!producto.quantity || producto.quantity == 0" > true
+                            <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div>
+                          
+                          <div v-else-if="producto.quantity || producto.quantity > 0" > false
+                            <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Sacar del Carrito</button>
+                          </div>
+    
+                         <!-- <div v-else-if="!producto.quantity">
+                          <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div> -->
+                           
+                            <button data-hs-overlay="#hs-vertically-centered-modal" id="view-product">Ver producto</button>
+                        </div>
+                        
+                     </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Nose que filtra, preguntale a bauti-->
+        <div v-else style="display: flex;flex-wrap: wrap;">
+            {{buscadoOtro}}
+            <div v-if="arrayProductosRespaldo.length == 0">
+                <div class="container-shop-card-info">
+                    <h2>{{producto.nombre}}</h2>
+                    <h3>$ {{producto.precio}}</h3>
+                </div>
+            </div>
+
+            <div v-else v-for="producto in arrayProductosRespaldo" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div  v-if="rango > producto.precio" @click=modalProducto(producto._id)>
+                    <div class="container-shop-card">
+
+                        <div class="container-shop-card-img" v-bind:style="{ backgroundImage: 'url(' + producto.imagen + ')' }">
+                            
+                        </div>
+                        
+                        <div class="container-shop-card-info">
+                            <h2>{{producto.nombre}}</h2>
+                            <h3>$ {{producto.precio}}</h3>
+                        </div>
+    
+                        <div class="container-buttons-info">
+                          {{dsdsd}}
+                          <div v-if="!producto.quantity || producto.quantity == 0" > true
+                            <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div>
+                          
+                          <div v-else-if="producto.quantity || producto.quantity > 0" > false
+                            <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Sacar del Carrito</button>
+                          </div>
+    
+                         <!-- <div v-else-if="!producto.quantity">
+                          <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div> -->
+                           
+                            <button data-hs-overlay="#hs-vertically-centered-modal" id="view-product">Ver producto</button>
+                        </div>
+                        
+                     </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </div>
 
 
 
