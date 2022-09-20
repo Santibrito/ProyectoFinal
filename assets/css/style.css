@@ -3412,6 +3412,15 @@ iframe {
   padding-top: 5vh;
 }
 
+@media (max-width: 1024px){
+.container-chekout{
+  display: flex;
+  flex-direction: column;
+}
+
+
+}
+
 .container-productos {
   display: flex;
   margin-top: 2rem;
