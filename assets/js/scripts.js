@@ -107,6 +107,8 @@ function count(){
        count();
      },    
      ease:Circ.easeOut
+     
+     
    });
  }
  
