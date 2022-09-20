@@ -382,7 +382,21 @@
                     </div>
 
                     <div class="container-buttons-info">
-                        <div v-if="producto.contador == null">
+                      {{dsdsd}}
+                      <div v-if="!producto.quantity || producto.quantity == 0" > true
+                        <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                      </div>
+                      
+                      <div v-else-if="producto.quantity || producto.quantity > 0" > false
+                        <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Sacar del Carrito</button>
+                      </div>
+
+                     <!-- <div v-else-if="!producto.quantity">
+                      <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                      </div> -->
+
+
+                      <!--<div v-if="producto.contador == null">
                             <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
                           </div>
                           
@@ -392,7 +406,7 @@
   
                           <div v-else>
                           <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
-                        </div>
+                        </div> -->
                        
                         <button data-hs-overlay="#hs-vertically-centered-modal" id="view-product">Ver producto</button>
                     </div>
@@ -446,17 +460,18 @@
                         </div>
                         <div class="modal-footer">
                         
-                        <div v-if="producto.contador == null">
+                          {{dsdsd}}
+                          <div v-if="!producto.quantity || producto.quantity == 0" > true
+                            <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div>
+                          
+                          <div v-else-if="producto.quantity || producto.quantity > 0" > false
+                            <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Sacar del Carrito</button>
+                          </div>
+    
+                         <!-- <div v-else-if="!producto.quantity">
                           <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
-                        </div>
-                        
-                        <div v-else-if="producto.contador > 0">
-                          <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Sacar del Carrito</button>
-                        </div>
-
-                        <div v-else>
-                        <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
-                      </div>
+                          </div> -->
 
                       </div>
                       </div>
@@ -495,17 +510,18 @@
                         </div>
     
                         <div class="container-buttons-info">
-                            <div v-if="producto.contador == null">
-                                <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
-                              </div>
-                              
-                              <div v-else-if="producto.contador > 0">
-                                <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Quitar del Carrito</button>
-                              </div>
-      
-                              <div v-else>
-                              <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
-                            </div>
+                          {{dsdsd}}
+                          <div v-if="!producto.quantity || producto.quantity == 0" > true
+                            <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div>
+                          
+                          <div v-else-if="producto.quantity || producto.quantity > 0" > false
+                            <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Sacar del Carrito</button>
+                          </div>
+    
+                         <!-- <div v-else-if="!producto.quantity">
+                          <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div> -->
                            
                             <button data-hs-overlay="#hs-vertically-centered-modal" id="view-product">Ver producto</button>
                         </div>
@@ -540,17 +556,18 @@
                         </div>
     
                         <div class="container-buttons-info">
-                            <div v-if="producto.contador == null">
-                                <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
-                              </div>
-                              
-                              <div v-else-if="producto.contador > 0">
-                                <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Quitar del Carrito</button>
-                              </div>
-      
-                              <div v-else>
-                              <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
-                            </div>
+                          {{dsdsd}}
+                          <div v-if="!producto.quantity || producto.quantity == 0" > true
+                            <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div>
+                          
+                          <div v-else-if="producto.quantity || producto.quantity > 0" > false
+                            <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Sacar del Carrito</button>
+                          </div>
+    
+                         <!-- <div v-else-if="!producto.quantity">
+                          <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div> -->
                            
                             <button data-hs-overlay="#hs-vertically-centered-modal" id="view-product">Ver producto</button>
                         </div>
@@ -585,17 +602,18 @@
                         </div>
     
                         <div class="container-buttons-info">
-                            <div v-if="producto.contador == null">
-                                <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
-                              </div>
-                              
-                              <div v-else-if="producto.contador > 0">
-                                <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Quitar del Carrito</button>
-                              </div>
-      
-                              <div v-else>
-                              <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
-                            </div>
+                          {{dsdsd}}
+                          <div v-if="!producto.quantity || producto.quantity == 0" > true
+                            <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div>
+                          
+                          <div v-else-if="producto.quantity || producto.quantity > 0" > false
+                            <button  type="button" id="delete-card" @click="quitarDelCarrito(producto)">Sacar del Carrito</button>
+                          </div>
+    
+                         <!-- <div v-else-if="!producto.quantity">
+                          <button  type="button" id="add-card" class="btn btn-primary agregar" @click="agregarAlCarrito(producto)">Agregar Carrito</button>
+                          </div> -->
                            
                             <button data-hs-overlay="#hs-vertically-centered-modal" id="view-product">Ver producto</button>
                         </div>
