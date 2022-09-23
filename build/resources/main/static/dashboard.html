@@ -121,10 +121,7 @@
           <h4>{{clients.email}}</h4>
 
           <div class="container-btn-edit-profile">
-            <a href="#" data-modal-toggle="popup-modal3">
-              <p>Editar perfil</p>
-              <i class="bi bi-pencil-square"></i>
-            </a>
+            
           </div>
         </div>
       </div>
@@ -219,7 +216,8 @@
           <div  class="container-pets-main">
             <div class="box-container-pet" v-for="pet in pets">
               <div class="img-pet">
-                <img src="assets/img/perro.png" width="150">
+                <img v-if="pet.medicalHistory.petType == 'PERRO'" src="assets/img/perro.png" width="150"> <img v-else
+                  src="https://cdn.images.express.co.uk/img/dynamic/128/590x/secondary/1695285.jpg?r=1547815112963" width="150">
               </div>
               <div class="name-pet">
                 <h4>{{pet.name}}</h4>
@@ -231,7 +229,9 @@
 
         <div class="container-pets-info" v-show="idPet != 0">
           <div v-for="onlyPet in pet" class="perfil-pet">
-            <img src="assets/img/perro.png" width="210">
+            <img v-if="onlyPet.medicalHistory.petType == 'GATO'"
+              src="https://cdn.images.express.co.uk/img/dynamic/128/590x/secondary/1695285.jpg?r=1547815112963" width="210">
+            <img v-else src="assets/img/perro.png" width="210">
             <div class="info-pet">
               <h3><span id="info-pet">Nombre: </span>{{onlyPet.name}}</h3>
               <h3><span id="info-pet">Tipo de mascota: </span>{{onlyPet.race}}</h3>
@@ -330,8 +330,8 @@
                       <span class="sr-only">Close modal</span>
                   </button>
                   <div class="p-6">
-                      <form>dasdasdasd
-                        <h2> Select para elegir el tipo de turno (para cliente/ para mascota)</h2>
+                      <form>
+                        <h2 class="sub-title">Select para elegir el tipo de turno (para cliente/ para mascota)</h2>
                         <br>
                           <select name="" id="" v-model="tipoTurnoDeShifts">
                               <option value="" disabled selected>Eliga una opcion</option>
@@ -479,7 +479,7 @@
       aria-hidden="true">
         <div class="relative p-4 w-full max-w-md h-full md:h-auto">
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <h2 class="text-center">Solicita Turno</h2>
+               
                 <button type="button"
                     class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
                     data-modal-toggle="popup-modal2">
@@ -492,49 +492,51 @@
                     <span class="sr-only">Close modal</span>
                 </button>
                 <div class="p-6">
-                    <form>
+                    <form class="formulario-turns">
 
-                      <label>Select para elegir el tipo de turno (para cliente/ para mascota)
+                      <h2 class="sub-title title-modal-turns">Select para elegir el tipo de turno (para cliente/ para mascota)</h2>
                         <select name="" id="" v-model="tipoTurnoDeShifts">
                             <option value="" disabled selected>Eliga una opcion</option>
                             <option value="cliente">Cliente</option>
                             <option value="mascota">Mascota</option>
                         </select>
                       </label>
-                      {{FfffTipoTurno}} <!-- muestra si elegiste turno para mascota o cliente -->
+                      {{FfffTipoTurno}} 
             
                       <div v-if="tipoTurnoDeShifts == 'mascota'">
-                          <label>select para elegir motivo/especialidad
+                        <h2 class="sub-title title-modal-turns" style="text-align: left; margin-top: 1vh;">Especialista</h2>
                               <select name="" id="" v-model="especialidadElegidaDeShifts">
-                                  <option value="" disabled selected>Eliga una opcion</option>
+                                  <option value="" disabled selected>Seleccione un specialista</option>
                                   <option value="CARDIOLOGO">Cardiologo</option>
                                   <option value="CIRUJANO">Cirujano</option>
                                   <option value="OFTALMOLOGO">Oftalmologo</option>
                                   <option value="CLINICO">Clinico</option>
                               </select>
-                          </label>
+                        
                           {{FfffEspecialidad}} <!-- muestra que especialidad elegiste -->
               
                           <br>
-              
-                          <label>Select para elegir medico
-              
+                          <h2 class="sub-title title-modal-turns" style="text-align: left; margin-top: 1vh;">Medico</h2>
+                          
                               <select name="" id="" v-if="especialidadElegidaDeShifts == 'CARDIOLOGO'" v-model="medicoElegidoDeShifts">
-                                  <option value="" disabled selected>Eliga una opcion</option>
+                                  <option value="" disabled selected>Seleccione el medico</option>
                                   <option :value="vete.name" v-for="vete in veterinarioCardiologoDeShifts">{{vete.name}}</option><!--value vete.name -->
                               </select>
               
                               <select name="" id="" v-else-if="especialidadElegidaDeShifts == 'CIRUJANO'" v-model="medicoElegidoDeShifts">
+                                <h2 class="sub-title title-modal-turns" style="text-align: left; margin-top: 1vh;">Mascota</h2>
                                   <option value="" disabled selected>Eliga una opcion</option>
                                   <option :value="vete.name" v-for="vete in veterinarioCirujanoDeShifts">{{vete.name}}</option><!--value vete.name -->
                               </select>
               
                               <select name="" id="" v-else-if="especialidadElegidaDeShifts == 'OFTALMOLOGO'" v-model="medicoElegidoDeShifts">
+                                <h2 class="sub-title title-modal-turns" style="text-align: left; margin-top: 1vh;">Mascota</h2>
                                   <option value="" disabled selected>Eliga una opcion</option>
                                   <option :value="vete.name" v-for="vete in veterinarioOftalmologoDeShifts">{{vete.name}}</option><!--value vete.name -->
                               </select>
               
                               <select name="" id="" v-else-if="especialidadElegidaDeShifts == 'CLINICO'" v-model="medicoElegidoDeShifts">
+                                <h2 class="sub-title title-modal-turns" style="text-align: left; margin-top: 1vh;">Mascota</h2>
                                   <option value="" disabled selected>Eliga una opcion</option>
                                   <option :value="vete.name" v-for="vete in veterinarioClinicoDeShifts">{{vete.name}}</option><!--value vete.name -->
                               </select>
@@ -547,48 +549,49 @@
                           {{FfffMedicoElegido}} <!-- muestra el medico que elegiste segun la especialidad -->
               
                           <label>
+                            <h2 class="sub-title title-modal-turns" style="text-align: left; margin-top: 1vh;">Mascota</h2>
                               <select name="" id="" v-model="idMascotaDeShifts">
-                                  <option value="" disabled selected>Eliga una opcion</option>
+                                <option value="" disabled selected>Seleccione un specialista</option>
                                   <option :value="pet.id" v-for="pet in clienteMascotasDeShifts">{{pet.name}}</option>
                               </select>
                           </label>
               
                           <br>
               
-                          <label>Input para elegir el dia
-                              <input type="date" v-model="fechaDeShifts">
+                          <h2 class="sub-title title-modal-turns" style="text-align: left; margin-top: 1vh;">Seleccione una fecha</h2>
+                              <input type="date" v-model="fechaDeShifts" style="width: 100%;border-radius:10px">
                               <!--<input type="time" v-model="tiempo"> -->
                               <!-- <input type="submit" @click.prevent="pruebaLocalDateTime"> -->
               
                           </label>
               
-              
+                          <h2 class="sub-title title-modal-turns" style="text-align: left; margin-top: 1vh;">Seleccione un horario</h2>  
                           <select v-if="fechaDeShifts != null" v-model="tiempoDeShifts">
+                            <h2 class="sub-title title-modal-turns" style="text-align: left; margin-top: 1vh;">Mascota</h2>
                               <option value="" disabled selected>Eliga una opcion</option>
                               <option :value="vete"  v-for="vete in turnosDeShifts" >{{vete}}</option>
                           </select><!-- no me toma la propiedad horarios -->
                           <div v-else>eliga fecha</div>
               
               
-              
-                          <label>
-                              <input type="submit" @click.prevent="peticionTurnoMascota">
+                          <div style="margin-top: 2vh;">
+                          <label style="padding-top: 10px;">
+                              <input type="submit" @click.prevent="peticionTurnoMascota" value="Solicitar turno" id="solicita-turno-btn">
                           </label>
-              
+                        </div>
                           {{fffff}}
               
                           <!--<input type="submit" value="enviar" @click.prevent="confirmacionTurno"> @click="confirmacionTurnoMascota" -->
                       </div>
                       <div v-else-if="tipoTurnoDeShifts == 'cliente'">
                           <br>
-                          <p v-model="motivoClienteDeShifts">Motivo/Especialidad: Consulta clinica</p>
-                          {{FfffEspecialidadCliente}}
+                        
               
               
-                          <label>Select para elegir medico de la consulta
-              
+                            <h2 class="sub-title title-modal-turns" style="text-align: left;">Elegir medico de la consulta</h2>
                               <select name="" id="" v-if="motivoClienteDeShifts == 'CLINICO'" v-model="medicoClienteDeShifts">
-                                  <option value="" disabled selected>Eliga una opcion</option>
+                                <h2 class="sub-title title-modal-turns" style="text-align: left; margin-top: 1vh;">Mascota</h2>
+                                  <option value="" disabled selected>Seleccione un medico</option>
                                   <option :value="vete.name" v-for="vete in veterinarioClinicoDeShifts">{{vete.name}}</option>
                               </select>
               
@@ -602,26 +605,27 @@
               
                           <br>
               
-                          <label>Input para elegir el dia
-                              <input type="date" v-model="fechaClienteDeShifts">
-                              <!--<input type="time" v-model="tiempo"> -->
-                              <!-- <input type="submit" @click.prevent="pruebaLocalDateTime"> -->
-              
+                          <h2 class="sub-title title-modal-turns" style="text-align: left; margin-top: 1vh;">Seleccione una fecha</h2>
+                              <input type="date" v-model="fechaClienteDeShifts" style="width: 100%;border-radius:10px">
                           </label>
                           {{fffffCliente}}
               
               
+                          <h2 class="sub-title title-modal-turns" style="text-align: left;margin-top: 2vh;">Elegir medico de la consulta</h2>
                           <select v-if="fechaClienteDeShifts != null" v-model="tiempoClienteDeShifts">
+                          
+
+                            
                               <option value="" disabled selected>Eliga una opcion</option>
                               <option :value="vete"  v-for="vete in turnosClienteDeShifts" >{{vete}}</option>
                           </select>
                           <div v-else>eliga fecha</div>
               
+                          <div style="margin-top: 2vh;">
                           <label>
-                              <input type="submit" @click.prevent="peticionTurnoCliente">
+                              <input type="submit" @click.prevent="peticionTurnoCliente" id="solicita-turno-btn">
                           </label>
-                          
-                          <!-- <input type="submit" @click="peticionTurnoMascota">@click="confirmacionTurnoCliente" -->
+                        </div>
                       </div>
 
                     </form>

@@ -3010,7 +3010,7 @@ iframe {
 .container-pet-list {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2,1fr);
+
   grid-gap: 2vh;
 }
 }
@@ -3907,8 +3907,7 @@ td {
 
 .container-pets-main{
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2,1fr);
+  grid-template-columns:repeat(2,1fr);
 }
 
 .perfil-pet {
@@ -4056,10 +4055,10 @@ address{
 }
 
 .card-obra-social {
-  margin-left: 10vw;
+  margin: auto;
   margin-bottom: 1rem;
-  background-image: url(/assets/img/fondo-cards.jpg);
-  background-size: 150%;
+  background-image: url("https://www.ellenfinkelstein.com/pptblog/wp-content/uploads/2014/02/blue-gradient-background.png");
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: 50%;
 }
@@ -4488,4 +4487,26 @@ address{
   text-align: center;
 }
 
-/*Mica*/
+.title-modal-turns{
+  font-size: 1.2em;
+  text-align: center;
+  color: var(--main);
+  font-family: var(--font-title);
+}
+
+.formulario-turns select{
+  margin-top: 2vh;
+  width: 100%;
+  border-radius: 10px;
+  padding: 1vh;
+}
+
+#solicita-turno-btn{
+  width: 100%; 
+  padding: 1vh;
+  background-color: var(--main);
+  border-radius: 10px;
+  color: white;
+  font-family: var(--font-subtitle);
+  cursor: pointer;
+}

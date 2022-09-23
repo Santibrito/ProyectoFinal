@@ -21,14 +21,15 @@ createApp({
             stock:0,
             price:0,
             productCategory:"",
-            
+            data:[],
+            clientTrue:"",
 
         }
     },
     created() {
     this.getVeterinaries()
     this.getProducts()  
-    
+     this.showClientAuth()
     },
 
     methods: {
@@ -98,7 +99,7 @@ console.log(listShift);
             console.log(this.veterinaries);
         })
       },
-    
+
       deleteVeterinari(id){
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
@@ -154,15 +155,14 @@ console.log(listShift);
             }
         })
     },
-     getProducts(){
+      getProducts(){
         axios.get("/api/products")
         .then(response =>{
             this.products=response.data
             console.log(this.products);
         })
      },
-
-    createProduct(){
+      createProduct(){
         
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
@@ -218,9 +218,7 @@ console.log(listShift);
             }
         })
     },
-
-
-    deleteProduct(id){
+      deleteProduct(id){
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
                 confirmButton: 'buttonAccept',
@@ -276,6 +274,70 @@ console.log(listShift);
             }
         })
     }
+
+          logout(){
+               const swalWithBootstrapButtons = Swal.mixin({
+                  customClass: {
+                      confirmButton: 'buttonAccept',
+                      cancelButton: 'buttonCancel'
+                  },
+                  buttonsStyling: false
+              })
+                  swalWithBootstrapButtons.fire({
+                  title: '¿Estás seguro?',
+                  text: "Estar por cerrar sesión",
+                  icon: 'question',
+                  showCancelButton: true,
+                  confirmButtonText: 'Aceptar',
+                  cancelButtonText: 'Cancelar',
+                  reverseButtons: true
+              }).then((result) => {
+                  if (result.isConfirmed) {
+    axios.post('/api/logout')
+                          .then((response) => {
+                              swalWithBootstrapButtons.fire({
+                                  title: 'Logout',
+                                  text: "Has cerrado sesión correctamente",
+                                  icon: 'success',
+                                  showCancelButton: true,
+                                  confirmButtonText: 'Aceptar',
+                                  cancelButtonText: 'Cancelar',
+                                  reverseButtons: true
+                              })
+                              setTimeout(() => {
+                                  location.reload();
+                              }, 2000);
+                          })
+                          .catch(response => {
+                              const swalWithBootstrapButtons = Swal.mixin({
+                                  customClass: {
+                                      cancelButton: 'buttonCancel'
+                                  },
+                                  buttonsStyling: false
+                              })
+
+                              swalWithBootstrapButtons.fire({
+                                  title: "Hemos detectado un error",
+                                  text: response.response.data,
+                                  icon: "error",
+                                  showConfirmButton: false,
+                                  showCancelButton: true,
+                                  cancelButtonText: 'Aceptar',
+                              })
+                          })
+                  }
+              })
+          },
+    showClientAuth(){
+            axios.get("/api/user/current")
+            .then(response=>{
+              this.data=response.data
+              this.clientTrue = this.data.authority
+
+              console.log(this.clientTrue);
+            })
+          },
+
 },
   
 

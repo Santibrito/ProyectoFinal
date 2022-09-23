@@ -216,7 +216,8 @@
           <div  class="container-pets-main">
             <div class="box-container-pet" v-for="pet in pets">
               <div class="img-pet">
-                <img src="assets/img/perro.png" width="150">
+                <img v-if="pet.medicalHistory.petType == 'PERRO'" src="assets/img/perro.png" width="150"> <img v-else
+                  src="https://cdn.images.express.co.uk/img/dynamic/128/590x/secondary/1695285.jpg?r=1547815112963" width="150">
               </div>
               <div class="name-pet">
                 <h4>{{pet.name}}</h4>
@@ -228,7 +229,9 @@
 
         <div class="container-pets-info" v-show="idPet != 0">
           <div v-for="onlyPet in pet" class="perfil-pet">
-            <img src="assets/img/perro.png" width="210">
+            <img v-if="onlyPet.medicalHistory.petType == 'GATO'"
+              src="https://cdn.images.express.co.uk/img/dynamic/128/590x/secondary/1695285.jpg?r=1547815112963" width="210">
+            <img v-else src="assets/img/perro.png" width="210">
             <div class="info-pet">
               <h3><span id="info-pet">Nombre: </span>{{onlyPet.name}}</h3>
               <h3><span id="info-pet">Tipo de mascota: </span>{{onlyPet.race}}</h3>
@@ -626,9 +629,6 @@
                       </div>
 
                     </form>
-
-
-
                 </div>
             </div>
         </div>
