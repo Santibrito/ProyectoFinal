@@ -33,9 +33,9 @@ const app = Vue.createApp({
                 if (this.email == "pedro@gmail.com") {
                   window.location.href = '/dashboard.html'
                 }
-                else {
-                  window.location.href = '/veterinario.html'
-                }
+                // else {
+                //   window.location.href = '/veterinario.html'
+                // }
 
               }).catch(response => {
                 const swalWithBootstrapButtons = Swal.mixin({
