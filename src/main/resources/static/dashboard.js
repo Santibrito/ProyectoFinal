@@ -226,6 +226,10 @@ const app = Vue.
                 console.log("hhhhCliente")
                 console.log(this.getTurnos())
                 console.log(this.getVeterinarios());
+
+                
+                window.location.reload()
+
             })
             .catch(error =>console.log("jjjj"))
         },
@@ -235,6 +239,7 @@ const app = Vue.
                 console.log("hhhhMascota")
                 console.log(this.getTurnos())
                 console.log(this.getVeterinarios());
+                window.location.reload()
             })
             .catch(error =>console.log("jjjjMascota"))
         },
