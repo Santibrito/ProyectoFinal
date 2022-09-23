@@ -226,8 +226,6 @@ const app = Vue.
                 console.log("hhhhCliente")
                 console.log(this.getTurnos())
                 console.log(this.getVeterinarios());
-                
-                
                 window.location.reload()
 
             })
