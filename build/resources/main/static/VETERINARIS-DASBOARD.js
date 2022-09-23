@@ -69,7 +69,7 @@ createApp({
                         customClass: {
                             cancelButton: 'btn btn-danger'
                         },
-                        buttonsStyling: false
+                        //buttonsStyling: false
                     })
                     swalWithBootstrapButtons.fire({
                         title: "Hemos detectado un error",
@@ -100,7 +100,7 @@ createApp({
                         customClass: {
                             cancelButton: 'btn btn-danger'
                         },
-                        buttonsStyling: false
+                        //buttonsStyling: false
                     })
                     swalWithBootstrapButtons.fire({
                         title: "Hemos detectado un error",
@@ -137,7 +137,7 @@ createApp({
                     customClass: {
                         cancelButton: 'btn btn-danger'
                     },
-                    buttonsStyling: false
+                    //buttonsStyling: false
                 })
                 swalWithBootstrapButtons.fire({
                     title: "Borrado",
@@ -156,7 +156,7 @@ createApp({
                     confirmButton: 'buttonAccept',
                     cancelButton: 'buttonCancel'
                 },
-                buttonsStyling: false
+                //buttonsStyling: false
             })
     
           
@@ -192,7 +192,7 @@ createApp({
                                 customClass: {
                                     cancelButton: 'buttonCancel'
                                 },
-                                buttonsStyling: false
+                                //buttonsStyling: false
                             })
     
                             swalWithBootstrapButtons.fire({
@@ -214,7 +214,7 @@ createApp({
                     confirmButton: 'buttonAccept',
                     cancelButton: 'buttonCancel'
                 },
-                buttonsStyling: false
+                //buttonsStyling: false
             })
 
             swalWithBootstrapButtons.fire({
@@ -247,7 +247,7 @@ createApp({
                                 customClass: {
                                     cancelButton: 'buttonCancel'
                                 },
-                                buttonsStyling: false
+                                //buttonsStyling: false
                             })
 
                             swalWithBootstrapButtons.fire({
@@ -276,7 +276,7 @@ createApp({
                     confirmButton: 'buttonAccept',
                     cancelButton: 'buttonCancel'
                 },
-                buttonsStyling: false
+                //buttonsStyling: false
             })
 
             swalWithBootstrapButtons.fire({
@@ -309,7 +309,7 @@ createApp({
                                 customClass: {
                                     cancelButton: 'buttonCancel'
                                 },
-                                buttonsStyling: false
+                                //buttonsStyling: false
                             })
 
                             swalWithBootstrapButtons.fire({

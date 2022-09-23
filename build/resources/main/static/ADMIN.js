@@ -41,7 +41,7 @@ console.log(listShift);
                     confirmButton: 'buttonAccept',
                     cancelButton: 'buttonCancel'
                 },
-                buttonsStyling: false
+                //buttonsStyling: false
             })
 
             swalWithBootstrapButtons.fire({
@@ -76,7 +76,7 @@ console.log(listShift);
                                 customClass: {
                                     cancelButton: 'buttonCancel'
                                 },
-                                buttonsStyling: false
+                                //buttonsStyling: false
                             })
 
                             swalWithBootstrapButtons.fire({
@@ -106,7 +106,7 @@ console.log(listShift);
                 confirmButton: 'buttonAccept',
                 cancelButton: 'buttonCancel'
             },
-            buttonsStyling: false
+            //buttonsStyling: false
         })
 
         swalWithBootstrapButtons.fire({
@@ -139,7 +139,7 @@ console.log(listShift);
                             customClass: {
                                 cancelButton: 'buttonCancel'
                             },
-                            buttonsStyling: false
+                            //buttonsStyling: false
                         })
 
                         swalWithBootstrapButtons.fire({
@@ -169,7 +169,7 @@ console.log(listShift);
                 confirmButton: 'buttonAccept',
                 cancelButton: 'buttonCancel'
             },
-            buttonsStyling: false
+            //buttonsStyling: false
         })
 
         swalWithBootstrapButtons.fire({
@@ -203,7 +203,7 @@ console.log(listShift);
                             customClass: {
                                 cancelButton: 'buttonCancel'
                             },
-                            buttonsStyling: false
+                            //buttonsStyling: false
                         })
 
                         swalWithBootstrapButtons.fire({
@@ -224,7 +224,7 @@ console.log(listShift);
                 confirmButton: 'buttonAccept',
                 cancelButton: 'buttonCancel'
             },
-            buttonsStyling: false
+            //buttonsStyling: false
         })
 
         swalWithBootstrapButtons.fire({
@@ -258,7 +258,7 @@ console.log(listShift);
                             customClass: {
                                 cancelButton: 'buttonCancel'
                             },
-                            buttonsStyling: false
+                            //buttonsStyling: false
                         })
 
                         swalWithBootstrapButtons.fire({
@@ -273,7 +273,7 @@ console.log(listShift);
                     })
             }
         })
-    }
+    },
 
           logout(){
                const swalWithBootstrapButtons = Swal.mixin({
@@ -313,7 +313,7 @@ console.log(listShift);
                                   customClass: {
                                       cancelButton: 'buttonCancel'
                                   },
-                                  buttonsStyling: false
+                                  //buttonsStyling: false
                               })
 
                               swalWithBootstrapButtons.fire({
